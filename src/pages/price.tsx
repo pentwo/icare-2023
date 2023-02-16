@@ -1,0 +1,116 @@
+import React from "react";
+import { Layout } from "../components/Layout/Layout";
+import Price from "../components/general/Price";
+import CancelPolicy from "../components/general/CancelPolicy";
+import { graphql } from "gatsby";
+import Seo from "../components/general/Seo";
+
+interface PriceProps {
+  title: string;
+  price: PriceDetail[];
+  description?: string;
+  bg?: any;
+}
+
+interface PriceDetail {
+  time: string;
+  price: number;
+  highlight?: boolean;
+}
+
+const priceInfo: PriceProps[] = [
+  {
+    title: "Remedial/Sports Massage",
+    description: "*All Health Fund Rebate Are Available",
+    price: [
+      {
+        time: "1 hour",
+        price: 110,
+      },
+      {
+        time: "1 hours 15 minutes",
+        price: 120,
+        highlight: true,
+      },
+      {
+        time: "1 hours 30 minutes",
+        price: 145,
+      },
+    ],
+  },
+  {
+    title: "Fertility Massage Therapy",
+    price: [
+      {
+        time: "Initial treatment (including consultation) 120 mins",
+        price: 250,
+      },
+      {
+        time: "Follow up treatment 90 mins",
+        price: 170,
+      },
+    ],
+  },
+  {
+    title: "Pregnancy/Prenatal Massage",
+    price: [
+      {
+        time: "1 hour",
+        price: 110,
+      },
+      {
+        time: "1 hours 15 minutes",
+        price: 120,
+      },
+      {
+        time: "1 hours 30 minutes",
+        price: 145,
+        highlight: true,
+      },
+    ],
+  },
+];
+
+export default function PricePage({ data }) {
+  const prices = priceInfo.map((item, index) => {
+    return {
+      ...item,
+      bg: data[`bg${index + 1}`].childImageSharp.fluid,
+    };
+  });
+
+  return (
+    <Layout>
+      <Seo title="Price" />
+      {/* <Hero /> */}
+      <Price prices={prices} />
+      <CancelPolicy />
+    </Layout>
+  );
+}
+
+export const query = graphql`
+  query {
+    bg3: file(relativePath: { eq: "priceImages/bg3.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 960) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    bg1: file(relativePath: { eq: "priceImages/bg1.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 960) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    bg2: file(relativePath: { eq: "priceImages/bg2.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 960) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`;
