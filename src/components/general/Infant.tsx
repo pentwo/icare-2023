@@ -31,7 +31,7 @@ const Infant = (props: Props) => {
             mx="auto"
             withIndicators
             loop
-            slideSize="70%"
+            // slideSize="70%"
             slideGap="lg"
             plugins={[autoplay.current]}
             onMouseEnter={autoplay.current.stop}
