@@ -7,7 +7,7 @@ import React from "react";
 // COMPONENT IMPORTS
 
 // MANTINE IMPORTS
-import { Container, Text, Title, List, Stack, Center } from "@mantine/core";
+import { Container, Text, Title, List, Stack, Center, Box } from "@mantine/core";
 import { graphql, StaticQuery } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
 
@@ -27,14 +27,21 @@ const About = (props: Props) => {
     <Container mt={60}>
       <Stack>
         <Center>
-          <StaticImage
-            src="../../images/portrait.jpg"
-            alt="jenny Portrait"
-            style={{
-              maxWidth: "350px",
-              borderRadius: "50%",
+          <Box
+            sx={{
+              img: {
+                borderRadius: "50%",
+              },
             }}
-          />
+          >
+            <StaticImage
+              src="../../images/portrait.jpg"
+              alt="jenny Portrait"
+              style={{
+                maxWidth: "350px",
+              }}
+            />
+          </Box>
         </Center>
         <Title order={2} align={"center"}>
           Jenny YEH

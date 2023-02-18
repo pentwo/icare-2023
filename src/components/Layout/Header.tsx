@@ -17,6 +17,7 @@ import {
   createStyles,
   Box,
   Menu,
+  Anchor,
 } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import React, { useState } from "react";
@@ -27,6 +28,7 @@ import {
   IconHeart,
   IconCurrencyDollar,
   IconChevronDown,
+  IconArrowRight,
 } from "@tabler/icons";
 import { Link } from "gatsby";
 
@@ -119,7 +121,7 @@ const links: {
   label: string;
   icon: React.ReactNode;
   link: string;
-  links?: { label: string; link: string }[];
+  links?: { label: string; link: string; icon?: React.ReactNode }[];
 }[] = [
   { label: "Tel: 0431 192 844", icon: <IconPhone />, link: "tel:0431192844" },
   { label: "Home", icon: <IconHome />, link: "/" },
@@ -147,7 +149,9 @@ const ICareHeader = (props: Props) => {
     <Header height={60} p={0}>
       <Container>
         <Group noWrap className={classes.inner}>
-          <Title order={2}>iCare</Title>
+          <Anchor component={Link} to={"/"} underline={false}>
+            <Title order={2}>iCare</Title>
+          </Anchor>
           <Group noWrap className={classes.links}>
             {links.map((link, index) => {
               if (link.links) {
@@ -195,15 +199,42 @@ const ICareHeader = (props: Props) => {
           <Burger opened={opened} onClick={() => setOpened((o) => !o)} className={classes.burger} />
           {/* {opened && ( */}
           <Box className={cx(classes.burgerLinks, opened && classes.burgerLinksOpen)}>
-            {links.map((link, index) => (
-              <NavLink
-                key={index}
-                component={Link}
-                to={link.link}
-                label={link.label}
-                icon={link.icon}
-              />
-            ))}
+            {links.map((link, index) => {
+              const subLinks = link.links;
+              if (subLinks) {
+                return (
+                  <>
+                    <NavLink
+                      key={index}
+                      component={Link}
+                      to={link.link}
+                      label={link.label}
+                      icon={link.icon}
+                    />
+                    {subLinks.map((sublink, index) => (
+                      <NavLink
+                        key={sublink.label}
+                        component={Link}
+                        to={sublink.link}
+                        label={sublink.label}
+                        icon={sublink.icon ?? <IconArrowRight />}
+                        ml={20}
+                      />
+                    ))}
+                  </>
+                );
+              }
+
+              return (
+                <NavLink
+                  key={index}
+                  component={Link}
+                  to={link.link}
+                  label={link.label}
+                  icon={link.icon}
+                />
+              );
+            })}
           </Box>
           {/* )} */}
         </Group>

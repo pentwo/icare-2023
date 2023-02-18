@@ -66,6 +66,9 @@ const Hero = (props: Props) => {
           sx={(theme) => ({
             ...theme.fn.cover(),
             marginLeft: "-10rem",
+            [theme.fn.smallerThan("sm")]: {
+              marginLeft: 0,
+            },
           })}
         >
           <Stack>
