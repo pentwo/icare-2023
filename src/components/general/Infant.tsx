@@ -138,6 +138,10 @@ const Infant = (props: Props) => {
             How to communicate with baby by understanding their language-crying and their body
             languages
           </List.Item>
+
+          <Text my={10}>And the most importantly</Text>
+
+          <List.Item>Practice Legs and feet Massage or Massage for Colic</List.Item>
         </List>
       </Stack>
     </Container>

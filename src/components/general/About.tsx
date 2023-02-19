@@ -79,6 +79,7 @@ const About = (props: Props) => {
           <List.Item>Japanese Shiatsu</List.Item>
           <List.Item>Sport Massage</List.Item>
           <List.Item>Myofascial Release</List.Item>
+          <List.Item>Neurofascial Release</List.Item>
           <List.Item>Positional Release</List.Item>
           <List.Item>Postnatal Massage</List.Item>
           <List.Item>Reflexology</List.Item>
@@ -92,8 +93,7 @@ const About = (props: Props) => {
           <List.Item>Kinesiotaping</List.Item>
           <List.Item>Reiki</List.Item>
           <List.Item>Fertility Massage Therapy</List.Item>
-          <List.Item>Infant Massage</List.Item>
-          <List.Item>Neurofascial</List.Item>
+          <List.Item>Infant Massage Instructor</List.Item>
         </List>
 
         <Title order={2} align={"center"}>
