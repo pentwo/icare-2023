@@ -18,8 +18,10 @@ import {
   Box,
   Menu,
   Anchor,
+  Button,
+  Modal,
 } from "@mantine/core";
-import { useDisclosure } from "@mantine/hooks";
+import { useDisclosure, useViewportSize } from "@mantine/hooks";
 import React, { useState } from "react";
 import {
   IconHome,
@@ -145,13 +147,18 @@ const ICareHeader = (props: Props) => {
   const { classes, cx } = useStyles();
   const [opened, setOpened] = useState(false);
 
+  const [bookingOpened, { open, close }] = useDisclosure(false);
+
   return (
     <Header height={60} p={0}>
+      {/* <!-- Start Square Appointments Embed Code --><script src='https://square.site/appointments/buyer/widget/2scr8j5ghv08kg/HGVQ3HMRPZ4E7.js'></script><!-- End Square Appointments Embed Code --> */}
+
       <Container>
         <Group noWrap className={classes.inner}>
           <Anchor component={Link} to={"/"} underline={false}>
             <Title order={2}>iCare</Title>
           </Anchor>
+          {/* Desktop NavLinks */}
           <Group noWrap className={classes.links}>
             {links.map((link, index) => {
               if (link.links) {
@@ -196,14 +203,48 @@ const ICareHeader = (props: Props) => {
               );
             })}
           </Group>
-          <Burger opened={opened} onClick={() => setOpened((o) => !o)} className={classes.burger} />
-          {/* {opened && ( */}
-          <Box className={cx(classes.burgerLinks, opened && classes.burgerLinksOpen)}>
-            {links.map((link, index) => {
-              const subLinks = link.links;
-              if (subLinks) {
-                return (
-                  <>
+
+          {/* Mobile NavLinks */}
+          <Group>
+            {/* Book Now button */}
+            <Button component={Link} to={"/booking"}>
+              Book Now
+            </Button>
+
+            <Burger
+              opened={opened}
+              onClick={() => setOpened((o) => !o)}
+              className={classes.burger}
+            />
+            {opened && (
+              <Box className={cx(classes.burgerLinks, opened && classes.burgerLinksOpen)}>
+                {links.map((link, index) => {
+                  const subLinks = link.links;
+                  if (subLinks) {
+                    return (
+                      <>
+                        <NavLink
+                          key={index}
+                          component={Link}
+                          to={link.link}
+                          label={link.label}
+                          icon={link.icon}
+                        />
+                        {subLinks.map((sublink, index) => (
+                          <NavLink
+                            key={sublink.label}
+                            component={Link}
+                            to={sublink.link}
+                            label={sublink.label}
+                            icon={sublink.icon ?? <IconArrowRight />}
+                            ml={20}
+                          />
+                        ))}
+                      </>
+                    );
+                  }
+
+                  return (
                     <NavLink
                       key={index}
                       component={Link}
@@ -211,36 +252,33 @@ const ICareHeader = (props: Props) => {
                       label={link.label}
                       icon={link.icon}
                     />
-                    {subLinks.map((sublink, index) => (
-                      <NavLink
-                        key={sublink.label}
-                        component={Link}
-                        to={sublink.link}
-                        label={sublink.label}
-                        icon={sublink.icon ?? <IconArrowRight />}
-                        ml={20}
-                      />
-                    ))}
-                  </>
-                );
-              }
-
-              return (
-                <NavLink
-                  key={index}
-                  component={Link}
-                  to={link.link}
-                  label={link.label}
-                  icon={link.icon}
-                />
-              );
-            })}
-          </Box>
-          {/* )} */}
+                  );
+                })}
+              </Box>
+            )}
+          </Group>
         </Group>
       </Container>
+      <BookingModal opened={bookingOpened} close={close} />
     </Header>
   );
 };
+// src="https://icare-remedial-massage.square.site/"
 
 export default ICareHeader;
+
+const BookingModal = ({ opened, close }) => {
+  return (
+    <Modal
+      opened={opened}
+      onClose={close}
+      title="Booking"
+      size="100%"
+      //   overflow="inside"
+      transition="fade"
+      transitionDuration={600}
+      transitionTimingFunction="ease"
+      //   fullScreen
+    ></Modal>
+  );
+};

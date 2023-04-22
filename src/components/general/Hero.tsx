@@ -7,8 +7,9 @@ import React from "react";
 // COMPONENT IMPORTS
 
 // MANTINE IMPORTS
-import { Box, Center, Text, BackgroundImage, Title, Stack } from "@mantine/core";
+import { Box, Center, Text, BackgroundImage, Title, Stack, Button, Group } from "@mantine/core";
 import { StaticImage } from "gatsby-plugin-image";
+import { Link } from "gatsby";
 
 // NETWORK IMPORTS
 
@@ -74,6 +75,11 @@ const Hero = (props: Props) => {
           <Stack>
             <Title order={1}>iCare Remedial Massage</Title>
             <Text>The best time to take care of yourself</Text>
+            <Group>
+              <Button component={Link} to={"/booking"} size="lg">
+                Book Now
+              </Button>
+            </Group>
           </Stack>
         </Center>
       </Box>
