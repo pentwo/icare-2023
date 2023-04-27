@@ -104,6 +104,7 @@ const About = (props: Props) => {
           <List.Item>Diploma of Remedial Massage (HLT50307)</List.Item>
           <List.Item>Practitioner of Pregnancy Massage @ NurtureLife&reg;</List.Item>
           <List.Item>Member of Massage & Myotherapy Association</List.Item>
+          <List.Item>Paediatric Massage Consultant</List.Item>
         </List>
       </Stack>
     </Container>
