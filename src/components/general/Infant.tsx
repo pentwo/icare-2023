@@ -107,42 +107,79 @@ const Infant = (props: Props) => {
           better overall mood and appetite, and a greater sense of security and attachment.
         </Text>
         <Text>
-          If you are new to infant massage, we recommend attending an introduction workshop with a
-          certified infant massage instructor. This can be a great way to learn proper techniques
-          and get some hands-on experience. Follow up, you may choose to join our 4-sessions classes
-          with one-on-one private tutor or semi-private group classes (2-5 babies max.). In this 4-
-          secession course, we are going to talk about some specific topic of childcare such as
-          asthma or sinus congestion, colic or constipation, etc. and how can infant massage help
-          with those situations. Also, we will talk about how to do massage with elder child.
-          Further more, we will introduce baby yoga to guide you how to exercise with your babies
-          with a fun and safe activity.
+          If you are new to infant massage, we recommend attending an Introductory Workshop with a
+          certified Paediatric Massage Consultant.
+        </Text>
+        <Text>
+          The workshop will last 45 - 60 minutes, during which we will cover the following topics:
         </Text>
         <List icon={<IconChevronRight />}>
+          <List.Item>Early Childhood Development</List.Item>
+          <List.Item>Benefits of infant massage</List.Item>
+          <List.Item>Selecting a safe baby massage oil</List.Item>
+          <List.Item>Ideal times for infant massage</List.Item>
+          <List.Item>Hands on practice for some simple techniques of baby massage</List.Item>
+        </List>
+        <Text>
+          This workshop is available for a group booking or private bookings. Fathers and
+          grandparents are more than welcome to attend. In addition to the course, you will take
+          home the following:
+        </Text>
+        <List icon={<IconChevronRight />}>
+          <List.Item>An Organic Baby Massage Oil</List.Item>
+          <List.Item>Parent Manual Book</List.Item>
+          <List.Item>A certificate for your family members</List.Item>
+        </List>
+        <Text>
+          Please note that the introduction workshop will not cover full-body massage techniques. If
+          you wish to learn more, I recommend joining my 4-session Infant Massage Course. 4-Session
+          Infant Massage Course. Each session will last 45 - 60minutes, below is a breakdown of what
+          will be covered in each session.
+        </Text>
+
+        <Title order={3}>Session 1</Title>
+        <List icon={<IconChevronRight />}>
+          <List.Item>Education Topic: Baby’s daily schedule and Parents’ self-care </List.Item>
           <List.Item>
-            Book a Infant Massage Workshop (community group, childcare centre, parenting support
-            group are more than welcomed)
-          </List.Item>
-          <List.Item>
-            Book 4-secession Infant Massage Course Or For more information, please contact:{" "}
-            <Anchor href="mailto:jeny2219@gmail.com">jeny2219@gmail.com</Anchor>
+            Techniques taught: Legs, Bottock and Abdomen massage. Massage for colic, constipation,
+            wind, reflux, etc.{" "}
           </List.Item>
         </List>
-        <Text>In the workshop, you will learn</Text>
-        <List icon={<IconCheck />}>
-          <List.Item>Human development in the Earlier childhood: 0-2 years old</List.Item>
-          <List.Item>Why does baby need infant massage </List.Item>
-          <List.Item>Why do parents need to learn infant massage </List.Item>
-          <List.Item>How to choose a safe baby massage oil</List.Item>
-          <List.Item>When is the best time to provide infant massage</List.Item>
+
+        <Title order={3}>Session 2</Title>
+        <List icon={<IconChevronRight />}>
+          <List.Item>Education Topic: Baby’s language and body language </List.Item>
           <List.Item>
-            How to communicate with baby by understanding their language-crying and their body
-            languages
+            Techniques taught: Chest, Arms, Face and Head massage. Craniosacral Therapy for baby{" "}
           </List.Item>
-
-          <Text my={10}>And the most importantly</Text>
-
-          <List.Item>Practice Legs and feet Massage or Massage for Colic</List.Item>
         </List>
+
+        <Title order={3}>Session 3</Title>
+        <List icon={<IconChevronRight />}>
+          <List.Item>Education Topic: Solid food</List.Item>
+          <List.Item>Techniques taught: Back. Infant First Aid </List.Item>
+        </List>
+
+        <Title order={3}>Session 4</Title>
+        <List icon={<IconChevronRight />}>
+          <List.Item>Education Topic: Early Childhood Development </List.Item>
+          <List.Item>
+            Techniques Taught: massage for 9 - 12 months old. Exercise Games for Baby
+          </List.Item>
+        </List>
+
+        <Text>
+          If you would prefer to attend the introductory course only, the parent manual book
+          provided includes all the information covered in the course for self-learning, as well as
+          contact details for our team should you need assistance in the future.
+        </Text>
+        <Text>
+          If you wish to attend the 4-Session Course, group booking and Private one-on-one bookings
+          are available. If you have any further question, please do not hesitate to reach out to
+          our team at{" "}
+          <Anchor href="mailto:info@bodyworkssubiaco.com">info@bodyworkssubiaco.com</Anchor> or give
+          us a call on <Anchor href="tel:+61893815565">08-9381-5565</Anchor>.
+        </Text>
       </Stack>
     </Container>
   );
