@@ -134,7 +134,7 @@ const links: {
     link: "/service",
     links: [
       { label: "Remedial/Sport Massage", link: "/service" },
-      { label: "Fertility Massage", link: "/service" },
+      { label: "Fertility Massage (Female Only)", link: "/service" },
       { label: "Pregnancy Massage", link: "/service" },
       { label: "Infant Massage", link: "/infant" },
     ],

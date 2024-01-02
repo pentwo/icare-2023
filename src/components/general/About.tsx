@@ -53,7 +53,7 @@ const About = (props: Props) => {
         </Text>
 
         <Text>
-          Jenny is a 12-years-experienced massage therapist. Qualified Diploma of remedial massage
+          Jenny is a 13-years-experienced massage therapist. Qualified Diploma of remedial massage
           and practitioner of pregnancy massage. Jenny had completed the Bachelor of Education and
           worked as a teacher in child cares and kindergarten in Taiwan. She LOVE to work with
           children and families. Therefore, she chooses to do specialized training in fertility

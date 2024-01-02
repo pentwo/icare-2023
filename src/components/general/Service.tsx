@@ -26,9 +26,9 @@ const servicesInfo: ServiceProps[] = [
       "Remedial/Sports Massages also known as injury treatment massage. Unlike relaxation massage, remedial massage is designed to deal with specific pain points or musculoskeletal discomfort. Remedial massage is including multiple techniques such        as Swedish, Deep tissue, Shiatsu, Myofascial release, Manual lymphatic drainage, etc.",
   },
   {
-    title: "What is Fertility Massage Therapy?",
+    title: "What is Fertility Massage Therapy? (Female Only)",
     description:
-      "Fertility Massage Therapy is a deep, yet gentle, non invasive abdominal and sacral therapy that focus on improving circulation to the abdominal organs with an aim to improve blood, nerve and lymph flow. The massage also focus on releasing physical and emotional tension, helping to loosen debris (that has been accumulating in your gut for years) encouraging a natural movement and clearing both physical and emotional congestion, leaving you and your abdomen feeling lighter and freer.",
+      "Fertility Massage Therapy is a deep, yet gentle, non invasive abdominal and sacral therapy that focus on improving circulation to the abdominal organs with an aim to improve blood, nerve and lymph flow. The massage also focus on releasing physical and emotional tension, helping to loosen debris (that has been accumulating in your gut for years) encouraging a natural movement and clearing both physical and emotional congestion, leaving you and your abdomen feeling lighter and freer. (Please note this service is female only)",
   },
   {
     title: "What is Pregnancy/Prenatal Massage??",
