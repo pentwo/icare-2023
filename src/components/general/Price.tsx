@@ -158,7 +158,7 @@ const PriceBlock = ({ title, price, description, bg }: PriceProps) => {
             <Title order={2}>{title}</Title>
             <Text>{description}</Text>
             <Group>
-              <Button leftIcon={<IconPhone />} component="a" href="tel:0432 194 194">
+              <Button leftIcon={<IconPhone />} component="a" href="tel:0431192844">
                 Call or Text for Booking
               </Button>
             </Group>
