@@ -73,7 +73,7 @@ const Hero = (props: Props) => {
           })}
         >
           <Stack>
-            <Title order={1}>iCare Remedial Massage</Title>
+            <Title order={1}>iCare Health Massage</Title>
             <Text>The best time to take care of yourself</Text>
             <Group>
               <Button component={Link} to={"/booking"} size="lg">
