@@ -25,20 +25,20 @@ const priceInfo: PriceProps[] = [
     price: [
       {
         time: "45 minutes",
-        price: 95,
+        price: 100,
       },
       {
         time: "1 hour",
-        price: 110,
+        price: 115,
       },
       {
         time: "1 hours 15 minutes",
-        price: 120,
+        price: 125,
         highlight: true,
       },
       {
         time: "1 hours 30 minutes",
-        price: 145,
+        price: 150,
       },
     ],
   },
@@ -60,15 +60,15 @@ const priceInfo: PriceProps[] = [
     price: [
       {
         time: "1 hour",
-        price: 110,
+        price: 115,
       },
       {
         time: "1 hours 15 minutes",
-        price: 120,
+        price: 125,
       },
       {
         time: "1 hours 30 minutes",
-        price: 145,
+        price: 150,
         highlight: true,
       },
     ],
