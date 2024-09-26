@@ -19,6 +19,11 @@ exports.onClientEntry = () => {
     gtag("js", new Date());
     gtag("config", "AW-784873740");
 
+    // Add conversion tracking
+    gtag("event", "conversion", {
+      send_to: "AW-784873740/Qm5fCO_q19gBEIzyoPYC",
+    });
+
     // Load the gtag.js script
     const script = document.createElement("script");
     script.src = "https://www.googletagmanager.com/gtag/js?id=AW-784873740";
