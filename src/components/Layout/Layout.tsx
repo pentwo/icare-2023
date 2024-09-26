@@ -7,12 +7,6 @@ import Header from "./Header";
 import "../../styles/index.css";
 import Footer from "./Footer";
 
-import TagManager from "react-gtm-module";
-
-const tagManagerArgs = {
-  gtmId: "AW-784873740",
-};
-
 /**
  *
  */
@@ -27,10 +21,6 @@ export function Layout({ children }: LayoutProps) {
     setColorScheme(value || (colorScheme === "dark" ? "light" : "dark"));
 
   useHotkeys([["mod+J", () => toggleColorScheme()]]);
-
-  useEffect(() => {
-    TagManager.initialize(tagManagerArgs);
-  }, []);
 
   return (
     <MantineProvider withGlobalStyles withNormalizeCSS theme={iCareTheme}>

@@ -15,16 +15,10 @@ import React, { useEffect, useState } from "react";
 // TYPE IMPORTS
 
 // FUNCTION IMPORTS
-import TagManager from "react-gtm-module";
 
 // STYLE IMPORTS
 
 interface Props {}
-
-const tagManagerArgs = {
-  gtmId: "AW-784873740",
-};
-
 const Booking = (props: Props) => {
   const { height, width } = useViewportSize();
   const [isLoading, setIsLoading] = useState(true);
@@ -42,11 +36,7 @@ const Booking = (props: Props) => {
     handleResize(); // Initial call to set the correct height
 
     return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
-  useEffect(() => {
-    TagManager.initialize(tagManagerArgs);
-  }, []);
+  }, [height]);
 
   return (
     <Container mt={60}>
