@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useHotkeys } from "@mantine/hooks";
 import { MantineProvider, ColorSchemeProvider, ColorScheme, AppShell, Space } from "@mantine/core";
 import { iCareTheme } from "../styles/iCareTheme";
@@ -6,6 +6,16 @@ import Header from "./Header";
 
 import "../../styles/index.css";
 import Footer from "./Footer";
+
+import TagManager from "react-gtm-module";
+
+const tagManagerArgs = {
+  gtmId: "AW-784873740",
+};
+
+/**
+ *
+ */
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -17,6 +27,10 @@ export function Layout({ children }: LayoutProps) {
     setColorScheme(value || (colorScheme === "dark" ? "light" : "dark"));
 
   useHotkeys([["mod+J", () => toggleColorScheme()]]);
+
+  useEffect(() => {
+    TagManager.initialize(tagManagerArgs);
+  }, []);
 
   return (
     <MantineProvider withGlobalStyles withNormalizeCSS theme={iCareTheme}>
