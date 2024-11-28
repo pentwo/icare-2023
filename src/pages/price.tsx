@@ -24,6 +24,10 @@ const priceInfo: PriceProps[] = [
     description: "*All Health Fund Rebate Are Available",
     price: [
       {
+        time: "30 minutes",
+        price: 85,
+      },
+      {
         time: "45 minutes",
         price: 100,
       },
