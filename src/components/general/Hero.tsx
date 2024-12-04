@@ -1,15 +1,30 @@
 // REACT IMPORTS
 
-import React from "react";
+import React, { useState } from "react";
 
 // NEXT IMPORTS
 
 // COMPONENT IMPORTS
 
 // MANTINE IMPORTS
-import { Box, Center, Text, BackgroundImage, Title, Stack, Button, Group } from "@mantine/core";
+import {
+  Box,
+  Center,
+  Text,
+  BackgroundImage,
+  Title,
+  Stack,
+  Button,
+  Group,
+  Alert,
+  Anchor,
+  Mark,
+  Popover,
+} from "@mantine/core";
 import { StaticImage } from "gatsby-plugin-image";
 import { Link } from "gatsby";
+import { IconAlertCircle } from "@tabler/icons";
+import BookingAlert from "./BookingAlert";
 
 // NETWORK IMPORTS
 
@@ -22,6 +37,8 @@ import { Link } from "gatsby";
 interface Props {}
 
 const Hero = (props: Props) => {
+  const [alertOpen, setAlertOpen] = useState(false);
+
   return (
     <Box
       sx={{
@@ -76,9 +93,22 @@ const Hero = (props: Props) => {
             <Title order={1}>iCare Health Massage</Title>
             <Text>The best time to take care of yourself</Text>
             <Group>
-              <Button component={Link} to={"/booking"} size="lg">
-                Book Now
-              </Button>
+              <Popover opened={alertOpen}>
+                <Popover.Target>
+                  <Button
+                    component={Link}
+                    to={"/booking"}
+                    size="lg"
+                    onMouseOver={() => setAlertOpen(true)}
+                    onMouseLeave={() => setAlertOpen(false)}
+                  >
+                    Book Now
+                  </Button>
+                </Popover.Target>
+                <Popover.Dropdown>
+                  <BookingAlert variant="short" />
+                </Popover.Dropdown>
+              </Popover>
             </Group>
           </Stack>
         </Center>

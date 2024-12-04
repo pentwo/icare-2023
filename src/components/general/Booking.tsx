@@ -1,8 +1,10 @@
 // REACT IMPORTS
 
-import { Stack, Container, Loader, Group } from "@mantine/core";
+import { Stack, Container, Loader, Group, Alert, Anchor, Mark } from "@mantine/core";
 import { useViewportSize } from "@mantine/hooks";
+import { IconAlertCircle } from "@tabler/icons";
 import React, { useEffect, useState } from "react";
+import BookingAlert from "./BookingAlert";
 
 // NEXT IMPORTS
 
@@ -42,6 +44,7 @@ const Booking = (props: Props) => {
     <Container mt={60}>
       <Stack style={{ height: "100%" }}>
         {/* <Group position="center">{isLoading && <Loader size={48} color="pink" />}</Group> */}
+        <BookingAlert variant="fullwidth" />
         <iframe
           //   src="https://squareup.com/appointments/book/2scr8j5ghv08kg/HGVQ3HMRPZ4E7/start"
           src="https://icare-remedial-massage.square.site/"

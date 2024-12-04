@@ -25,7 +25,7 @@ const priceInfo: PriceProps[] = [
     price: [
       {
         time: "30 minutes",
-        price: 85,
+        price: 90,
       },
       {
         time: "45 minutes",
