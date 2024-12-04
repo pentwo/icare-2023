@@ -24,37 +24,37 @@ interface Props {}
 const Booking = (props: Props) => {
   const { height, width } = useViewportSize();
   const [isLoading, setIsLoading] = useState(true);
-
-  const [iframeHeight, setIframeHeight] = useState(height - 320);
+  const [iframeHeight, setIframeHeight] = useState(600);
 
   useEffect(() => {
-    // Adjust iframe height when window is resized
     const handleResize = () => {
-      const newHeight = window.innerHeight - 320;
+      const newHeight = Math.max(window.innerHeight * 0.8, 600);
       setIframeHeight(newHeight);
     };
 
     window.addEventListener("resize", handleResize);
-    handleResize(); // Initial call to set the correct height
+    handleResize();
 
-    return () => window.removeEventListener("resize", handleResize);
-  }, [height]);
+    const timeoutId = setTimeout(handleResize, 100);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+      clearTimeout(timeoutId);
+    };
+  }, []);
 
   return (
     <Container mt={60}>
       <Stack style={{ height: "100%" }}>
-        {/* <Group position="center">{isLoading && <Loader size={48} color="pink" />}</Group> */}
         <BookingAlert variant="fullwidth" />
         <iframe
-          //   src="https://squareup.com/appointments/book/2scr8j5ghv08kg/HGVQ3HMRPZ4E7/start"
           src="https://icare-remedial-massage.square.site/"
-          //   width={width - 60}
           height={iframeHeight}
-          //   frameBorder={0}
           scrolling="auto"
-          //   onLoad={() => setIsLoading(true)}
           style={{
             border: "none",
+            width: "100%",
+            minHeight: "600px",
           }}
         ></iframe>
       </Stack>
