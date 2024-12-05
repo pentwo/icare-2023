@@ -35,7 +35,7 @@ import {
   IconArrowRight,
 } from "@tabler/icons";
 import { Link } from "gatsby";
-import BookingAlert from "./BookingAlert";
+import BookingAlert from "../general/BookingAlert";
 
 
 // NETWORK IMPORTS
