@@ -6,6 +6,7 @@
 
 // MANTINE IMPORTS
 import {
+
   Header,
   Title,
   Container,
@@ -20,6 +21,7 @@ import {
   Anchor,
   Button,
   Modal,
+  Popover,
 } from "@mantine/core";
 import { useDisclosure, useViewportSize } from "@mantine/hooks";
 import React, { useState } from "react";
@@ -33,6 +35,8 @@ import {
   IconArrowRight,
 } from "@tabler/icons";
 import { Link } from "gatsby";
+import BookingAlert from "./BookingAlert";
+
 
 // NETWORK IMPORTS
 
@@ -146,6 +150,7 @@ const ICareHeader = (props: Props) => {
   //   const [opened, { toggle }] = useDisclosure(false);
   const { classes, cx } = useStyles();
   const [opened, setOpened] = useState(false);
+  const [alertOpen, setAlertOpen] = useState(false);
 
   const [bookingOpened, { open, close }] = useDisclosure(false);
 
@@ -207,10 +212,21 @@ const ICareHeader = (props: Props) => {
           {/* Mobile NavLinks */}
           <Group>
             {/* Book Now button */}
-            <Button component={Link} to={"/booking"}>
-              Book Now
-            </Button>
-
+            <Popover opened={alertOpen}>
+              <Popover.Target>
+                <Button 
+                  component={Link} 
+                  to={"/booking"}
+                  onMouseOver={() => setAlertOpen(true)}
+                  onMouseLeave={() => setAlertOpen(false)}
+                >
+                  Book Now
+                </Button>
+              </Popover.Target>
+              <Popover.Dropdown>
+                <BookingAlert variant="short" />
+              </Popover.Dropdown>
+            </Popover>
             <Burger
               opened={opened}
               onClick={() => setOpened((o) => !o)}
