@@ -51,11 +51,11 @@ const priceInfo: PriceProps[] = [
     price: [
       {
         time: "Initial treatment (including consultation) 120 mins",
-        price: 250,
+        price: 280,
       },
       {
         time: "Follow up treatment 90 mins",
-        price: 170,
+        price: 200,
       },
     ],
   },
