@@ -48,7 +48,7 @@ const Booking = (props: Props) => {
       <Stack style={{ height: "100%" }}>
         <BookingAlert variant="fullwidth" />
         <iframe
-          src="https://icare-remedial-massage.square.site/"
+          src="https://icare-health-massage.square.site/"
           height={iframeHeight}
           scrolling="auto"
           style={{
