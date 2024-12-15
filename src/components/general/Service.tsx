@@ -1,21 +1,5 @@
-// REACT IMPORTS
-
 import { Stack, Title, Text, Container, BackgroundImage } from "@mantine/core";
 import React from "react";
-
-// NEXT IMPORTS
-
-// COMPONENT IMPORTS
-
-// MANTINE IMPORTS
-
-// NETWORK IMPORTS
-
-// TYPE IMPORTS
-
-// FUNCTION IMPORTS
-
-// STYLE IMPORTS
 
 interface Props {}
 

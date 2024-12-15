@@ -6,7 +6,6 @@
 
 // MANTINE IMPORTS
 import {
-
   Header,
   Title,
   Container,
@@ -36,7 +35,8 @@ import {
 } from "@tabler/icons";
 import { Link } from "gatsby";
 import BookingAlert from "../general/BookingAlert";
-
+import { StaticImage } from "gatsby-plugin-image";
+// import logo from "../../images/logo-v2.jpg";
 
 // NETWORK IMPORTS
 
@@ -137,10 +137,10 @@ const links: {
     icon: <IconHeart />,
     link: "/service",
     links: [
-      { label: "Remedial/Sport Massage", link: "/service" },
-      { label: "Fertility Massage (Female Only)", link: "/service" },
-      { label: "Pregnancy Massage", link: "/service" },
-      { label: "Infant Massage", link: "/infant" },
+      { label: "Remedial Massage", link: "/service/remedial" },
+      { label: "Fertility Massage", link: "/service/fertility" },
+      { label: "Pregnancy Massage", link: "/service/pregnancy" },
+      //   { label: "Infant Massage", link: "/service/infant" },
     ],
   },
   { label: "Price", icon: <IconCurrencyDollar />, link: "/price" },
@@ -161,7 +161,8 @@ const ICareHeader = (props: Props) => {
       <Container>
         <Group noWrap className={classes.inner}>
           <Anchor component={Link} to={"/"} underline={false}>
-            <Title order={2}>iCare</Title>
+            {/* <Title order={2}>iCare</Title> */}
+            <StaticImage src={"../../images/logo-v2.jpg"} alt="iCare Logo" width={48} height={48} />
           </Anchor>
           {/* Desktop NavLinks */}
           <Group noWrap className={classes.links}>
@@ -214,8 +215,8 @@ const ICareHeader = (props: Props) => {
             {/* Book Now button */}
             <Popover opened={alertOpen}>
               <Popover.Target>
-                <Button 
-                  component={Link} 
+                <Button
+                  component={Link}
                   to={"/booking"}
                   onMouseOver={() => setAlertOpen(true)}
                   onMouseLeave={() => setAlertOpen(false)}
