@@ -1,7 +1,18 @@
-import { Title, Text, Container, Stack } from "@mantine/core";
+import {
+  Title,
+  Text,
+  Container,
+  Stack,
+  Group,
+  SimpleGrid,
+  Grid,
+  Box,
+  BackgroundImage,
+} from "@mantine/core";
 import React from "react";
 import SEO from "../../components/general/Seo";
 import { Layout } from "../../components/Layout/Layout";
+import { StaticImage } from "gatsby-plugin-image";
 
 const Fertility = () => {
   return (
@@ -16,27 +27,41 @@ const Fertility = () => {
           <Title order={4}>Formerly known as Mind-Body Restorative Massage</Title>
           <Title order={2}>A Holistic Approach to Wellness</Title>
 
-          <Text>
-            Fertility Massage is a specialized therapeutic treatment that combines gentle massage
-            techniques with emotional support to promote overall reproductive and mental wellness.
-            Trained by Edwina Taylor in Perth, I offer this nurturing treatment to support various
-            aspects of women's health and wellbeing.
-          </Text>
+          <Grid align="center">
+            <Grid.Col sm={12} md={6}>
+              <Stack>
+                <Text>
+                  Fertility Massage is a specialized therapeutic treatment that combines gentle
+                  massage techniques with emotional support to promote overall reproductive and
+                  mental wellness. Trained by Edwina Taylor in Perth, I offer this nurturing
+                  treatment to support various aspects of women's health and wellbeing.
+                </Text>
+                <Title order={2}>Who Can Benefit?</Title>
+                <Text>
+                  This gentle yet effective treatment can help:
+                  <ul>
+                    <li>Women preparing their bodies for conception</li>
+                    <li>Those experiencing fertility challenges</li>
+                    <li>Individuals with menstrual irregularities or period pain</li>
+                    <li>People managing endometriosis symptoms</li>
+                    <li>Anyone seeking relief from anxiety and stress</li>
+                    <li>Those dealing with digestive issues</li>
+                    <li>Individuals looking to restore hormonal balance</li>
+                    <li>IVF support</li>
+                  </ul>
+                </Text>
+              </Stack>
+            </Grid.Col>
 
-          <Title order={2}>Who Can Benefit?</Title>
-          <Text>
-            This gentle yet effective treatment can help:
-            <ul>
-              <li>Women preparing their bodies for conception</li>
-              <li>Those experiencing fertility challenges</li>
-              <li>Individuals with menstrual irregularities or period pain</li>
-              <li>People managing endometriosis symptoms</li>
-              <li>Anyone seeking relief from anxiety and stress</li>
-              <li>Those dealing with digestive issues</li>
-              <li>Individuals looking to restore hormonal balance</li>
-              <li>IVF support</li>
-            </ul>
-          </Text>
+            <Grid.Col md={12} lg={6} style={{ display: "flex", justifyContent: "center" }}>
+              <StaticImage
+                src="../../images/fertility-images/v2/fertility-1.jpg"
+                alt="Fertility Massage"
+                height={480}
+                style={{ borderRadius: "16px" }}
+              />
+            </Grid.Col>
+          </Grid>
 
           <Title order={2}>How It Works</Title>
           <Text>
@@ -50,6 +75,24 @@ const Fertility = () => {
             </ul>
           </Text>
 
+          <Stack align="center">
+            <Box style={{ height: 480, position: "relative" }}>
+              <StaticImage
+                src="../../images/fertility-images/v2/fertility-2.jpg"
+                alt={""}
+                style={{
+                  position: "absolute",
+                  top: 0,
+                  left: "-240px",
+                  height: "480px",
+                  width: "480px",
+                  objectFit: "cover",
+                  objectPosition: "center",
+                  borderRadius: "16px",
+                }}
+              />
+            </Box>
+          </Stack>
           <Title order={2}>What to Expect During Your Session</Title>
           <Text>
             Your treatment journey begins with:
@@ -89,6 +132,25 @@ const Fertility = () => {
               <li>Resources and self-care recommendations</li>
             </ul>
           </Text>
+
+          <Stack align="center">
+            <Box style={{ height: 480, position: "relative" }}>
+              <StaticImage
+                src="../../images/fertility-images/v2/fertility-3.jpg"
+                alt={""}
+                style={{
+                  position: "absolute",
+                  top: 0,
+                  left: "-240px",
+                  height: "480px",
+                  width: "480px",
+                  objectFit: "cover",
+                  objectPosition: "center",
+                  borderRadius: "16px",
+                }}
+              />
+            </Box>
+          </Stack>
 
           <Title order={2}>Safety and Comfort</Title>
           <Text>
