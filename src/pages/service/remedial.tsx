@@ -11,7 +11,7 @@ const Remedial = () => {
     <Layout>
       <Container mt={60}>
         <SEO title={"Remedial Massage"} />
-        <Stack>
+        <Stack spacing={"xl"}>
           <Title order={1}>Remedial Massage - Professional Pain Management</Title>
           <Text>
             With 14 years of experience as a qualified Remedial Massage Therapist, I specialize in

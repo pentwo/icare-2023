@@ -36,7 +36,7 @@ const Fertility = () => {
 
           <Grid align="center">
             <Grid.Col sm={12} md={6}>
-              <Stack>
+              <Stack spacing={"xl"}>
                 <Text>
                   Fertility Massage is a specialized therapeutic treatment that combines gentle
                   massage techniques with emotional support to promote overall reproductive and
@@ -99,22 +99,24 @@ const Fertility = () => {
 
           <Grid align="center">
             <Grid.Col sm={12} md={6}>
-              <Title order={2}>What to Expect During Your Session</Title>
-              <Text>Your treatment journey begins with:</Text>
-              <List
-                spacing="md"
-                icon={
-                  <ThemeIcon variant="light" size="md">
-                    <IconCaretRight />
-                  </ThemeIcon>
-                }
-              >
-                <List.Item>A detailed consultation to understand your specific needs</List.Item>
-                <List.Item>Discussion of your health history and wellness goals</List.Item>
-                <List.Item>A tailored treatment plan designed for your situation</List.Item>
-                <List.Item>Gentle, nurturing massage techniques</List.Item>
-                <List.Item>A safe space to process emotions and reduce stress</List.Item>
-              </List>
+              <Stack spacing={"xl"}>
+                <Title order={2}>What to Expect During Your Session</Title>
+                <Text>Your treatment journey begins with:</Text>
+                <List
+                  spacing="md"
+                  icon={
+                    <ThemeIcon variant="light" size="md">
+                      <IconCaretRight />
+                    </ThemeIcon>
+                  }
+                >
+                  <List.Item>A detailed consultation to understand your specific needs</List.Item>
+                  <List.Item>Discussion of your health history and wellness goals</List.Item>
+                  <List.Item>A tailored treatment plan designed for your situation</List.Item>
+                  <List.Item>Gentle, nurturing massage techniques</List.Item>
+                  <List.Item>A safe space to process emotions and reduce stress</List.Item>
+                </List>
+              </Stack>
             </Grid.Col>
             <Grid.Col sm={12} md={6}>
               <StaticImage
@@ -208,7 +210,14 @@ const Fertility = () => {
           </Grid>
 
           <Grid align="center">
-            <Grid.Col sm={12} md={4}>
+            <Grid.Col
+              sm={12}
+              md={4}
+              order={2}
+              //   orderSm={2}
+              //   orderMd={1}
+              style={{ display: "flex", justifyContent: "center" }}
+            >
               <StaticImage
                 src="../../images/fertility-images/v2/fertility-2.jpg"
                 alt="Fertility Massage"
@@ -216,7 +225,12 @@ const Fertility = () => {
                 style={{ borderRadius: "16px" }}
               />
             </Grid.Col>
-            <Grid.Col sm={12} md={8}>
+            <Grid.Col
+              sm={12}
+              md={8}
+              // orderSm={1}
+              //   orderMd={2}
+            >
               <Stack spacing={"xl"}>
                 <Title order={2}>Your Journey to Wellness</Title>
                 <Text>

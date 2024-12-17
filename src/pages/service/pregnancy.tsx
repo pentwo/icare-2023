@@ -26,26 +26,28 @@ const Pregnancy = () => {
 
           <Grid align="center">
             <Grid.Col sm={12} md={6}>
-              <Title order={2}>Benefits of Pregnancy Massage</Title>
-              <Text>
-                Regular pregnancy massage can provide numerous benefits for both mother and baby:
-              </Text>
-              <List
-                spacing="xs"
-                icon={
-                  <ThemeIcon variant="light" size="md" color="yellow">
-                    <IconFlower />
-                  </ThemeIcon>
-                }
-              >
-                <List.Item>Reduces back, neck, and joint pain common during pregnancy</List.Item>
-                <List.Item>Alleviates swelling in hands and feet (edema)</List.Item>
-                <List.Item>Improves sleep quality and reduces fatigue</List.Item>
-                <List.Item>Helps manage anxiety and stress</List.Item>
-                <List.Item>Eases muscle tension and cramping</List.Item>
-                <List.Item>Promotes better circulation</List.Item>
-                <List.Item>Provides emotional support and relaxation</List.Item>
-              </List>
+              <Stack spacing={"xs"}>
+                <Title order={2}>Benefits of Pregnancy Massage</Title>
+                <Text>
+                  Regular pregnancy massage can provide numerous benefits for both mother and baby:
+                </Text>
+                <List
+                  spacing="xs"
+                  icon={
+                    <ThemeIcon variant="light" size="md" color="yellow">
+                      <IconFlower />
+                    </ThemeIcon>
+                  }
+                >
+                  <List.Item>Reduces back, neck, and joint pain common during pregnancy</List.Item>
+                  <List.Item>Alleviates swelling in hands and feet (edema)</List.Item>
+                  <List.Item>Improves sleep quality and reduces fatigue</List.Item>
+                  <List.Item>Helps manage anxiety and stress</List.Item>
+                  <List.Item>Eases muscle tension and cramping</List.Item>
+                  <List.Item>Promotes better circulation</List.Item>
+                  <List.Item>Provides emotional support and relaxation</List.Item>
+                </List>
+              </Stack>
             </Grid.Col>
 
             <Grid.Col md={12} lg={6} style={{ display: "flex", justifyContent: "center" }}>
@@ -163,25 +165,27 @@ const Pregnancy = () => {
               />
             </Grid.Col>
             <Grid.Col sm={12} md={6}>
-              <Title order={2}>Expertise You Can Trust</Title>
-              <Text>
-                With specialized training in pregnancy massage and years of experience working with
-                expecting mothers, I understand the unique needs of pregnant bodies. My
-                qualifications include:
-              </Text>
-              <List
-                spacing="xs"
-                icon={
-                  <ThemeIcon variant="light" size="md" color="yellow">
-                    <IconFlower />
-                  </ThemeIcon>
-                }
-              >
-                <List.Item>Certified Pregnancy Massage Practitioner</List.Item>
-                <List.Item>Trained in Mind-Body Restorative Massage</List.Item>
-                <List.Item>Experience with high-risk pregnancies</List.Item>
-                <List.Item>Understanding of prenatal anatomy and physiology</List.Item>
-              </List>
+              <Stack spacing={"xs"}>
+                <Title order={2}>Expertise You Can Trust</Title>
+                <Text>
+                  With specialized training in pregnancy massage and years of experience working
+                  with expecting mothers, I understand the unique needs of pregnant bodies. My
+                  qualifications include:
+                </Text>
+                <List
+                  spacing="xs"
+                  icon={
+                    <ThemeIcon variant="light" size="md" color="yellow">
+                      <IconFlower />
+                    </ThemeIcon>
+                  }
+                >
+                  <List.Item>Certified Pregnancy Massage Practitioner</List.Item>
+                  <List.Item>Trained in Mind-Body Restorative Massage</List.Item>
+                  <List.Item>Experience with high-risk pregnancies</List.Item>
+                  <List.Item>Understanding of prenatal anatomy and physiology</List.Item>
+                </List>
+              </Stack>
             </Grid.Col>
           </Grid>
 
