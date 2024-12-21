@@ -211,7 +211,7 @@ const ICareHeader = (props: Props) => {
           </Group>
 
           {/* Mobile NavLinks */}
-          <Group>
+          <Group noWrap>
             {/* Book Now button */}
             <Popover opened={alertOpen}>
               <Popover.Target>
@@ -228,6 +228,9 @@ const ICareHeader = (props: Props) => {
                 <BookingAlert variant="short" />
               </Popover.Dropdown>
             </Popover>
+            <Button component={Link} to={"/voucher"}>
+              Buy Voucher
+            </Button>
             <Burger
               opened={opened}
               onClick={() => setOpened((o) => !o)}

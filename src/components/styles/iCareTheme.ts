@@ -52,7 +52,7 @@ export const iCareTheme: MantineThemeOverride = {
   primaryColor: "pink",
 
   // Index of color from theme.colors that is considered primary, Shade type is 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9
-  //   primaryShade: "3",
+  primaryShade: 3,
 
   // Default gradient used in components that support `variant="gradient"` (Button, ThemeIcon, etc.)
   // defaultGradient: { deg: number; from: MantineColor; to: MantineColor };

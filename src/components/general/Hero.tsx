@@ -93,22 +93,27 @@ const Hero = (props: Props) => {
             <Title order={1}>iCare Health Massage</Title>
             <Text>The best time to take care of yourself</Text>
             <Group>
-              <Popover opened={alertOpen}>
-                <Popover.Target>
-                  <Button
-                    component={Link}
-                    to={"/booking"}
-                    size="lg"
-                    onMouseOver={() => setAlertOpen(true)}
-                    onMouseLeave={() => setAlertOpen(false)}
-                  >
-                    Book Now
-                  </Button>
-                </Popover.Target>
-                <Popover.Dropdown>
-                  <BookingAlert variant="short" />
-                </Popover.Dropdown>
-              </Popover>
+              <Stack>
+                <Popover opened={alertOpen}>
+                  <Popover.Target>
+                    <Button
+                      component={Link}
+                      to={"/booking"}
+                      size="lg"
+                      onMouseOver={() => setAlertOpen(true)}
+                      onMouseLeave={() => setAlertOpen(false)}
+                    >
+                      Book Now
+                    </Button>
+                  </Popover.Target>
+                  <Popover.Dropdown>
+                    <BookingAlert variant="short" />
+                  </Popover.Dropdown>
+                </Popover>
+                <Button component={Link} to={"/voucher"} size="lg">
+                  Buy Voucher
+                </Button>
+              </Stack>
             </Group>
           </Stack>
         </Center>

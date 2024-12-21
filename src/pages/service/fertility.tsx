@@ -213,7 +213,7 @@ const Fertility = () => {
             <Grid.Col
               sm={12}
               md={4}
-              order={2}
+              //   order={2}
               //   orderSm={2}
               //   orderMd={1}
               style={{ display: "flex", justifyContent: "center" }}
