@@ -45,7 +45,7 @@ const Booking = (props: Props) => {
 
   return (
     <Container mt={60} style={{ display: "flex", justifyContent: "center" }}>
-      <Stack style={{ height: "100%" }} align="center" mb={-125}>
+      <Stack style={{ height: "100%" }} align="center">
         <BookingAlert variant="fullwidth" />
         <iframe
           //   src="https://icare-health-massage.square.site/"
