@@ -44,17 +44,19 @@ const Booking = (props: Props) => {
   }, []);
 
   return (
-    <Container mt={60}>
-      <Stack style={{ height: "100%" }}>
+    <Container mt={60} style={{ display: "flex", justifyContent: "center" }}>
+      <Stack style={{ height: "100%" }} align="center" mb={-125}>
         <BookingAlert variant="fullwidth" />
         <iframe
-          src="https://icare-health-massage.square.site/"
+          //   src="https://icare-health-massage.square.site/"
+          src="https://l.yourpractice.pro/widget/service-menu/678ce44ba0cf0efb06612d27"
           height={iframeHeight}
           scrolling="auto"
           style={{
             border: "none",
             width: "100%",
-            minHeight: "600px",
+            // maxWidth: "768px",
+            // minHeight: "600px",
           }}
         ></iframe>
       </Stack>
