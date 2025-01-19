@@ -129,7 +129,7 @@ const links: {
   link: string;
   links?: { label: string; link: string; icon?: React.ReactNode }[];
 }[] = [
-  { label: "Tel: 0431 192 844", icon: <IconPhone />, link: "tel:0431192844" },
+  { label: "Tel: 0489 080 666", icon: <IconPhone />, link: "tel:61489080666" },
   { label: "Home", icon: <IconHome />, link: "/" },
   { label: "About", icon: <IconHandStop />, link: "/about" },
   {

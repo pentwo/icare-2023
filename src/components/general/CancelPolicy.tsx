@@ -28,7 +28,7 @@ const CancelPolicy = (props: Props) => {
         <Text>
           Thank you for choosing our business. We understand that things can come up and you may
           need to reschedule or cancel your appointment. In order to better serve you, we kindly
-          request that you give us a call at <Anchor href="tel:+61431192844">0431-192-844</Anchor>{" "}
+          request that you give us a call at <Anchor href="tel:+61489080666">0489-080-666</Anchor>{" "}
           at least <Mark>24 hours in advance</Mark> if you need to change your appointment. If this
           is not possible, we ask that you please understand that a fee of{" "}
           <Mark>50% of the appointment cost may be incurred</Mark>. In the event that you miss your
