@@ -1,12 +1,27 @@
-import { Title, Text, Container, Stack, List, ThemeIcon, Group, Button } from "@mantine/core";
+import {
+  Title,
+  Text,
+  Container,
+  Stack,
+  List,
+  ThemeIcon,
+  Group,
+  Button,
+  Indicator,
+} from "@mantine/core";
 import React from "react";
 import SEO from "../../components/general/Seo";
 import { Layout } from "../../components/Layout/Layout";
 import { IconCheck, IconFlower } from "@tabler/icons";
 import ColoredBox from "../../components/ui/ColoredBox";
 import { Link } from "gatsby";
+import Testimony from "../../components/general/Testimony";
+import { testimonies } from "../../Data/testimonies";
+import { Carousel } from "@mantine/carousel";
 
 const Remedial = () => {
+  const remedialTestimonies = testimonies.filter((testimony) => testimony.service === "remedial");
+
   return (
     <Layout>
       <Container mt={60}>
@@ -68,6 +83,29 @@ const Remedial = () => {
             improve your posture, my goal is to provide effective, personalized treatment that
             addresses your specific needs and supports your journey to better health.
           </Text>
+
+          <Title order={2}>Testimonials</Title>
+          <Carousel
+            loop
+            withIndicators
+            controlSize={30}
+            align="center"
+            slideGap="md"
+            styles={(theme) => ({
+              indicator: {
+                backgroundColor: theme.colors.green[1],
+                "&[data-active]": {
+                  backgroundColor: theme.colors.green[4],
+                },
+              },
+            })}
+          >
+            {remedialTestimonies.map((testimony) => (
+              <Carousel.Slide key={testimony.name}>
+                <Testimony testimony={testimony} />
+              </Carousel.Slide>
+            ))}
+          </Carousel>
 
           <ColoredBox title="Book Your Session" color="green.1">
             <Text>

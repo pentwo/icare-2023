@@ -20,8 +20,13 @@ import { StaticImage } from "gatsby-plugin-image";
 import { IconCaretRight, IconFlower } from "@tabler/icons";
 import ColoredBox from "../../components/ui/ColoredBox";
 import { Link } from "gatsby";
+import { testimonies } from "../../Data/testimonies";
+import Testimony from "../../components/general/Testimony";
+import { Carousel } from "@mantine/carousel";
 
 const Fertility = () => {
+  const fertilityTestimonies = testimonies.filter((testimony) => testimony.service === "fertility");
+
   return (
     <Layout>
       <Container mt={60}>
@@ -120,7 +125,7 @@ const Fertility = () => {
             </Grid.Col>
             <Grid.Col sm={12} md={6}>
               <StaticImage
-                src="../../images/pregnancy-images/v2/pregnancy-2.jpeg"
+                src="../../images/v2-photos/fertility-1.webp"
                 alt="Fertility Massage"
                 height={480}
                 style={{ borderRadius: "16px" }}
@@ -202,7 +207,7 @@ const Fertility = () => {
             </Grid.Col>
             <Grid.Col sm={12} md={6}>
               <StaticImage
-                src="../../images/fertility-images/v2/fertility-7.jpeg"
+                src="../../images/v2-photos/fertility-2.webp"
                 alt="Fertility Massage"
                 style={{ borderRadius: "16px" }}
               />
@@ -219,7 +224,7 @@ const Fertility = () => {
               style={{ display: "flex", justifyContent: "center" }}
             >
               <StaticImage
-                src="../../images/fertility-images/v2/fertility-2.jpg"
+                src="../../images/v2-photos/fertility-3.webp"
                 alt="Fertility Massage"
                 height={500}
                 style={{ borderRadius: "16px" }}
@@ -253,26 +258,65 @@ const Fertility = () => {
             </Grid.Col>
           </Grid>
 
-          <Title order={2}>Booking Information</Title>
-          <Title order={3}>Session Duration</Title>
+          <Grid align="center">
+            <Grid.Col sm={12} md={6}>
+              <Stack spacing={"xl"}>
+                <Title order={2}>Booking Information</Title>
+                <Title order={3}>Session Duration</Title>
 
-          <List
-            spacing="xs"
-            icon={
-              <ThemeIcon variant="light" size="md">
-                <IconFlower />
-              </ThemeIcon>
-            }
-          >
-            <List.Item>
-              Initial Treatment: <Mark>2 hours</Mark> This allows time for a thorough consultation
-              and comprehensive first treatment
-            </List.Item>
-            <List.Item>
-              Follow-up Sessions: <Mark>90 minutes</Mark> Focused on continuing your therapeutic
-              journey
-            </List.Item>
-          </List>
+                <List
+                  spacing="xs"
+                  icon={
+                    <ThemeIcon variant="light" size="md">
+                      <IconFlower />
+                    </ThemeIcon>
+                  }
+                >
+                  <List.Item>
+                    Initial Treatment: <Mark>2 hours</Mark> This allows time for a thorough
+                    consultation and comprehensive first treatment
+                  </List.Item>
+                  <List.Item>
+                    Follow-up Sessions: <Mark>90 minutes</Mark> Focused on continuing your
+                    therapeutic journey
+                  </List.Item>
+                </List>
+
+                <Stack spacing={0}>
+                  <Title order={2}>Testimonials</Title>
+                  <Carousel
+                    loop
+                    withIndicators
+                    controlSize={30}
+                    align="center"
+                    slideGap="md"
+                    styles={(theme) => ({
+                      indicator: {
+                        backgroundColor: theme.colors.pink[1],
+                        "&[data-active]": {
+                          backgroundColor: theme.colors.pink[4],
+                        },
+                      },
+                    })}
+                  >
+                    {fertilityTestimonies.map((testimony) => (
+                      <Carousel.Slide key={testimony.name}>
+                        <Testimony testimony={testimony} />
+                      </Carousel.Slide>
+                    ))}
+                  </Carousel>
+                </Stack>
+              </Stack>
+            </Grid.Col>
+            <Grid.Col sm={12} md={6} style={{ display: "flex", justifyContent: "center" }}>
+              <StaticImage
+                src="../../images/v2-photos/fertility-5.webp"
+                alt="Fertility Massage"
+                height={500}
+                style={{ borderRadius: "16px" }}
+              />
+            </Grid.Col>
+          </Grid>
 
           <ColoredBox title="Book Your FREE 30-Minute Consultation Call Today!">
             <Text>

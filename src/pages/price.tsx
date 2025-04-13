@@ -80,6 +80,7 @@ const priceInfo: PriceProps[] = [
 ];
 
 export default function PricePage({ data }) {
+  console.log("data: ", data);
   const prices = priceInfo.map((item, index) => {
     return {
       ...item,
@@ -99,21 +100,21 @@ export default function PricePage({ data }) {
 
 export const query = graphql`
   query {
-    bg3: file(relativePath: { eq: "priceImages/bg3.jpg" }) {
+    bg3: file(relativePath: { eq: "priceImages/bg3.webp" }) {
       childImageSharp {
         fluid(maxWidth: 960) {
           ...GatsbyImageSharpFluid
         }
       }
     }
-    bg1: file(relativePath: { eq: "priceImages/bg1.jpg" }) {
+    bg1: file(relativePath: { eq: "v2-photos/price-remedial.webp" }) {
       childImageSharp {
         fluid(maxWidth: 960) {
           ...GatsbyImageSharpFluid
         }
       }
     }
-    bg2: file(relativePath: { eq: "priceImages/bg2.jpg" }) {
+    bg2: file(relativePath: { eq: "v2-photos/price-fertility.webp" }) {
       childImageSharp {
         fluid(maxWidth: 960) {
           ...GatsbyImageSharpFluid

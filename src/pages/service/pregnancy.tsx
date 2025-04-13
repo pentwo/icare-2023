@@ -6,8 +6,13 @@ import { IconFlower } from "@tabler/icons";
 import ColoredBox from "../../components/ui/ColoredBox";
 import { Link } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
+import { testimonies } from "../../Data/testimonies";
+import Testimony from "../../components/general/Testimony";
+import { Carousel } from "@mantine/carousel";
 
 const Pregnancy = () => {
+  const pregnancyTestimonies = testimonies.filter((testimony) => testimony.service === "pregnancy");
+
   return (
     <Layout>
       <Container mt={60}>
@@ -188,6 +193,29 @@ const Pregnancy = () => {
               </Stack>
             </Grid.Col>
           </Grid>
+
+          <Title order={2}>Testimonials</Title>
+          <Carousel
+            loop
+            withIndicators
+            controlSize={30}
+            align="center"
+            slideGap="md"
+            styles={(theme) => ({
+              indicator: {
+                backgroundColor: theme.colors.yellow[1],
+                "&[data-active]": {
+                  backgroundColor: theme.colors.yellow[4],
+                },
+              },
+            })}
+          >
+            {pregnancyTestimonies.map((testimony) => (
+              <Carousel.Slide key={testimony.name}>
+                <Testimony testimony={testimony} />
+              </Carousel.Slide>
+            ))}
+          </Carousel>
 
           <ColoredBox title="Booking Your Session" color="yellow.1">
             <Text>
