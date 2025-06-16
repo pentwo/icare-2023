@@ -25,24 +25,24 @@ const priceInfo: PriceProps[] = [
     price: [
       {
         time: "30 minutes",
-        price: 90,
+        price: 93,
       },
       {
         time: "45 minutes",
-        price: 100,
+        price: 103,
       },
       {
         time: "1 hour",
-        price: 115,
+        price: 118,
       },
       {
         time: "1 hours 15 minutes",
-        price: 125,
+        price: 128,
         highlight: true,
       },
       {
         time: "1 hours 30 minutes",
-        price: 150,
+        price: 154,
       },
     ],
   },
@@ -51,11 +51,11 @@ const priceInfo: PriceProps[] = [
     price: [
       {
         time: "Initial treatment (including consultation) 120 mins",
-        price: 280,
+        price: 288,
       },
       {
         time: "Follow up treatment 90 mins",
-        price: 200,
+        price: 206,
       },
     ],
   },
@@ -64,15 +64,15 @@ const priceInfo: PriceProps[] = [
     price: [
       {
         time: "1 hour",
-        price: 115,
+        price: 118,
       },
       {
         time: "1 hours 15 minutes",
-        price: 125,
+        price: 128,
       },
       {
         time: "1 hours 30 minutes",
-        price: 150,
+        price: 154,
         highlight: true,
       },
     ],
