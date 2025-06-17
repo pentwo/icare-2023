@@ -169,7 +169,7 @@ const ICareHeader = (props: Props) => {
             {links.map((link, index) => {
               if (link.links) {
                 return (
-                  <Menu>
+                  <Menu key={link.label}>
                     <Menu.Target>
                       <NavLink
                         noWrap

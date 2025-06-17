@@ -107,20 +107,12 @@ const priceInfo: PriceProps[] = [
 const Price = ({ prices }: Props) => {
   const [backgrounds, setBackgrounds] = useState<any[]>([]);
 
-  //   useEffect(() => {
-  //     console.log("backgrounds: ", backgrounds);
-  //     // if (!bgs) return;
-  //     setBackgrounds(bgs);
-  //   }, [bgs]);
-
   return (
-    // <Container mt={60}>
     <Stack spacing={0}>
       {prices.map((price, index) => (
         <PriceBlock key={index} {...price} />
       ))}
     </Stack>
-    // </Container>
   );
 };
 
@@ -195,7 +187,14 @@ const PriceBlock = ({ title, price, description, bg }: PriceProps) => {
                       )}
                     </Group>
                   </td>
-                  <td align="center">$ {priceDetail.price}</td>
+                  <td
+                    align="center"
+                    style={{
+                      whiteSpace: "nowrap",
+                    }}
+                  >
+                    $ {priceDetail.price}
+                  </td>
                 </tr>
               ))}
             </tbody>

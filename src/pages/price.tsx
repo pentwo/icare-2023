@@ -80,7 +80,6 @@ const priceInfo: PriceProps[] = [
 ];
 
 export default function PricePage({ data }) {
-  console.log("data: ", data);
   const prices = priceInfo.map((item, index) => {
     return {
       ...item,
