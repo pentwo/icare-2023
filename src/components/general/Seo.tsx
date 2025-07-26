@@ -111,44 +111,6 @@ function SEO({
   );
 }
 
-// SEO.defaultProps = {
-//   lang: `en`,
-//   description: `Jenny is a 10-years-experienced massage therapist. Qualified Diploma of remedial massage and practitioner of pregnancy massage. (Work in Wu’s Asian Massage)`,
-//   meta: [],
-//   keywords: [
-//     "Deep Tissue",
-//     "Swedish",
-//     "Trigger Point",
-//     "Japanese Shiatsu",
-//     "Sport Massage",
-//     "Myofascial Release",
-//     "Positional Release",
-//     "Trager",
-//     "Postual Massage",
-//     "Reflexology",
-//     "Manual Lymphtic Drainage",
-//     "healthy lifestyle",
-//     "healthfund rebates",
-//     "pregnancy massageperth",
-//     "selfcare matters",
-//     "women",
-//     "women empowerment",
-//     "women health",
-//     "women healthcare",
-//     "womens wellness",
-//     "positive thinking",
-//     "chakra healing",
-//     "chakra balancing",
-//     "fertility massage specialist",
-//     "fertility massage therapy",
-//     "pregnancy massage specialist",
-//     "mental health",
-//     "mental health awareness",
-//     "mental health matters",
-//     "mental health support",
-//     "mental health help",
-//   ],
-// };
 
 export default SEO;
 

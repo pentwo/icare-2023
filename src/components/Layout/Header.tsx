@@ -7,10 +7,8 @@
 // MANTINE IMPORTS
 import {
   Header,
-  Title,
   Container,
   Burger,
-  SimpleGrid,
   Text,
   NavLink,
   Group,
@@ -22,7 +20,7 @@ import {
   Modal,
   Popover,
 } from "@mantine/core";
-import { useDisclosure, useViewportSize } from "@mantine/hooks";
+import { useDisclosure } from "@mantine/hooks";
 import React, { useState } from "react";
 import {
   IconHome,
@@ -30,13 +28,12 @@ import {
   IconHandStop,
   IconHeart,
   IconCurrencyDollar,
-  IconChevronDown,
   IconArrowRight,
+  IconUsers,
 } from "@tabler/icons";
 import { Link } from "gatsby";
 import BookingAlert from "../general/BookingAlert";
 import { StaticImage } from "gatsby-plugin-image";
-// import logo from "../../images/logo-v2.jpg";
 
 // NETWORK IMPORTS
 
@@ -129,9 +126,10 @@ const links: {
   link: string;
   links?: { label: string; link: string; icon?: React.ReactNode }[];
 }[] = [
-  { label: "Tel: 0489 080 666", icon: <IconPhone />, link: "tel:61489080666" },
+  { label: "Tel: 0489 080 666", icon: <IconPhone />, link: "tel:+61489080666" },
   { label: "Home", icon: <IconHome />, link: "/" },
   { label: "About", icon: <IconHandStop />, link: "/about" },
+  { label: "Our Team", icon: <IconUsers />, link: "/our-team" },
   {
     label: "Service",
     icon: <IconHeart />,
@@ -140,14 +138,12 @@ const links: {
       { label: "Remedial Massage", link: "/service/remedial" },
       { label: "Fertility Massage", link: "/service/fertility" },
       { label: "Pregnancy Massage", link: "/service/pregnancy" },
-      //   { label: "Infant Massage", link: "/service/infant" },
     ],
   },
   { label: "Price", icon: <IconCurrencyDollar />, link: "/price" },
 ];
 
 const ICareHeader = (props: Props) => {
-  //   const [opened, { toggle }] = useDisclosure(false);
   const { classes, cx } = useStyles();
   const [opened, setOpened] = useState(false);
   const [alertOpen, setAlertOpen] = useState(false);
@@ -161,7 +157,6 @@ const ICareHeader = (props: Props) => {
       <Container>
         <Group noWrap className={classes.inner}>
           <Anchor component={Link} to={"/"} underline={false}>
-            {/* <Title order={2}>iCare</Title> */}
             <StaticImage src={"../../images/logo-v2.jpg"} alt="iCare Logo" width={48} height={48} />
           </Anchor>
           {/* Desktop NavLinks */}
@@ -174,6 +169,8 @@ const ICareHeader = (props: Props) => {
                       <NavLink
                         noWrap
                         key={index}
+                        component={link.link.startsWith('tel:') ? 'a' : Link}
+                        {...(link.link.startsWith('tel:') ? { href: link.link } : { to: link.link })}
                         label={link.label}
                         icon={link.icon}
                         variant={"filled"}
@@ -181,13 +178,13 @@ const ICareHeader = (props: Props) => {
                       />
                     </Menu.Target>
                     <Menu.Dropdown>
-                      {link.links.map((link, index) => (
+                      {link.links.map((sublink, index) => (
                         <NavLink
                           key={index}
-                          component={Link}
-                          to={link.link}
-                          label={link.label}
-                          // icon={link.icon}
+                          component={sublink.link.startsWith('tel:') ? 'a' : Link}
+                          {...(sublink.link.startsWith('tel:') ? { href: sublink.link } : { to: sublink.link })}
+                          label={sublink.label}
+                          // icon={sublink.icon}
                         />
                       ))}
                     </Menu.Dropdown>
@@ -199,8 +196,8 @@ const ICareHeader = (props: Props) => {
                 <NavLink
                   noWrap
                   key={index}
-                  component={Link}
-                  to={link.link}
+                  component={link.link.startsWith('tel:') ? 'a' : Link}
+                  {...(link.link.startsWith('tel:') ? { href: link.link } : { to: link.link })}
                   label={link.label}
                   icon={link.icon}
                   variant={"filled"}
@@ -228,9 +225,6 @@ const ICareHeader = (props: Props) => {
                 <BookingAlert variant="short" />
               </Popover.Dropdown>
             </Popover>
-            <Button component={Link} to={"/voucher"}>
-              Buy Voucher
-            </Button>
             <Burger
               opened={opened}
               onClick={() => setOpened((o) => !o)}
@@ -245,16 +239,16 @@ const ICareHeader = (props: Props) => {
                       <>
                         <NavLink
                           key={index}
-                          component={Link}
-                          to={link.link}
+                          component={link.link.startsWith('tel:') ? 'a' : Link}
+                          {...(link.link.startsWith('tel:') ? { href: link.link } : { to: link.link })}
                           label={link.label}
                           icon={link.icon}
                         />
                         {subLinks.map((sublink, index) => (
                           <NavLink
                             key={sublink.label}
-                            component={Link}
-                            to={sublink.link}
+                            component={sublink.link.startsWith('tel:') ? 'a' : Link}
+                            {...(sublink.link.startsWith('tel:') ? { href: sublink.link } : { to: sublink.link })}
                             label={sublink.label}
                             icon={sublink.icon ?? <IconArrowRight />}
                             ml={20}
@@ -267,8 +261,8 @@ const ICareHeader = (props: Props) => {
                   return (
                     <NavLink
                       key={index}
-                      component={Link}
-                      to={link.link}
+                      component={link.link.startsWith('tel:') ? 'a' : Link}
+                      {...(link.link.startsWith('tel:') ? { href: link.link } : { to: link.link })}
                       label={link.label}
                       icon={link.icon}
                     />

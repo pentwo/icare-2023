@@ -14,11 +14,14 @@ import {
   Box,
   BackgroundImage,
   Space,
+  Center,
 } from "@mantine/core";
 import { IconPhone } from "@tabler/icons";
+import { Link } from "gatsby";
 import React, { useEffect, useState } from "react";
 import BgImage from "./BgImage";
 import Img from "gatsby-image";
+import ColoredBox from "../ui/ColoredBox";
 
 // NEXT IMPORTS
 
@@ -108,11 +111,50 @@ const Price = ({ prices }: Props) => {
   const [backgrounds, setBackgrounds] = useState<any[]>([]);
 
   return (
-    <Stack spacing={0}>
-      {prices.map((price, index) => (
-        <PriceBlock key={index} {...price} />
-      ))}
-    </Stack>
+    <Container>
+      <Stack spacing="xl">
+        {/* Hero Section */}
+        <Box mt={60} mb={40}>
+          <Center>
+            <Stack align="center" spacing="md">
+              <Title order={1} align="center" size="h1">
+                Transparent Pricing for Quality Care
+              </Title>
+              <Text align="center" size="lg" color="dimmed" maw={600}>
+                Professional massage therapy with competitive rates and health fund rebates available. 
+                Investment in your wellness with no hidden fees.
+              </Text>
+              <Button size="lg" component={Link} to="/booking" mt="md">
+                Book Your Session
+              </Button>
+            </Stack>
+          </Center>
+        </Box>
+
+        {/* Price Blocks */}
+        <Stack spacing={0}>
+          {prices.map((price, index) => (
+            <PriceBlock key={index} {...price} />
+          ))}
+        </Stack>
+
+        {/* CTA Section */}
+        <ColoredBox title="Ready to Book Your Session?">
+          <Text align="center" mb="md">
+            Choose the treatment that's right for you and experience the difference professional 
+            massage therapy can make. Health fund rebates available for eligible services.
+          </Text>
+          <Group position="center" spacing="md">
+            <Button size="lg" component={Link} to="/booking">
+              Book Online
+            </Button>
+            <Button size="lg" variant="outline" component="a" href="tel:+61489080666">
+              Call to Book
+            </Button>
+          </Group>
+        </ColoredBox>
+      </Stack>
+    </Container>
   );
 };
 
