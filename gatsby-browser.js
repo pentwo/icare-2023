@@ -1,15 +1,3 @@
-exports.onRouteUpdate = ({ location }) => {
-  if (typeof window.dataLayer !== "undefined") {
-    window.dataLayer.push({
-      event: "pageview",
-      page: {
-        path: location.pathname,
-        title: document.title,
-      },
-    });
-  }
-};
-
 exports.onClientEntry = () => {
   if (typeof window !== "undefined") {
     window.dataLayer = window.dataLayer || [];

@@ -20,6 +20,13 @@ import BookingAlert from "./BookingAlert";
 
 // STYLE IMPORTS
 
+// Extend Window interface for dataLayer
+declare global {
+  interface Window {
+    dataLayer: any[];
+  }
+}
+
 interface Props {}
 const Booking = (props: Props) => {
   const { height, width } = useViewportSize();
@@ -37,11 +44,31 @@ const Booking = (props: Props) => {
 
     const timeoutId = setTimeout(handleResize, 100);
 
+    // Track when booking page loads
+    if (typeof window.dataLayer !== "undefined") {
+      window.dataLayer.push({
+        event: "booking_page_loaded",
+        event_category: "engagement",
+        event_label: "booking_page",
+      });
+    }
+
     return () => {
       window.removeEventListener("resize", handleResize);
       clearTimeout(timeoutId);
     };
   }, []);
+
+  // Track iframe interactions
+  const handleIframeLoad = () => {
+    if (typeof window.dataLayer !== "undefined") {
+      window.dataLayer.push({
+        event: "booking_widget_loaded",
+        event_category: "engagement",
+        event_label: "booking_widget",
+      });
+    }
+  };
 
   return (
     <Container mt={60} style={{ display: "flex", justifyContent: "center" }}>
@@ -52,6 +79,7 @@ const Booking = (props: Props) => {
           src="https://l.yourpractice.pro/widget/service-menu/678ce44ba0cf0efb06612d27"
           height={iframeHeight}
           scrolling="auto"
+          onLoad={handleIframeLoad}
           style={{
             border: "none",
             width: "100%",
