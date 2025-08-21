@@ -77,6 +77,19 @@ const priceInfo: PriceProps[] = [
       },
     ],
   },
+  {
+    title: "Mind-Body Restorative Massage",
+    price: [
+      {
+        time: "Initial treatment (including consultation) 120 mins",
+        price: 288,
+      },
+      {
+        time: "Follow up treatment 90 mins",
+        price: 206,
+      },
+    ],
+  },
 ];
 
 export default function PricePage({ data }) {
@@ -114,6 +127,13 @@ export const query = graphql`
       }
     }
     bg2: file(relativePath: { eq: "v2-photos/price-fertility.webp" }) {
+      childImageSharp {
+        fluid(maxWidth: 960) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    bg4: file(relativePath: { eq: "v2-photos/price-body-mind.webp" }) {
       childImageSharp {
         fluid(maxWidth: 960) {
           ...GatsbyImageSharpFluid

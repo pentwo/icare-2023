@@ -138,6 +138,7 @@ const links: {
       { label: "Remedial Massage", link: "/service/remedial" },
       { label: "Fertility Massage", link: "/service/fertility" },
       { label: "Pregnancy Massage", link: "/service/pregnancy" },
+      { label: "Mind-Body Restorative Massage", link: "/service/mind-body" },
     ],
   },
   { label: "Price", icon: <IconCurrencyDollar />, link: "/price" },
@@ -169,8 +170,10 @@ const ICareHeader = (props: Props) => {
                       <NavLink
                         noWrap
                         key={index}
-                        component={link.link.startsWith('tel:') ? 'a' : Link}
-                        {...(link.link.startsWith('tel:') ? { href: link.link } : { to: link.link })}
+                        component={link.link.startsWith("tel:") ? "a" : Link}
+                        {...(link.link.startsWith("tel:")
+                          ? { href: link.link }
+                          : { to: link.link })}
                         label={link.label}
                         icon={link.icon}
                         variant={"filled"}
@@ -181,8 +184,10 @@ const ICareHeader = (props: Props) => {
                       {link.links.map((sublink, index) => (
                         <NavLink
                           key={index}
-                          component={sublink.link.startsWith('tel:') ? 'a' : Link}
-                          {...(sublink.link.startsWith('tel:') ? { href: sublink.link } : { to: sublink.link })}
+                          component={sublink.link.startsWith("tel:") ? "a" : Link}
+                          {...(sublink.link.startsWith("tel:")
+                            ? { href: sublink.link }
+                            : { to: sublink.link })}
                           label={sublink.label}
                           // icon={sublink.icon}
                         />
@@ -196,8 +201,8 @@ const ICareHeader = (props: Props) => {
                 <NavLink
                   noWrap
                   key={index}
-                  component={link.link.startsWith('tel:') ? 'a' : Link}
-                  {...(link.link.startsWith('tel:') ? { href: link.link } : { to: link.link })}
+                  component={link.link.startsWith("tel:") ? "a" : Link}
+                  {...(link.link.startsWith("tel:") ? { href: link.link } : { to: link.link })}
                   label={link.label}
                   icon={link.icon}
                   variant={"filled"}
@@ -239,16 +244,20 @@ const ICareHeader = (props: Props) => {
                       <>
                         <NavLink
                           key={index}
-                          component={link.link.startsWith('tel:') ? 'a' : Link}
-                          {...(link.link.startsWith('tel:') ? { href: link.link } : { to: link.link })}
+                          component={link.link.startsWith("tel:") ? "a" : Link}
+                          {...(link.link.startsWith("tel:")
+                            ? { href: link.link }
+                            : { to: link.link })}
                           label={link.label}
                           icon={link.icon}
                         />
                         {subLinks.map((sublink, index) => (
                           <NavLink
                             key={sublink.label}
-                            component={sublink.link.startsWith('tel:') ? 'a' : Link}
-                            {...(sublink.link.startsWith('tel:') ? { href: sublink.link } : { to: sublink.link })}
+                            component={sublink.link.startsWith("tel:") ? "a" : Link}
+                            {...(sublink.link.startsWith("tel:")
+                              ? { href: sublink.link }
+                              : { to: sublink.link })}
                             label={sublink.label}
                             icon={sublink.icon ?? <IconArrowRight />}
                             ml={20}
@@ -261,8 +270,8 @@ const ICareHeader = (props: Props) => {
                   return (
                     <NavLink
                       key={index}
-                      component={link.link.startsWith('tel:') ? 'a' : Link}
-                      {...(link.link.startsWith('tel:') ? { href: link.link } : { to: link.link })}
+                      component={link.link.startsWith("tel:") ? "a" : Link}
+                      {...(link.link.startsWith("tel:") ? { href: link.link } : { to: link.link })}
                       label={link.label}
                       icon={link.icon}
                     />

@@ -81,9 +81,7 @@ const Fertility = () => {
           </Grid>
 
           <ColoredBox title="How It Works">
-            <Text>
-              Mind-Body Restorative Massage works through several gentle therapeutic approaches:
-            </Text>
+            <Text>Fertility Massage works through several gentle therapeutic approaches:</Text>
             <List
               spacing="xs"
               icon={
@@ -96,9 +94,7 @@ const Fertility = () => {
               <List.Item>Abdominal massage techniques to enhance organ function</List.Item>
               <List.Item>Stress-reduction methods to support hormonal balance</List.Item>
               <List.Item>Lymphatic drainage to reduce inflammation</List.Item>
-              <List.Item>
-                Mindfulness and guide of meditation to release emotional tension
-              </List.Item>
+              <List.Item>Meditation and hypnosis to release emotional tension</List.Item>
             </List>
           </ColoredBox>
 
@@ -240,9 +236,9 @@ const Fertility = () => {
                 <Title order={2}>Your Journey to Wellness</Title>
                 <Text>
                   Whether you're preparing for conception, managing reproductive health concerns, or
-                  seeking relief from stress and anxiety, Mind-Body Restorative Massage offers a
-                  nurturing path to wellness. This treatment acknowledges the deep connection
-                  between physical and emotional health, providing support for your whole being.
+                  seeking relief from stress and anxiety, Fertility Massage offers a nurturing path
+                  to wellness. This treatment acknowledges the deep connection between physical and
+                  emotional health, providing support for your whole being.
                 </Text>
 
                 <ColoredBox title="Important Notice">

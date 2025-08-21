@@ -157,6 +157,53 @@ const Services = (props: Props) => {
           </Grid.Col>
         </Grid>
 
+        {/* Mind-Body Restorative Massage */}
+        <Grid>
+          <Grid.Col md={4}>
+            <Card
+              shadow="md"
+              padding="lg"
+              radius="md"
+              withBorder
+              style={{ height: "100%", display: "flex", flexDirection: "column" }}
+            >
+              <Card.Section>
+                <Box style={{ height: 250, overflow: "hidden" }}>
+                  <StaticImage
+                    src="../../images/v2-photos/price-fertility.webp"
+                    alt="Mind-Body Restorative Massage"
+                    style={{
+                      height: "100%",
+                      width: "100%",
+                      objectFit: "cover",
+                    }}
+                  />
+                </Box>
+              </Card.Section>
+
+              <Stack spacing="md" style={{ flex: 1 }} mt="md">
+                <Title order={3}>Mind-Body Restorative Massage</Title>
+                <Text size="sm" color="dimmed" style={{ flex: 1 }}>
+                  Integrated care combining remedial massage with clinical hypnosis and strategic
+                  psychotherapy to support both body and mind.
+                </Text>
+
+                <Group position="center" mt="auto">
+                  <Button
+                    component={Link}
+                    to="/service/mind-body"
+                    variant="light"
+                    color="violet"
+                    fullWidth
+                  >
+                    Learn More
+                  </Button>
+                </Group>
+              </Stack>
+            </Card>
+          </Grid.Col>
+        </Grid>
+
         <Group position="center" mt="xl">
           <Button size="lg" component={Link} to="/booking">
             Book Your Session

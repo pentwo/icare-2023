@@ -57,7 +57,7 @@ const Service = (props: Props) => {
 
           <Grid>
             {/* Remedial Massage */}
-            <Grid.Col md={4}>
+            <Grid.Col md={6}>
               <Card
                 shadow="md"
                 padding="lg"
@@ -116,7 +116,7 @@ const Service = (props: Props) => {
             </Grid.Col>
 
             {/* Fertility Massage */}
-            <Grid.Col md={4}>
+            <Grid.Col md={6}>
               <Card
                 shadow="md"
                 padding="lg"
@@ -175,7 +175,7 @@ const Service = (props: Props) => {
             </Grid.Col>
 
             {/* Pregnancy Massage */}
-            <Grid.Col md={4}>
+            <Grid.Col md={6}>
               <Card
                 shadow="md"
                 padding="lg"
@@ -226,6 +226,65 @@ const Service = (props: Props) => {
                       Learn More
                     </Button>
                     <Button component={Link} to="/booking" color="yellow.7">
+                      Book Now
+                    </Button>
+                  </Group>
+                </Stack>
+              </Card>
+            </Grid.Col>
+
+            {/* Mind-Body Restorative Massage */}
+            <Grid.Col md={6}>
+              <Card
+                shadow="md"
+                padding="lg"
+                radius="md"
+                withBorder
+                style={{ height: "100%", display: "flex", flexDirection: "column" }}
+              >
+                <Card.Section>
+                  <Box style={{ height: 250, overflow: "hidden" }}>
+                    <StaticImage
+                      src="../../images/v2-photos/remedial-2.webp"
+                      alt="Mind-Body Restorative Massage"
+                      style={{
+                        height: "100%",
+                        width: "100%",
+                        objectFit: "cover",
+                      }}
+                    />
+                  </Box>
+                </Card.Section>
+
+                <Stack spacing="md" style={{ flex: 1 }} mt="md">
+                  <Title order={3} color="violet">
+                    Mind-Body Restorative Massage
+                  </Title>
+                  <Text size="sm" color="dimmed">
+                    Integrated approach combining remedial massage with clinical hypnosis and
+                    strategic psychotherapy.
+                  </Text>
+
+                  <List
+                    spacing="xs"
+                    size="sm"
+                    icon={
+                      <ThemeIcon size="sm" color="violet">
+                        <IconCheck size="0.8rem" />
+                      </ThemeIcon>
+                    }
+                  >
+                    <List.Item>Chronic pain and tension</List.Item>
+                    <List.Item>Anxiety and stress reduction</List.Item>
+                    <List.Item>Improved sleep quality</List.Item>
+                    <List.Item>Mind-body reconnection</List.Item>
+                  </List>
+
+                  <Group grow mt="auto">
+                    <Button component={Link} to="/service/mind-body" variant="light" color="violet">
+                      Learn More
+                    </Button>
+                    <Button component={Link} to="/booking" color="violet">
                       Book Now
                     </Button>
                   </Group>
