@@ -157,8 +157,9 @@ const Services = (props: Props) => {
           </Grid.Col>
         </Grid>
 
-        {/* Mind-Body Restorative Massage */}
+        {/* Additional Services */}
         <Grid>
+          {/* Mind-Body Restorative Massage */}
           <Grid.Col md={4}>
             <Card
               shadow="md"
@@ -194,6 +195,51 @@ const Services = (props: Props) => {
                     to="/service/mind-body"
                     variant="light"
                     color="violet"
+                    fullWidth
+                  >
+                    Learn More
+                  </Button>
+                </Group>
+              </Stack>
+            </Card>
+          </Grid.Col>
+
+          {/* Clinical Hypnosis */}
+          <Grid.Col md={4}>
+            <Card
+              shadow="md"
+              padding="lg"
+              radius="md"
+              withBorder
+              style={{ height: "100%", display: "flex", flexDirection: "column" }}
+            >
+              <Card.Section>
+                <Box style={{ height: 250, overflow: "hidden" }}>
+                  <StaticImage
+                    src="../../images/v2-photos/body-mind-1.webp"
+                    alt="Clinical Hypnosis"
+                    style={{
+                      height: "100%",
+                      width: "100%",
+                      objectFit: "cover",
+                    }}
+                  />
+                </Box>
+              </Card.Section>
+
+              <Stack spacing="md" style={{ flex: 1 }} mt="md">
+                <Title order={3}>Clinical Hypnosis</Title>
+                <Text size="sm" color="dimmed" style={{ flex: 1 }}>
+                  Therapeutic technique accessing your mind's natural healing power for pain management,
+                  fertility support, anxiety relief, and sleep improvement.
+                </Text>
+
+                <Group position="center" mt="auto">
+                  <Button
+                    component={Link}
+                    to="/service/clinical-hypnosis"
+                    variant="light"
+                    color="blue"
                     fullWidth
                   >
                     Learn More

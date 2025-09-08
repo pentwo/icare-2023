@@ -5,6 +5,11 @@ exports.onClientEntry = () => {
       window.dataLayer.push(arguments);
     }
     gtag("js", new Date());
+
+    // Google Analytics 4 configuration
+    gtag("config", "G-2QHEJNHMRJ");
+
+    // Google Ads configuration (existing)
     gtag("config", "AW-784873740");
 
     // Add conversion tracking
@@ -12,9 +17,9 @@ exports.onClientEntry = () => {
       send_to: "AW-784873740/Qm5fCO_q19gBEIzyoPYC",
     });
 
-    // Load the gtag.js script
+    // Load the gtag.js script - this script can handle multiple tracking IDs
     const script = document.createElement("script");
-    script.src = "https://www.googletagmanager.com/gtag/js?id=AW-784873740";
+    script.src = "https://www.googletagmanager.com/gtag/js";
     script.async = true;
     document.head.appendChild(script);
   }

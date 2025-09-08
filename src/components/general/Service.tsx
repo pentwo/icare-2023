@@ -291,6 +291,64 @@ const Service = (props: Props) => {
                 </Stack>
               </Card>
             </Grid.Col>
+
+            {/* Clinical Hypnosis */}
+            <Grid.Col md={6}>
+              <Card
+                shadow="md"
+                padding="lg"
+                radius="md"
+                withBorder
+                style={{ height: "100%", display: "flex", flexDirection: "column" }}
+              >
+                <Card.Section>
+                  <Box style={{ height: 250, overflow: "hidden" }}>
+                    <StaticImage
+                      src="../../images/v2-photos/body-mind-1.webp"
+                      alt="Clinical Hypnosis"
+                      style={{
+                        height: "100%",
+                        width: "100%",
+                        objectFit: "cover",
+                      }}
+                    />
+                  </Box>
+                </Card.Section>
+
+                <Stack spacing="md" style={{ flex: 1 }} mt="md">
+                  <Title order={3} color="blue">
+                    Clinical Hypnosis
+                  </Title>
+                  <Text size="sm" color="dimmed">
+                    Therapeutic technique accessing your mind's natural healing power for holistic wellness.
+                  </Text>
+
+                  <List
+                    spacing="xs"
+                    size="sm"
+                    icon={
+                      <ThemeIcon size="sm" color="blue">
+                        <IconCheck size="0.8rem" />
+                      </ThemeIcon>
+                    }
+                  >
+                    <List.Item>Pain management</List.Item>
+                    <List.Item>Fertility support</List.Item>
+                    <List.Item>Anxiety relief</List.Item>
+                    <List.Item>Sleep improvement</List.Item>
+                  </List>
+
+                  <Group grow mt="auto">
+                    <Button component={Link} to="/service/clinical-hypnosis" variant="light" color="blue">
+                      Learn More
+                    </Button>
+                    <Button component={Link} to="/booking" color="blue">
+                      Book Now
+                    </Button>
+                  </Group>
+                </Stack>
+              </Card>
+            </Grid.Col>
           </Grid>
         </Box>
 

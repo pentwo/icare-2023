@@ -30,6 +30,7 @@ import {
   IconCurrencyDollar,
   IconArrowRight,
   IconUsers,
+  IconGift,
 } from "@tabler/icons";
 import { Link } from "gatsby";
 import BookingAlert from "../general/BookingAlert";
@@ -139,9 +140,11 @@ const links: {
       { label: "Fertility Massage", link: "/service/fertility" },
       { label: "Pregnancy Massage", link: "/service/pregnancy" },
       { label: "Mind-Body Restorative Massage", link: "/service/mind-body" },
+      { label: "Clinical Hypnosis", link: "/service/clinical-hypnosis" },
     ],
   },
   { label: "Price", icon: <IconCurrencyDollar />, link: "/price" },
+  { label: "Gift Voucher", icon: <IconGift />, link: "/voucher" },
 ];
 
 const ICareHeader = (props: Props) => {
