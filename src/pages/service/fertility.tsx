@@ -326,9 +326,18 @@ const Fertility = () => {
               appropriate treatment approach for your needs.
             </Text>
 
-            <Group position="center">
-              <Button size="lg" component={Link} to="/booking">
-                Book Now
+            <Group position="center" spacing="md">
+              <Button size="lg" component={Link} to="/booking" color="blue">
+                Book Free Consultation
+              </Button>
+              <Button
+                size="lg"
+                variant="outline"
+                component="a"
+                href="tel:+61489080666"
+                color="blue"
+              >
+                Call to Discuss
               </Button>
             </Group>
           </ColoredBox>

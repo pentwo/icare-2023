@@ -171,7 +171,7 @@ const Services = (props: Props) => {
               <Card.Section>
                 <Box style={{ height: 250, overflow: "hidden" }}>
                   <StaticImage
-                    src="../../images/v2-photos/price-fertility.webp"
+                    src="../../images/v2-photos/body-mind-3.webp"
                     alt="Mind-Body Restorative Massage"
                     style={{
                       height: "100%",
@@ -230,8 +230,8 @@ const Services = (props: Props) => {
               <Stack spacing="md" style={{ flex: 1 }} mt="md">
                 <Title order={3}>Clinical Hypnosis</Title>
                 <Text size="sm" color="dimmed" style={{ flex: 1 }}>
-                  Therapeutic technique accessing your mind's natural healing power for pain management,
-                  fertility support, anxiety relief, and sleep improvement.
+                  Therapeutic technique accessing your mind's natural healing power for pain
+                  management, fertility support, anxiety relief, and sleep improvement.
                 </Text>
 
                 <Group position="center" mt="auto">

@@ -161,9 +161,18 @@ const MindBody: React.FC = () => {
               Ready to experience Mind-Body Restorative Massage? Book a session today and begin your
               journey toward integrated physical and mental wellbeing.
             </Text>
-            <Group position="center">
-              <Button size="lg" component={Link} to="/booking" color="violet">
-                Book Now
+            <Group position="center" spacing="md">
+              <Button size="lg" component={Link} to="/booking" color="blue">
+                Book Free Consultation
+              </Button>
+              <Button
+                size="lg"
+                variant="outline"
+                component="a"
+                href="tel:+61489080666"
+                color="blue"
+              >
+                Call to Discuss
               </Button>
             </Group>
           </ColoredBox>
