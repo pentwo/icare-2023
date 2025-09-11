@@ -29,12 +29,12 @@ const priceInfo: PriceProps[] = [
       {
         time: "30 minutes",
         price: 93,
-        category: "initial",
+        category: "followup",
       },
       {
         time: "45 minutes",
         price: 103,
-        category: "initial",
+        category: "followup",
       },
       {
         time: "1 hour",
@@ -43,29 +43,29 @@ const priceInfo: PriceProps[] = [
       },
       {
         time: "1 hour",
-        price: 115,
+        price: 118,
         category: "followup",
-      },
-      {
-        time: "1 hours 15 minutes",
-        price: 125,
-        highlight: true,
-        category: "initial",
       },
       {
         time: "1 hours 15 minutes",
         price: 140,
         highlight: true,
+        category: "initial",
+      },
+      {
+        time: "1 hours 15 minutes",
+        price: 128,
+        highlight: true,
         category: "followup",
       },
       {
         time: "1 hours 30 minutes",
-        price: 150,
+        price: 166,
         category: "initial",
       },
       {
         time: "1 hours 30 minutes",
-        price: 166,
+        price: 154,
         category: "followup",
       },
     ],
