@@ -10,83 +10,133 @@ interface PriceProps {
   price: PriceDetail[];
   description?: string;
   bg?: any;
+  hasInitialFollowup?: boolean;
 }
 
 interface PriceDetail {
   time: string;
   price: number;
   highlight?: boolean;
+  category?: "initial" | "followup";
 }
 
 const priceInfo: PriceProps[] = [
   {
     title: "Remedial/Sports Massage",
     description: "*All Health Fund Rebate Are Available",
+    hasInitialFollowup: true,
     price: [
       {
         time: "30 minutes",
         price: 93,
+        category: "initial",
       },
       {
         time: "45 minutes",
         price: 103,
+        category: "initial",
       },
       {
         time: "1 hour",
-        price: 118,
+        price: 130,
+        category: "initial",
+      },
+      {
+        time: "1 hour",
+        price: 115,
+        category: "followup",
       },
       {
         time: "1 hours 15 minutes",
-        price: 128,
+        price: 125,
         highlight: true,
+        category: "initial",
+      },
+      {
+        time: "1 hours 15 minutes",
+        price: 140,
+        highlight: true,
+        category: "followup",
       },
       {
         time: "1 hours 30 minutes",
-        price: 154,
+        price: 150,
+        category: "initial",
+      },
+      {
+        time: "1 hours 30 minutes",
+        price: 166,
+        category: "followup",
       },
     ],
   },
   {
     title: "Fertility Massage Therapy",
+    hasInitialFollowup: true,
     price: [
       {
         time: "Initial treatment (including consultation) 120 mins",
         price: 288,
+        category: "initial",
       },
       {
         time: "Follow up treatment 90 mins",
         price: 206,
+        category: "followup",
       },
     ],
   },
   {
     title: "Pregnancy/Prenatal Massage",
+    hasInitialFollowup: true,
     price: [
       {
         time: "1 hour",
-        price: 118,
+        price: 140,
+        category: "initial",
       },
       {
         time: "1 hours 15 minutes",
-        price: 128,
+        price: 150,
+        category: "initial",
       },
       {
         time: "1 hours 30 minutes",
-        price: 154,
+        price: 176,
         highlight: true,
+        category: "initial",
+      },
+      {
+        time: "1 hour",
+        price: 130,
+        category: "followup",
+      },
+      {
+        time: "1 hours 15 minutes",
+        price: 140,
+        category: "followup",
+      },
+      {
+        time: "1 hours 30 minutes",
+        price: 166,
+        highlight: true,
+        category: "followup",
       },
     ],
   },
   {
     title: "Mind-Body Restorative Massage",
+    hasInitialFollowup: true,
     price: [
-      {
-        time: "Initial treatment (including consultation) 120 mins",
-        price: 288,
-      },
       {
         time: "Follow up treatment 90 mins",
         price: 206,
+        category: "followup",
+      },
+      {
+        time: "Initial treatment (including consultation) 120 mins",
+        price: 288,
+        category: "initial",
       },
     ],
   },
