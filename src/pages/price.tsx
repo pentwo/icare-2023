@@ -33,6 +33,11 @@ const priceInfo: PriceProps[] = [
       },
       {
         time: "45 minutes",
+        price: 118,
+        category: "initial",
+      },
+      {
+        time: "45 minutes",
         price: 103,
         category: "followup",
       },
