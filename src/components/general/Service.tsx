@@ -13,19 +13,67 @@ import {
   List,
   ThemeIcon,
   Center,
+  Badge,
+  createStyles,
 } from "@mantine/core";
 import { StaticImage } from "gatsby-plugin-image";
 import { Link } from "gatsby";
-import { IconCheck, IconClock, IconUsers, IconHeart } from "@tabler/icons";
+import { IconCheck, IconClock, IconUsers, IconHeart, IconGift, IconStar } from "@tabler/icons";
 import ColoredBox from "../ui/ColoredBox";
 import { Carousel } from "@mantine/carousel";
 import { testimonies } from "../../Data/testimonies";
 import Testimony from "./Testimony";
 import CancelPolicy from "./CancelPolicy";
 
+const useStyles = createStyles((theme) => ({
+  pregnancyCard: {
+    overflow: "hidden",
+    border: `2px solid ${theme.colors.yellow[3]}`,
+  },
+  pregnancyLeftSection: {
+    height: "100%",
+    display: "flex",
+    flexDirection: "column",
+    backgroundColor: "white",
+  },
+  packagesBanner: {
+    background: `linear-gradient(135deg, ${theme.colors.yellow[1]} 0%, ${theme.colors.orange[1]} 100%)`,
+    padding: theme.spacing.xl,
+    height: "100%",
+    display: "flex",
+    alignItems: "center",
+
+    [theme.fn.smallerThan("sm")]: {
+      padding: theme.spacing.md,
+    },
+  },
+  packagesContent: {
+    width: "100%",
+  },
+  packageCard: {
+    backgroundColor: "white",
+    borderRadius: theme.radius.md,
+    padding: theme.spacing.md,
+    textAlign: "center",
+    boxShadow: theme.shadows.sm,
+    border: `1px solid ${theme.colors.yellow[2]}`,
+    transition: "transform 0.2s ease, box-shadow 0.2s ease",
+    "&:hover": {
+      transform: "translateY(-2px)",
+      boxShadow: theme.shadows.md,
+    },
+  },
+  savingsBadge: {
+    position: "absolute",
+    top: -10,
+    right: -10,
+  },
+}));
+
 interface Props {}
 
 const Service = (props: Props) => {
+  const { classes } = useStyles();
   const allTestimonies = testimonies.slice(0, 6); // Show first 6 testimonials
 
   return (
@@ -174,62 +222,171 @@ const Service = (props: Props) => {
               </Card>
             </Grid.Col>
 
-            {/* Pregnancy Massage */}
-            <Grid.Col md={6}>
-              <Card
-                shadow="md"
-                padding="lg"
-                radius="md"
-                withBorder
-                style={{ height: "100%", display: "flex", flexDirection: "column" }}
-              >
-                <Card.Section>
-                  <Box style={{ height: 250, overflow: "hidden" }}>
-                    <StaticImage
-                      src="../../images/pregnancy-images/v2/pregnancy-1.jpeg"
-                      alt="Pregnancy Massage"
-                      style={{
-                        height: "100%",
-                        width: "100%",
-                        objectFit: "cover",
-                      }}
-                    />
-                  </Box>
-                </Card.Section>
+            {/* Pregnancy Massage - Full Width with Packages */}
+            <Grid.Col md={12}>
+              <Card shadow="md" padding={0} radius="md" withBorder className={classes.pregnancyCard}>
+                <Grid gutter={0}>
+                  {/* Left side - Image and service info */}
+                  <Grid.Col sm={12} md={5}>
+                    <Box className={classes.pregnancyLeftSection}>
+                      <Box style={{ height: 250, overflow: "hidden" }}>
+                        <StaticImage
+                          src="../../images/pregnancy-images/v2/pregnancy-1.jpeg"
+                          alt="Pregnancy Massage"
+                          style={{
+                            height: "100%",
+                            width: "100%",
+                            objectFit: "cover",
+                          }}
+                        />
+                      </Box>
+                      <Stack spacing="md" p="lg" style={{ flex: 1 }}>
+                        <Title order={3} color="yellow.7">
+                          Pregnancy Massage
+                        </Title>
+                        <Text size="sm" color="dimmed">
+                          Nurturing care throughout your pregnancy journey. Certified prenatal
+                          massage offering gentle support for expecting mothers.
+                        </Text>
+                        <List
+                          spacing="xs"
+                          size="sm"
+                          icon={
+                            <ThemeIcon size="sm" color="yellow">
+                              <IconUsers size="0.8rem" />
+                            </ThemeIcon>
+                          }
+                        >
+                          <List.Item>Pregnancy comfort</List.Item>
+                          <List.Item>Swelling reduction</List.Item>
+                          <List.Item>Stress relief</List.Item>
+                          <List.Item>Better sleep</List.Item>
+                        </List>
+                        <Group grow mt="auto">
+                          <Button
+                            component={Link}
+                            to="/service/pregnancy"
+                            variant="light"
+                            color="yellow"
+                          >
+                            Learn More
+                          </Button>
+                          <Button component={Link} to="/booking" color="yellow.7">
+                            Book Now
+                          </Button>
+                        </Group>
+                      </Stack>
+                    </Box>
+                  </Grid.Col>
 
-                <Stack spacing="md" style={{ flex: 1 }} mt="md">
-                  <Title order={3} color="yellow.7">
-                    Pregnancy Massage
-                  </Title>
-                  <Text size="sm" color="dimmed">
-                    Nurturing care throughout your pregnancy journey. Certified prenatal massage
-                    offering gentle support for expecting mothers.
-                  </Text>
+                  {/* Right side - Packages */}
+                  <Grid.Col sm={12} md={7}>
+                    <Box className={classes.packagesBanner}>
+                      <Stack className={classes.packagesContent} spacing="md" justify="center" style={{ height: "100%" }}>
+                        <Group position="center" spacing="xs">
+                          <ThemeIcon size="md" color="yellow" variant="filled" radius="xl">
+                            <IconGift size={16} />
+                          </ThemeIcon>
+                          <Title order={4} align="center">
+                            Care Packages - Save up to $186
+                          </Title>
+                        </Group>
 
-                  <List
-                    spacing="xs"
-                    size="sm"
-                    icon={
-                      <ThemeIcon size="sm" color="yellow">
-                        <IconUsers size="0.8rem" />
-                      </ThemeIcon>
-                    }
-                  >
-                    <List.Item>Pregnancy comfort</List.Item>
-                    <List.Item>Swelling reduction</List.Item>
-                    <List.Item>Stress relief</List.Item>
-                    <List.Item>Better sleep</List.Item>
-                  </List>
+                        <Stack spacing="xs">
+                          <Box className={classes.packageCard}>
+                            <Group position="apart">
+                              <Box>
+                                <Text weight={600} size="sm">
+                                  Foundation Care
+                                </Text>
+                                <Text size="xs" color="dimmed">
+                                  3 x 90-min sessions
+                                </Text>
+                              </Box>
+                              <Box style={{ textAlign: "right" }}>
+                                <Text weight={700} size="lg" color="yellow.7">
+                                  $430
+                                </Text>
+                                <Text size="xs" color="green" weight={600}>
+                                  Save $78
+                                </Text>
+                              </Box>
+                            </Group>
+                          </Box>
 
-                  <Group grow mt="auto">
-                    <Button component={Link} to="/service/pregnancy" variant="light" color="yellow">
-                      Learn More
-                    </Button>
-                    <Button component={Link} to="/booking" color="yellow.7">
-                      Book Now
-                    </Button>
-                  </Group>
-                </Stack>
+                          <Box className={classes.packageCard} style={{ position: "relative" }}>
+                            <Badge
+                              color="pink"
+                              variant="filled"
+                              size="xs"
+                              style={{ position: "absolute", top: -6, right: -6 }}
+                            >
+                              Popular
+                            </Badge>
+                            <Group position="apart">
+                              <Box>
+                                <Text weight={600} size="sm">
+                                  Pregnancy + Postnatal
+                                </Text>
+                                <Text size="xs" color="dimmed">
+                                  3 pregnancy + 1 postnatal
+                                </Text>
+                              </Box>
+                              <Box style={{ textAlign: "right" }}>
+                                <Text weight={700} size="lg" color="yellow.7">
+                                  $536
+                                </Text>
+                                <Text size="xs" color="green" weight={600}>
+                                  Save $100
+                                </Text>
+                              </Box>
+                            </Group>
+                          </Box>
+
+                          <Box className={classes.packageCard} style={{ position: "relative" }}>
+                            <Badge
+                              color="green"
+                              variant="filled"
+                              size="xs"
+                              style={{ position: "absolute", top: -6, right: -6 }}
+                            >
+                              Best Value
+                            </Badge>
+                            <Group position="apart">
+                              <Box>
+                                <Text weight={600} size="sm">
+                                  Complete Family Wellness
+                                </Text>
+                                <Text size="xs" color="dimmed">
+                                  Full package + infant massage
+                                </Text>
+                              </Box>
+                              <Box style={{ textAlign: "right" }}>
+                                <Text weight={700} size="lg" color="yellow.7">
+                                  $600
+                                </Text>
+                                <Text size="xs" color="green" weight={600}>
+                                  Save $186
+                                </Text>
+                              </Box>
+                            </Group>
+                          </Box>
+                        </Stack>
+
+                        <Group position="center">
+                          <Button
+                            component={Link}
+                            to="/service/pregnancy-packages"
+                            color="yellow.6"
+                            leftIcon={<IconStar size={16} />}
+                          >
+                            View Package Details
+                          </Button>
+                        </Group>
+                      </Stack>
+                    </Box>
+                  </Grid.Col>
+                </Grid>
               </Card>
             </Grid.Col>
 

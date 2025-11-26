@@ -217,6 +217,19 @@ const Pregnancy = () => {
             ))}
           </Carousel>
 
+          <ColoredBox title="Pregnancy Care Packages" color="yellow.1">
+            <Text>
+              Looking for ongoing support throughout your pregnancy? Our specialized care packages
+              offer consistent, gentle support from pregnancy through the postnatal period – with
+              significant savings compared to individual sessions.
+            </Text>
+            <Group position="center">
+              <Button size="lg" component={Link} to="/service/pregnancy-packages" color="yellow.5">
+                View Packages
+              </Button>
+            </Group>
+          </ColoredBox>
+
           <ColoredBox title="Booking Your Session" color="yellow.1">
             <Text>
               Ready to experience the nurturing benefits of pregnancy massage? Contact me to

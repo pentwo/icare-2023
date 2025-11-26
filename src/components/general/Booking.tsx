@@ -46,12 +46,13 @@ const useStyles = createStyles((theme) => ({
   iframe: {
     display: "block", // iframes are inline by default
     border: "0px", // Reset default border
-    height: "100vh", // Viewport-relative units
-    width: "100%", // Use 100% instead of 100vw to fit container
+    height: "1200px", // Fixed height to fit booking form content
+    width: "100%",
     borderRadius: "8px",
 
     [theme.fn.smallerThan("sm")]: {
       borderRadius: "4px",
+      height: "1400px", // Taller on mobile due to stacked layout
     },
   },
 }));
