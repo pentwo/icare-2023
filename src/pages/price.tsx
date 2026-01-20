@@ -28,49 +28,49 @@ const priceInfo: PriceProps[] = [
     price: [
       {
         time: "30 minutes",
-        price: 93,
+        price: 100,
         category: "followup",
       },
       {
         time: "45 minutes",
-        price: 118,
-        category: "initial",
-      },
-      {
-        time: "45 minutes",
-        price: 103,
-        category: "followup",
-      },
-      {
-        time: "1 hour",
         price: 130,
         category: "initial",
       },
       {
-        time: "1 hour",
-        price: 118,
+        time: "45 minutes",
+        price: 120,
         category: "followup",
+      },
+      {
+        time: "1 hour",
+        price: 140,
+        category: "initial",
+      },
+      {
+        time: "1 hour",
+        price: 130,
+        category: "followup",
+      },
+      {
+        time: "1 hours 15 minutes",
+        price: 150,
+        highlight: true,
+        category: "initial",
       },
       {
         time: "1 hours 15 minutes",
         price: 140,
         highlight: true,
-        category: "initial",
-      },
-      {
-        time: "1 hours 15 minutes",
-        price: 128,
-        highlight: true,
         category: "followup",
       },
       {
         time: "1 hours 30 minutes",
-        price: 166,
+        price: 175,
         category: "initial",
       },
       {
         time: "1 hours 30 minutes",
-        price: 154,
+        price: 165,
         category: "followup",
       },
     ],
@@ -81,12 +81,12 @@ const priceInfo: PriceProps[] = [
     price: [
       {
         time: "Initial treatment (including consultation) 120 mins",
-        price: 288,
+        price: 280,
         category: "initial",
       },
       {
         time: "Follow up treatment 90 mins",
-        price: 206,
+        price: 208,
         category: "followup",
       },
     ],
@@ -107,7 +107,7 @@ const priceInfo: PriceProps[] = [
       },
       {
         time: "1 hours 30 minutes",
-        price: 176,
+        price: 175,
         highlight: true,
         category: "initial",
       },
@@ -123,7 +123,7 @@ const priceInfo: PriceProps[] = [
       },
       {
         time: "1 hours 30 minutes",
-        price: 166,
+        price: 165,
         highlight: true,
         category: "followup",
       },
@@ -135,12 +135,12 @@ const priceInfo: PriceProps[] = [
     price: [
       {
         time: "Follow up treatment 90 mins",
-        price: 206,
+        price: 208,
         category: "followup",
       },
       {
         time: "Initial treatment (including consultation) 120 mins",
-        price: 288,
+        price: 280,
         category: "initial",
       },
     ],
