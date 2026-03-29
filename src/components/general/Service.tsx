@@ -18,7 +18,7 @@ import {
 } from "@mantine/core";
 import { StaticImage } from "gatsby-plugin-image";
 import { Link } from "gatsby";
-import { IconCheck, IconClock, IconUsers, IconHeart, IconGift, IconStar } from "@tabler/icons";
+import { IconCheck, IconClock, IconUsers, IconHeart, IconGift, IconStar, IconCut } from "@tabler/icons";
 import ColoredBox from "../ui/ColoredBox";
 import { Carousel } from "@mantine/carousel";
 import { testimonies } from "../../Data/testimonies";
@@ -500,6 +500,64 @@ const Service = (props: Props) => {
                       Learn More
                     </Button>
                     <Button component={Link} to="/booking" color="blue">
+                      Book Now
+                    </Button>
+                  </Group>
+                </Stack>
+              </Card>
+            </Grid.Col>
+            {/* Restore Scar Therapy */}
+            <Grid.Col md={6}>
+              <Card
+                shadow="md"
+                padding="lg"
+                radius="md"
+                withBorder
+                style={{ height: "100%", display: "flex", flexDirection: "column" }}
+              >
+                <Card.Section>
+                  <Box style={{ height: 250, overflow: "hidden" }}>
+                    <StaticImage
+                      src="../../images/v2-photos/body-mind-3.webp"
+                      alt="Restore Scar Therapy"
+                      style={{
+                        height: "100%",
+                        width: "100%",
+                        objectFit: "cover",
+                      }}
+                    />
+                  </Box>
+                </Card.Section>
+
+                <Stack spacing="md" style={{ flex: 1 }} mt="md">
+                  <Title order={3} color="teal">
+                    Restore Scar Therapy
+                  </Title>
+                  <Text size="sm" color="dimmed">
+                    A gentle, evidence-informed approach to help your body heal from caesarean and
+                    oncology scars — inside and out. Certified by Restore Therapy under Emma Holly.
+                  </Text>
+
+                  <List
+                    spacing="xs"
+                    size="sm"
+                    icon={
+                      <ThemeIcon size="sm" color="teal">
+                        <IconCheck size="0.8rem" />
+                      </ThemeIcon>
+                    }
+                  >
+                    <List.Item>C-section scar recovery</List.Item>
+                    <List.Item>Oncology scar specialist</List.Item>
+                    <List.Item>Sensation restoration</List.Item>
+                    <List.Item>Emotional wellbeing support</List.Item>
+                  </List>
+
+                  <Group grow mt="auto">
+                    <Button component={Link} to="/service/scar-therapy" variant="light" color="teal">
+                      Learn More
+                    </Button>
+                    <Button component={Link} to="/booking" color="teal">
                       Book Now
                     </Button>
                   </Group>

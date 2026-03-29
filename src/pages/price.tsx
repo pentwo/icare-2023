@@ -145,6 +145,22 @@ const priceInfo: PriceProps[] = [
       },
     ],
   },
+  {
+    title: "Restore Scar Therapy",
+    hasInitialFollowup: true,
+    price: [
+      {
+        time: "Initial treatment",
+        price: 130,
+        category: "initial",
+      },
+      {
+        time: "Follow up treatment",
+        price: 120,
+        category: "followup",
+      },
+    ],
+  },
 ];
 
 export default function PricePage({ data }) {
@@ -189,6 +205,13 @@ export const query = graphql`
       }
     }
     bg4: file(relativePath: { eq: "v2-photos/price-body-mind.webp" }) {
+      childImageSharp {
+        fluid(maxWidth: 960) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    bg5: file(relativePath: { eq: "v2-photos/price-scar-therapy.webp" }) {
       childImageSharp {
         fluid(maxWidth: 960) {
           ...GatsbyImageSharpFluid
