@@ -141,6 +141,7 @@ const links: {
       { label: "Pregnancy Massage", link: "/service/pregnancy" },
       { label: "Mind-Body Restorative Massage", link: "/service/mind-body" },
       { label: "Clinical Hypnosis", link: "/service/clinical-hypnosis" },
+      { label: "Restore Scar Therapy", link: "/service/scar-therapy" },
     ],
   },
   { label: "Price", icon: <IconCurrencyDollar />, link: "/price" },
