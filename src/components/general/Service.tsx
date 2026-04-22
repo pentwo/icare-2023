@@ -90,9 +90,6 @@ const Service = (props: Props) => {
                 Holistic care combining massage therapy, clinical hypnosis, and strategic
                 psychotherapy to support your complete wellbeing journey
               </Text>
-              <Button size="lg" component={Link} to="/booking" mt="md">
-                Book Your Consultation
-              </Button>
             </Stack>
           </Center>
         </Box>
