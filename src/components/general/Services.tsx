@@ -171,7 +171,7 @@ const Services = (props: Props) => {
               <Card.Section>
                 <Box style={{ height: 250, overflow: "hidden" }}>
                   <StaticImage
-                    src="../../images/v2-photos/body-mind-3.webp"
+                    src="../../images/v2-photos/remedial-2.webp"
                     alt="Mind-Body Restorative Massage"
                     style={{
                       height: "100%",
@@ -261,7 +261,7 @@ const Services = (props: Props) => {
               <Card.Section>
                 <Box style={{ height: 250, overflow: "hidden" }}>
                   <StaticImage
-                    src="../../images/v2-photos/price-scar-therapy.webp"
+                    src="../../images/v2-photos/body-mind-3.webp"
                     alt="Restore Scar Therapy"
                     style={{
                       height: "100%",
