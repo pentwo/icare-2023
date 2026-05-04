@@ -260,7 +260,7 @@ const ScarTherapy = () => {
           </Grid>
 
           {/* Credentials */}
-          <ColoredBox title="Trained by the Best" color="pink.2">
+          <ColoredBox title="Trained by the Best" color="teal.1">
             <Grid align="center">
               <Grid.Col sm={12} md={6}>
                 <Stack spacing="md">
@@ -417,7 +417,7 @@ const ScarTherapy = () => {
           </Box>
 
           {/* Booking CTA */}
-          <ColoredBox title="Ready to Begin Your Healing Journey?">
+          <ColoredBox title="Ready to Begin Your Healing Journey?" color="teal.1">
             <Text>
               Whether your scar is weeks or years old, there is support available. Book a
               consultation and take the first step toward feeling more comfortable in your body.

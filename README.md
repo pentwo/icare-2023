@@ -1,19 +1,49 @@
-# Mantine + Gatsby.js template
+# iCare Health Massage
 
-[Read documentation](https://mantine.dev/theming/gatsby/)
+Marketing and booking website for iCare Health Massage, built with Gatsby and Mantine.
 
-Get started with Mantine + Gatsby with just a few button clicks.
-Click `Use this template` button at the header of repository or [follow this link](https://github.com/mantinedev/mantine-gatsby-template/generate) and
-create new repository with all @mantine packages.
+## Tech stack
 
-## What's included
+- [Gatsby 3](https://www.gatsbyjs.com/) (React 17, TypeScript)
+- [Mantine 5](https://mantine.dev/) UI components (`@mantine/core`, `@mantine/hooks`, `@mantine/carousel`)
+- `gatsby-plugin-image` / `gatsby-plugin-sharp` for image processing
+- `gatsby-plugin-google-tagmanager` for analytics
 
-- `gatsby-plugin-mantine` – server side rendering setup for gatsby
-- `@mantine/core` and `@mantine/hooks` packages
-- Color scheme toggle example (`Ctrl + J` shortcut or button click)
+## Requirements
+
+- Node.js 22 (see `.nvmrc`)
+- npm 10+
+
+## Getting started
+
+```sh
+nvm use            # picks up Node 22 from .nvmrc
+npm install
+npm start          # dev server on http://localhost:5001
+```
 
 ## npm scripts
 
-- `npm start` – start project locally
-- `npm run build` – export project for production
-- `npm run serve` – serve production build locally
+- `npm start` – run the dev server (`gatsby develop`) on port 5001
+- `npm run build` – production build into `public/`
+- `npm run serve` – serve the production build on port 5002
+- `npm run clean` – clear the Gatsby cache
+
+## Project structure
+
+```
+src/
+  components/   Layout, UI, and general page components
+  pages/        Top-level routes (index, about, booking, price, voucher, ...)
+    service/    Service-specific pages (remedial, pregnancy, scar-therapy, ...)
+  Data/         Static content (services, pricing, team)
+  images/       Source images processed by gatsby-plugin-sharp
+  styles/       Global styles
+gatsby-config.js  Site metadata and plugin configuration
+gatsby-browser.js Browser-side Gatsby APIs
+gatsby.ssr.js     SSR Gatsby APIs
+```
+
+## Services offered (pages)
+
+Remedial · Pregnancy · Pregnancy packages · Fertility · Scar therapy · Clinical hypnosis · Mind & body · Infant
