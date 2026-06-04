@@ -175,10 +175,7 @@ const Infant = (props: Props) => {
         </Text>
         <Text>
           If you wish to attend the 4-Session Course, group booking and Private one-on-one bookings
-          are available. If you have any further question, please do not hesitate to reach out to
-          our team at{" "}
-          <Anchor href="mailto:info@bodyworkssubiaco.com">info@bodyworkssubiaco.com</Anchor> or give
-          us a call on <Anchor href="tel:+61893815565">08-9381-5565</Anchor>.
+          are available.
         </Text>
       </Stack>
     </Container>
