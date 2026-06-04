@@ -19,7 +19,7 @@ const BookingAlert = ({ variant }: Props) => {
       This Home Studio Booking is for <Mark color="red.2">Female ONLY</Mark>.{" "}
       {variant === "short" && <br />}
       Male patients please contact{" "}
-      <Anchor href="tel:0893815565">Bodyworks Subiaco (08) 9381 5565</Anchor>
+      <Anchor href="tel:0892507772">hbf physio Midland (08) 9250 7772</Anchor>
     </Alert>
   );
 };
