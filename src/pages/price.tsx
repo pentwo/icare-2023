@@ -173,7 +173,10 @@ export default function PricePage({ data }) {
 
   return (
     <Layout>
-      <Seo title="Price" />
+      <Seo
+        title="Prices & Health Fund Rebates"
+        description="Massage prices for remedial, fertility, pregnancy and scar therapy sessions in Perth. Health fund rebates available with HICAPS."
+      />
       {/* <Hero /> */}
       <Price prices={prices} />
       <CancelPolicy />

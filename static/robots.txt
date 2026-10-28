@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://icarehealthmassage.com.au/sitemap/sitemap-index.xml

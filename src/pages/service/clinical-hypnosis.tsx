@@ -22,7 +22,10 @@ const ClinicalHypnosis: React.FC = () => {
   return (
     <Layout>
       <Container mt={60}>
-        <SEO title={"Clinical Hypnosis"} />
+        <SEO
+          title="Clinical Hypnosis Perth"
+          description="Clinical hypnosis in Perth: a collaborative, deeply relaxed state where you stay in control while easing anxiety, pain, insomnia and fertility stress."
+        />
         <Stack spacing={"xl"}>
           <Title order={1}>Clinical Hypnosis</Title>
           <Title order={3} color="dimmed">

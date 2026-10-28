@@ -6,7 +6,10 @@ import Infant from "../components/general/Infant";
 export default function InfantPage() {
   return (
     <Layout>
-      <Seo title={"Infant Massage"} />
+      <Seo
+        title="Infant Massage Classes Perth"
+        description="Learn baby massage with a certified Paediatric Massage Consultant in Perth. Introductory workshops and a 4-session infant massage course for parents."
+      />
       <Infant />
       {/* <About /> */}
       {/* <CancelPolicy /> */}

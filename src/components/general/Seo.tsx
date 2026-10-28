@@ -1,116 +1,92 @@
 import React from "react";
 import Helmet from "react-helmet";
-import { StaticQuery, graphql } from "gatsby";
+import { useLocation } from "@reach/router";
+import { useStaticQuery, graphql } from "gatsby";
 
 interface SeoProps {
+  title: string;
   description?: string;
   lang?: string;
   meta?: any[];
-  keywords?: string[];
-  title: string;
+  image?: string;
 }
 
-function SEO({
+const localBusinessSchema = (siteUrl: string, description: string, image: string) => ({
+  "@context": "https://schema.org",
+  "@type": "HealthAndBeautyBusiness",
+  name: "iCare Health Massage",
   description,
-  lang = "en",
-  meta = [],
-  keywords = [
-    "Deep Tissue",
-    "Swedish",
-    "Trigger Point",
-    "Japanese Shiatsu",
-    "Sport Massage",
-    "Myofascial Release",
-    "Positional Release",
-    "Trager",
-    "Postual Massage",
-    "Reflexology",
-    "Manual Lymphtic Drainage",
-    "healthy lifestyle",
-    "healthfund rebates",
-    "pregnancy massageperth",
-    "selfcare matters",
-    "women",
-    "women empowerment",
-    "women health",
-    "women healthcare",
-    "womens wellness",
-    "positive thinking",
-    "chakra healing",
-    "chakra balancing",
-    "fertility massage specialist",
-    "fertility massage therapy",
-    "pregnancy massage specialist",
-    "mental health",
-    "mental health awareness",
-    "mental health matters",
-    "mental health support",
-    "mental health help",
+  url: siteUrl,
+  image,
+  logo: `${siteUrl}/icons/icon-512x512.png`,
+  telephone: "+61489080666",
+  priceRange: "$$",
+  founder: { "@type": "Person", name: "Jenny Yeh" },
+  // Home studio: suburb only, street address is intentionally not published
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Balga",
+    addressRegion: "WA",
+    postalCode: "6061",
+    addressCountry: "AU",
+  },
+  areaServed: { "@type": "City", name: "Perth" },
+  openingHoursSpecification: [
+    { dayOfWeek: "Monday", opens: "08:30", closes: "17:00" },
+    { dayOfWeek: ["Wednesday", "Thursday"], opens: "08:00", closes: "12:00" },
+    { dayOfWeek: "Friday", opens: "10:30", closes: "17:00" },
+    { dayOfWeek: "Saturday", opens: "08:00", closes: "17:00" },
+  ].map((spec) => ({ "@type": "OpeningHoursSpecification", ...spec })),
+  knowsAbout: [
+    "Remedial Massage",
+    "Fertility Massage",
+    "Pregnancy Massage",
+    "Scar Therapy",
+    "Clinical Hypnosis",
+    "Infant Massage",
   ],
-  title,
-}: SeoProps) {
+});
+
+function SEO({ title, description, lang = "en", meta = [], image }: SeoProps) {
+  const { pathname } = useLocation();
+  const { site } = useStaticQuery(detailsQuery);
+  const { siteUrl, defaultDescription, author } = site.siteMetadata;
+
+  const metaDescription = description || defaultDescription;
+  const canonical = `${siteUrl}${pathname}`;
+  const metaImage = `${siteUrl}${image || "/og-image.jpg"}`;
+  const isHome = pathname === "/";
+
   return (
-    <StaticQuery
-      query={detailsQuery}
-      render={(data) => {
-        const metaDescription = description || data.site.siteMetadata.description;
-        return (
-          <Helmet
-            htmlAttributes={{
-              lang,
-            }}
-            title={title}
-            titleTemplate={`%s | ${data.site.siteMetadata.title}`}
-            meta={[
-              {
-                name: `description`,
-                content: metaDescription,
-              },
-              {
-                property: `og:title`,
-                content: title,
-              },
-              {
-                property: `og:description`,
-                content: metaDescription,
-              },
-              {
-                property: `og:type`,
-                content: `website`,
-              },
-              {
-                name: `twitter:card`,
-                content: `summary`,
-              },
-              {
-                name: `twitter:creator`,
-                content: data.site.siteMetadata.author,
-              },
-              {
-                name: `twitter:title`,
-                content: title,
-              },
-              {
-                name: `twitter:description`,
-                content: metaDescription,
-              },
-            ]
-              .concat(
-                keywords.length > 0
-                  ? {
-                      name: `keywords`,
-                      content: keywords.join(`, `),
-                    }
-                  : [],
-              )
-              .concat(meta)}
-          />
-        );
-      }}
-    />
+    <Helmet
+      htmlAttributes={{ lang }}
+      title={title}
+      titleTemplate={`%s | ${site.siteMetadata.title}`}
+      link={[{ rel: "canonical", href: canonical }]}
+      meta={[
+        { name: `description`, content: metaDescription },
+        { property: `og:title`, content: title },
+        { property: `og:description`, content: metaDescription },
+        { property: `og:type`, content: `website` },
+        { property: `og:url`, content: canonical },
+        { property: `og:image`, content: metaImage },
+        { property: `og:site_name`, content: site.siteMetadata.title },
+        { property: `og:locale`, content: `en_AU` },
+        { name: `twitter:card`, content: `summary_large_image` },
+        { name: `twitter:creator`, content: author },
+        { name: `twitter:title`, content: title },
+        { name: `twitter:description`, content: metaDescription },
+        { name: `twitter:image`, content: metaImage },
+      ].concat(meta)}
+    >
+      {isHome && (
+        <script type="application/ld+json">
+          {JSON.stringify(localBusinessSchema(siteUrl, metaDescription, metaImage))}
+        </script>
+      )}
+    </Helmet>
   );
 }
-
 
 export default SEO;
 
@@ -119,8 +95,9 @@ const detailsQuery = graphql`
     site {
       siteMetadata {
         title
-        description
+        defaultDescription: description
         author
+        siteUrl
       }
     }
   }

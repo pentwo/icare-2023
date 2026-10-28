@@ -16,7 +16,10 @@ const Pregnancy = () => {
   return (
     <Layout>
       <Container mt={60}>
-        <SEO title={"Pregnancy Massage"} />
+        <SEO
+          title="Pregnancy Massage Perth"
+          description="Safe, specialised pregnancy massage in Perth from a certified prenatal practitioner. Relief for back pain, hip discomfort, swelling and sleep problems."
+        />
         <Stack spacing={"xl"}>
           <Title order={1} sx={{ fontSize: 42 }}>
             Pregnancy Massage - Nurturing Care for Your Journey

@@ -6,22 +6,9 @@ import OurTeam from "../components/general/OurTeam";
 export default function OurTeamPage() {
   return (
     <Layout>
-      <Seo 
-        title={"Our Team"} 
-        description="Meet Jenny YEH and our experienced team of massage therapists at iCare Health Massage. Specialized in remedial massage, fertility massage, pregnancy massage, and holistic healing."
-        keywords={[
-          "Jenny YEH",
-          "massage therapist",
-          "remedial massage",
-          "fertility massage",
-          "pregnancy massage",
-          "infant massage",
-          "qualified therapist",
-          "13 years experience",
-          "Reiki",
-          "Neurofascial release",
-          "team"
-        ]}
+      <Seo
+        title="Our Team"
+        description="Meet Jenny Yeh, qualified remedial massage therapist in Perth specialising in fertility, pregnancy and scar therapy massage, and clinical hypnosis."
       />
       <OurTeam />
     </Layout>

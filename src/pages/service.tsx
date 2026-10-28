@@ -6,23 +6,9 @@ import SEO from "../components/general/Seo";
 export default function ServicePage() {
   return (
     <Layout>
-      <SEO 
-        title={"Services"} 
-        description="Discover our specialized massage therapy services including remedial massage, fertility massage, and pregnancy massage. 13+ years of professional experience in holistic health care."
-        keywords={[
-          "massage services",
-          "remedial massage",
-          "fertility massage",
-          "pregnancy massage",
-          "therapeutic massage",
-          "holistic health",
-          "pain management",
-          "reproductive wellness",
-          "prenatal care",
-          "Jenny YEH",
-          "Perth massage",
-          "qualified therapist"
-        ]}
+      <SEO
+        title="Massage Services Perth"
+        description="Remedial, fertility, pregnancy, mind-body restorative massage, Restore Scar Therapy and clinical hypnosis in Perth. 13+ years of professional experience."
       />
       <Service />
     </Layout>

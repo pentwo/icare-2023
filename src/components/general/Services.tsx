@@ -9,7 +9,7 @@ const Services = (props: Props) => {
   return (
     <Container mt={80} mb={80}>
       <Stack spacing="xl">
-        <Title order={1} align="center" mb="xl">
+        <Title order={2} size="h1" align="center" mb="xl">
           Our Services
         </Title>
 

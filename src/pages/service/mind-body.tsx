@@ -11,7 +11,10 @@ const MindBody: React.FC = () => {
   return (
     <Layout>
       <Container mt={60}>
-        <SEO title={"Mind-Body Restorative Massage"} />
+        <SEO
+          title="Mind-Body Restorative Massage"
+          description="Mind-body restorative massage in Perth combining remedial massage, clinical hypnosis and strategic psychotherapy for chronic pain, stress and tension."
+        />
         <Stack spacing={"xl"}>
           <Title order={1}>Mind-Body Restorative Massage</Title>
           <Title order={3} color="dimmed">

@@ -24,8 +24,8 @@ const ScarTherapy = () => {
     <Layout>
       <Container mt={60}>
         <SEO
-          title={"Restore Scar Therapy"}
-          description="Restore Scar Therapy is a gentle, evidence-informed approach to help your body heal from caesarean and oncology scars. Certified specialist trained by Emma Holly, founder of Restore Therapy."
+          title="Restore Scar Therapy Perth"
+          description="Gentle, evidence-informed Restore Scar Therapy in Perth for caesarean and oncology scars. Certified specialist trained by Emma Holly of Restore Therapy."
         />
         <Stack spacing={"xl"}>
           <Title order={1}>Restore Scar Therapy</Title>

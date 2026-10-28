@@ -93,7 +93,7 @@ const Infant = (props: Props) => {
             </Carousel.Slide>
           </Carousel>
         </Center>
-        <Title order={2}>Infant Massage</Title>
+        <Title order={1} size="h2">Infant Massage</Title>
         <Text>
           Infant massage is a wonderful way for parents to connect with their babies, improve their
           physical and emotional well-being, and create a deeper bond. Using a small amount of baby

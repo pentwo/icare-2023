@@ -27,7 +27,10 @@ const Remedial = () => {
   return (
     <Layout>
       <Container mt={60}>
-        <SEO title={"Remedial Massage"} />
+        <SEO
+          title="Remedial Massage Perth"
+          description="Remedial massage in Perth for pain management, posture and scoliosis. 14 years experience as a qualified remedial therapist. Health fund rebates available."
+        />
         <Stack spacing={"xl"}>
           <Title order={1}>Remedial Massage - Professional Pain Management</Title>
           <Text>
