@@ -22,6 +22,11 @@ const localBusinessSchema = (siteUrl: string, description: string, image: string
   telephone: "+61489080666",
   priceRange: "$$",
   founder: { "@type": "Person", name: "Jenny Yeh" },
+  sameAs: [
+    "https://www.google.com/search?kgmid=/g/11gtykjqsw",
+    "https://www.instagram.com/icare_health_massage_hypnosis/",
+    "https://www.facebook.com/iCare.Health.Massage.Hypnosis",
+  ],
   // Home studio: suburb only, street address is intentionally not published
   address: {
     "@type": "PostalAddress",
