@@ -89,7 +89,7 @@ const ManualLymphaticDrainage = () => {
 
           <Grid>
             <Grid.Col sm={12} md={4}>
-              <ColoredBox title="Swelling During Pregnancy" color="yellow.1">
+              <ColoredBox title="Swelling During Pregnancy" color="cyan.1">
                 <Text>
                   Swollen hands, feet and legs are common as your body carries extra fluid. MLD
                   offers gentle relief in a calm, restful session designed around your comfort.
@@ -97,7 +97,7 @@ const ManualLymphaticDrainage = () => {
               </ColoredBox>
             </Grid.Col>
             <Grid.Col sm={12} md={4}>
-              <ColoredBox title="Swelling After Surgery" color="teal.1">
+              <ColoredBox title="Swelling After Surgery" color="cyan.1">
                 <Text>
                   Wisdom tooth removal, hip or knee replacement, cosmetic surgery and more. MLD
                   supports recovery by encouraging fluid movement and easing tightness and puffiness.
@@ -108,7 +108,7 @@ const ManualLymphaticDrainage = () => {
               </ColoredBox>
             </Grid.Col>
             <Grid.Col sm={12} md={4}>
-              <ColoredBox title="Pain Management" color="green.1">
+              <ColoredBox title="Pain Management" color="cyan.1">
                 <Text>
                   Swelling and inflammation can add to ongoing pain. MLD calms the nervous system and
                   may help ease pain through gentle stimulation of the skin's touch receptors.
