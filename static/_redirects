@@ -1,3 +1,7 @@
 # Consolidate www onto the apex domain
 https://www.icarehealthmassage.com.au/* https://icarehealthmassage.com.au/:splat 301!
 http://www.icarehealthmassage.com.au/*  https://icarehealthmassage.com.au/:splat 301!
+
+# Infant massage service discontinued (2026-11)
+/infant    /service/  301
+/infant/*  /service/  301

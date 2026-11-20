@@ -129,24 +129,25 @@ const links: {
 }[] = [
   { label: "Tel: 0489 080 666", icon: <IconPhone />, link: "tel:+61489080666" },
   { label: "Home", icon: <IconHome />, link: "/" },
-  { label: "About", icon: <IconHandStop />, link: "/about" },
-  { label: "Our Team", icon: <IconUsers />, link: "/our-team" },
+  { label: "About", icon: <IconHandStop />, link: "/about/" },
+  { label: "Our Team", icon: <IconUsers />, link: "/our-team/" },
   {
     label: "Service",
     icon: <IconHeart />,
-    link: "/service",
+    link: "/service/",
     links: [
-      { label: "Remedial Massage", link: "/service/remedial" },
-      { label: "Fertility Massage", link: "/service/fertility" },
-      { label: "Pregnancy Massage", link: "/service/pregnancy" },
-      { label: "Mind-Body Restorative Massage", link: "/service/mind-body" },
-      { label: "Clinical Hypnosis", link: "/service/clinical-hypnosis" },
-      { label: "Restore Scar Therapy", link: "/service/scar-therapy" },
-      { label: "Manual Lymphatic Drainage", link: "/service/mld" },
+      { label: "Remedial Massage", link: "/service/remedial/" },
+      { label: "Fertility Massage", link: "/service/fertility/" },
+      { label: "Pregnancy Massage", link: "/service/pregnancy/" },
+      { label: "Mind-Body Restorative Massage", link: "/service/mind-body/" },
+      { label: "Clinical Hypnosis", link: "/service/clinical-hypnosis/" },
+      { label: "Restore Scar Therapy", link: "/service/scar-therapy/" },
+      { label: "Manual Lymphatic Drainage", link: "/service/mld/" },
+      { label: "Pregnancy Care Packages", link: "/service/pregnancy-packages/" },
     ],
   },
-  { label: "Price", icon: <IconCurrencyDollar />, link: "/price" },
-  { label: "Gift Voucher", icon: <IconGift />, link: "/voucher" },
+  { label: "Price", icon: <IconCurrencyDollar />, link: "/price/" },
+  { label: "Gift Voucher", icon: <IconGift />, link: "/voucher/" },
 ];
 
 const ICareHeader = (props: Props) => {
@@ -224,7 +225,7 @@ const ICareHeader = (props: Props) => {
               <Popover.Target>
                 <Button
                   component={Link}
-                  to={"/booking"}
+                  to={"/booking/"}
                   onMouseOver={() => setAlertOpen(true)}
                   onMouseLeave={() => setAlertOpen(false)}
                 >

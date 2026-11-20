@@ -159,7 +159,7 @@ const Remedial = () => {
               massage session today.
             </Text>
             <Group position="center">
-              <Button size="lg" component={Link} to="/booking" color="green.4">
+              <Button size="lg" component={Link} to="/booking/" color="green.4">
                 Book Now
               </Button>
             </Group>

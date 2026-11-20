@@ -149,10 +149,10 @@ const Service = (props: Props) => {
                   </List>
 
                   <Group grow mt="auto">
-                    <Button component={Link} to="/service/remedial" variant="light" color="green">
+                    <Button component={Link} to="/service/remedial/" variant="light" color="green">
                       Learn More
                     </Button>
-                    <Button component={Link} to="/booking" color="green">
+                    <Button component={Link} to="/booking/" color="green">
                       Book Now
                     </Button>
                   </Group>
@@ -208,10 +208,10 @@ const Service = (props: Props) => {
                   </List>
 
                   <Group grow mt="auto">
-                    <Button component={Link} to="/service/fertility" variant="light" color="pink">
+                    <Button component={Link} to="/service/fertility/" variant="light" color="pink">
                       Learn More
                     </Button>
-                    <Button component={Link} to="/booking" color="pink">
+                    <Button component={Link} to="/booking/" color="pink">
                       Book Now
                     </Button>
                   </Group>
@@ -262,13 +262,13 @@ const Service = (props: Props) => {
                         <Group grow mt="auto">
                           <Button
                             component={Link}
-                            to="/service/pregnancy"
+                            to="/service/pregnancy/"
                             variant="light"
                             color="yellow"
                           >
                             Learn More
                           </Button>
-                          <Button component={Link} to="/booking" color="yellow.7">
+                          <Button component={Link} to="/booking/" color="yellow.7">
                             Book Now
                           </Button>
                         </Group>
@@ -373,7 +373,7 @@ const Service = (props: Props) => {
                         <Group position="center">
                           <Button
                             component={Link}
-                            to="/service/pregnancy-packages"
+                            to="/service/pregnancy-packages/"
                             color="yellow.6"
                             leftIcon={<IconStar size={16} />}
                           >
@@ -435,10 +435,10 @@ const Service = (props: Props) => {
                   </List>
 
                   <Group grow mt="auto">
-                    <Button component={Link} to="/service/mind-body" variant="light" color="violet">
+                    <Button component={Link} to="/service/mind-body/" variant="light" color="violet">
                       Learn More
                     </Button>
-                    <Button component={Link} to="/booking" color="violet">
+                    <Button component={Link} to="/booking/" color="violet">
                       Book Now
                     </Button>
                   </Group>
@@ -493,10 +493,10 @@ const Service = (props: Props) => {
                   </List>
 
                   <Group grow mt="auto">
-                    <Button component={Link} to="/service/clinical-hypnosis" variant="light" color="blue">
+                    <Button component={Link} to="/service/clinical-hypnosis/" variant="light" color="blue">
                       Learn More
                     </Button>
-                    <Button component={Link} to="/booking" color="blue">
+                    <Button component={Link} to="/booking/" color="blue">
                       Book Now
                     </Button>
                   </Group>
@@ -551,10 +551,10 @@ const Service = (props: Props) => {
                   </List>
 
                   <Group grow mt="auto">
-                    <Button component={Link} to="/service/scar-therapy" variant="light" color="teal">
+                    <Button component={Link} to="/service/scar-therapy/" variant="light" color="teal">
                       Learn More
                     </Button>
-                    <Button component={Link} to="/booking" color="teal">
+                    <Button component={Link} to="/booking/" color="teal">
                       Book Now
                     </Button>
                   </Group>
@@ -609,16 +609,17 @@ const Service = (props: Props) => {
                   </List>
 
                   <Group grow mt="auto">
-                    <Button component={Link} to="/service/mld" variant="light" color="cyan">
+                    <Button component={Link} to="/service/mld/" variant="light" color="cyan">
                       Learn More
                     </Button>
-                    <Button component={Link} to="/booking" color="cyan">
+                    <Button component={Link} to="/booking/" color="cyan">
                       Book Now
                     </Button>
                   </Group>
                 </Stack>
               </Card>
             </Grid.Col>
+
           </Grid>
         </Box>
 
@@ -764,7 +765,7 @@ const Service = (props: Props) => {
             that addresses your specific needs and wellness goals.
           </Text>
           <Group position="center" spacing="md">
-            <Button size="lg" component={Link} to="/booking">
+            <Button size="lg" component={Link} to="/booking/">
               Book Your Session
             </Button>
             <Button size="lg" variant="outline" component="a" href="tel:+61489080666">

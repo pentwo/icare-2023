@@ -227,7 +227,7 @@ const Pregnancy = () => {
               significant savings compared to individual sessions.
             </Text>
             <Group position="center">
-              <Button size="lg" component={Link} to="/service/pregnancy-packages" color="yellow.5">
+              <Button size="lg" component={Link} to="/service/pregnancy-packages/" color="yellow.5">
                 View Packages
               </Button>
             </Group>
@@ -246,7 +246,7 @@ const Pregnancy = () => {
             </Text>
 
             <Group position="center">
-              <Button size="lg" component={Link} to="/booking" color="yellow.5">
+              <Button size="lg" component={Link} to="/booking/" color="yellow.5">
                 Book Now
               </Button>
             </Group>

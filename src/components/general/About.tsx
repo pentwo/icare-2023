@@ -20,7 +20,7 @@ const About = (props: Props) => {
                 Holistic healing through compassionate care, evidence-based practice, and 
                 personalized treatment plans that honor your unique wellness journey.
               </Text>
-              <Button size="lg" component={Link} to="/booking" mt="md">
+              <Button size="lg" component={Link} to="/booking/" mt="md">
                 Start Your Journey
               </Button>
             </Stack>
@@ -102,7 +102,7 @@ const About = (props: Props) => {
             treatment plan that addresses your unique needs and wellness goals.
           </Text>
           <Group position="center" spacing="md">
-            <Button size="lg" component={Link} to="/booking">
+            <Button size="lg" component={Link} to="/booking/">
               Book Your Session
             </Button>
             <Button size="lg" variant="outline" component="a" href="tel:+61489080666">

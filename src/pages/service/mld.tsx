@@ -277,7 +277,7 @@ const ManualLymphaticDrainage = () => {
               on the spot.
             </Text>
             <Group position="center">
-              <Button size="lg" component={Link} to="/booking" color="cyan">
+              <Button size="lg" component={Link} to="/booking/" color="cyan">
                 Book Your Session
               </Button>
             </Group>
@@ -319,10 +319,10 @@ const ManualLymphaticDrainage = () => {
               Sometimes it just needs a little help moving forward.
             </Text>
             <Group position="center" mt="lg">
-              <Button size="lg" component={Link} to="/booking" color="cyan">
+              <Button size="lg" component={Link} to="/booking/" color="cyan">
                 Book Your Session
               </Button>
-              <Button size="lg" component={Link} to="/voucher" variant="outline" color="cyan">
+              <Button size="lg" component={Link} to="/voucher/" variant="outline" color="cyan">
                 Buy Voucher
               </Button>
             </Group>

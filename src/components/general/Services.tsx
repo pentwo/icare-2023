@@ -53,7 +53,7 @@ const Services = (props: Props) => {
                 <Group position="center" mt="auto">
                   <Button
                     component={Link}
-                    to="/service/remedial"
+                    to="/service/remedial/"
                     variant="light"
                     color="green"
                     fullWidth
@@ -99,7 +99,7 @@ const Services = (props: Props) => {
                 <Group position="center" mt="auto">
                   <Button
                     component={Link}
-                    to="/service/fertility"
+                    to="/service/fertility/"
                     variant="light"
                     color="pink"
                     fullWidth
@@ -144,7 +144,7 @@ const Services = (props: Props) => {
                 <Group position="center" mt="auto">
                   <Button
                     component={Link}
-                    to="/service/pregnancy"
+                    to="/service/pregnancy/"
                     variant="light"
                     color="yellow"
                     fullWidth
@@ -209,7 +209,7 @@ const Services = (props: Props) => {
                 <Group position="center" mt="auto">
                   <Button
                     component={Link}
-                    to="/service/mld"
+                    to="/service/mld/"
                     variant="light"
                     color="cyan"
                     fullWidth
@@ -254,7 +254,7 @@ const Services = (props: Props) => {
                 <Group position="center" mt="auto">
                   <Button
                     component={Link}
-                    to="/service/mind-body"
+                    to="/service/mind-body/"
                     variant="light"
                     color="violet"
                     fullWidth
@@ -299,7 +299,7 @@ const Services = (props: Props) => {
                 <Group position="center" mt="auto">
                   <Button
                     component={Link}
-                    to="/service/clinical-hypnosis"
+                    to="/service/clinical-hypnosis/"
                     variant="light"
                     color="blue"
                     fullWidth
@@ -345,7 +345,7 @@ const Services = (props: Props) => {
                 <Group position="center" mt="auto">
                   <Button
                     component={Link}
-                    to="/service/scar-therapy"
+                    to="/service/scar-therapy/"
                     variant="light"
                     color="teal"
                     fullWidth
@@ -359,7 +359,7 @@ const Services = (props: Props) => {
         </Grid>
 
         <Group position="center" mt="xl">
-          <Button size="lg" component={Link} to="/booking">
+          <Button size="lg" component={Link} to="/booking/">
             Book Your Session
           </Button>
         </Group>

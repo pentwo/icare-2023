@@ -67,7 +67,7 @@ const Price = ({ prices }: Props) => {
                 Professional massage therapy with competitive rates and health fund rebates
                 available. Investment in your wellness with no hidden fees.
               </Text>
-              <Button size="lg" component={Link} to="/booking" mt="md">
+              <Button size="lg" component={Link} to="/booking/" mt="md">
                 Book Your Session
               </Button>
             </Stack>
@@ -88,7 +88,7 @@ const Price = ({ prices }: Props) => {
             massage therapy can make. Health fund rebates available for eligible services.
           </Text>
           <Group position="center" spacing="md">
-            <Button size="lg" component={Link} to="/booking">
+            <Button size="lg" component={Link} to="/booking/">
               Book Online
             </Button>
             <Button size="lg" variant="outline" component="a" href="tel:+61489080666">

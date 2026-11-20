@@ -22,7 +22,7 @@ const OurTeam = (props: Props) => {
                 Led by Jenny YEH, our experienced team brings 13+ years of expertise in 
                 remedial massage, fertility therapy, and holistic healing to support your wellness journey.
               </Text>
-              <Button size="lg" component={Link} to="/booking" mt="md">
+              <Button size="lg" component={Link} to="/booking/" mt="md">
                 Book with Jenny
               </Button>
             </Stack>
@@ -127,7 +127,7 @@ const OurTeam = (props: Props) => {
               your wellness goals. Book your personalized consultation today.
             </Text>
             <Group position="center" spacing="md">
-              <Button size="lg" component={Link} to="/booking">
+              <Button size="lg" component={Link} to="/booking/">
                 Book Your Session
               </Button>
               <Button size="lg" variant="outline" component="a" href="tel:+61489080666">

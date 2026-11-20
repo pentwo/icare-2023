@@ -327,7 +327,7 @@ const Fertility = () => {
             </Text>
 
             <Group position="center" spacing="md">
-              <Button size="lg" component={Link} to="/booking" color="blue">
+              <Button size="lg" component={Link} to="/booking/" color="blue">
                 Book Free Consultation
               </Button>
               <Button

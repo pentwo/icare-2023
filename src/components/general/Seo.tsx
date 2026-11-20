@@ -48,7 +48,7 @@ const localBusinessSchema = (siteUrl: string, description: string, image: string
     "Pregnancy Massage",
     "Scar Therapy",
     "Clinical Hypnosis",
-    "Infant Massage",
+    "Manual Lymphatic Drainage",
   ],
 });
 

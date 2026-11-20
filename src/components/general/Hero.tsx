@@ -56,7 +56,10 @@ const Hero = (props: Props) => {
       > */}
       <StaticImage
         src="../../images/hero.jpg"
-        alt={""}
+        alt="Relaxing massage treatment at iCare Health Massage studio in Perth"
+        loading="eager"
+        placeholder="none"
+        layout="fullWidth"
         style={{
           position: "absolute",
           top: 0,
@@ -98,7 +101,7 @@ const Hero = (props: Props) => {
                   <Popover.Target>
                     <Button
                       component={Link}
-                      to={"/booking"}
+                      to={"/booking/"}
                       size="lg"
                       onMouseOver={() => setAlertOpen(true)}
                       onMouseLeave={() => setAlertOpen(false)}
@@ -110,7 +113,7 @@ const Hero = (props: Props) => {
                     <BookingAlert variant="short" />
                   </Popover.Dropdown>
                 </Popover>
-                <Button component={Link} to={"/voucher"} size="lg">
+                <Button component={Link} to={"/voucher/"} size="lg">
                   Buy Voucher
                 </Button>
               </Stack>

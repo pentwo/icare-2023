@@ -424,7 +424,7 @@ const ScarTherapy = () => {
             </Text>
 
             <Group position="center" spacing="md" mt="md">
-              <Button size="lg" component={Link} to="/booking" color="teal">
+              <Button size="lg" component={Link} to="/booking/" color="teal">
                 Book Your Session
               </Button>
               <Button

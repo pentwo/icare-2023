@@ -154,7 +154,7 @@ const PackageCard = ({
           </List>
         </Box>
 
-        <Button component={Link} to="/booking" color="yellow.5" fullWidth mt="md">
+        <Button component={Link} to="/booking/" color="yellow.5" fullWidth mt="md">
           Book This Package
         </Button>
       </Stack>
@@ -294,13 +294,13 @@ const PregnancyPackages = () => {
               pregnancy.
             </Text>
             <Group position="center" mt="md">
-              <Button size="lg" component={Link} to="/booking" color="yellow.5">
+              <Button size="lg" component={Link} to="/booking/" color="yellow.5">
                 Book a Consultation
               </Button>
               <Button
                 size="lg"
                 component={Link}
-                to="/service/pregnancy"
+                to="/service/pregnancy/"
                 variant="outline"
                 color="yellow.7"
               >
