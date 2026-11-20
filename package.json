@@ -58,5 +58,8 @@
     "immer": "^9.0.6",
     "node-fetch": "^2.6.7",
     "nth-check": "^2.0.1"
+  },
+  "overrides": {
+    "webpack": "5.99.6"
   }
 }
