@@ -102,7 +102,7 @@ const Service = (props: Props) => {
           </Title>
 
           <Grid>
-            {/* Remedial Massage */}
+            {/* Manual Lymphatic Drainage */}
             <Grid.Col md={6}>
               <Card
                 shadow="md"
@@ -114,8 +114,8 @@ const Service = (props: Props) => {
                 <Card.Section>
                   <Box style={{ height: 250, overflow: "hidden" }}>
                     <StaticImage
-                      src="../../images/v2-photos/remedial-1.webp"
-                      alt="Remedial Massage"
+                      src="../../images/v2-photos/body-mind-3.webp"
+                      alt="Manual Lymphatic Drainage"
                       style={{
                         height: "100%",
                         width: "100%",
@@ -126,34 +126,34 @@ const Service = (props: Props) => {
                 </Card.Section>
 
                 <Stack spacing="md" style={{ flex: 1 }} mt="md">
-                  <Title order={3} color="green">
-                    Remedial Massage
+                  <Title order={3} color="cyan">
+                    Manual Lymphatic Drainage
                   </Title>
                   <Text size="sm" color="dimmed">
-                    Professional pain management with {YEARS_EXPERIENCE} years of experience. Specializing in
-                    therapeutic treatment for pain relief and postural improvement.
+                    Gentle, rhythmic Dr. Vodder technique to ease swelling, calm the body and
+                    support your recovery.
                   </Text>
 
                   <List
                     spacing="xs"
                     size="sm"
                     icon={
-                      <ThemeIcon size="sm" color="green">
+                      <ThemeIcon size="sm" color="cyan">
                         <IconCheck size="0.8rem" />
                       </ThemeIcon>
                     }
                   >
-                    <List.Item>Chronic pain management</List.Item>
-                    <List.Item>Postural improvement</List.Item>
-                    <List.Item>Scoliosis treatment</List.Item>
-                    <List.Item>Injury rehabilitation</List.Item>
+                    <List.Item>Swelling during pregnancy</List.Item>
+                    <List.Item>Post-surgical recovery</List.Item>
+                    <List.Item>Pain management</List.Item>
+                    <List.Item>Deeply calming, very light pressure</List.Item>
                   </List>
 
                   <Group grow mt="auto">
-                    <Button component={Link} to="/service/remedial/" variant="light" color="green">
+                    <Button component={Link} to="/service/mld/" variant="light" color="cyan">
                       Learn More
                     </Button>
-                    <Button component={Link} to="/booking/" color="green">
+                    <Button component={Link} to="/booking/" color="cyan">
                       Book Now
                     </Button>
                   </Group>
@@ -388,6 +388,65 @@ const Service = (props: Props) => {
               </Card>
             </Grid.Col>
 
+            {/* Remedial Massage */}
+            <Grid.Col md={6}>
+              <Card
+                shadow="md"
+                padding="lg"
+                radius="md"
+                withBorder
+                style={{ height: "100%", display: "flex", flexDirection: "column" }}
+              >
+                <Card.Section>
+                  <Box style={{ height: 250, overflow: "hidden" }}>
+                    <StaticImage
+                      src="../../images/v2-photos/remedial-1.webp"
+                      alt="Remedial Massage"
+                      style={{
+                        height: "100%",
+                        width: "100%",
+                        objectFit: "cover",
+                      }}
+                    />
+                  </Box>
+                </Card.Section>
+
+                <Stack spacing="md" style={{ flex: 1 }} mt="md">
+                  <Title order={3} color="green">
+                    Remedial Massage
+                  </Title>
+                  <Text size="sm" color="dimmed">
+                    Professional pain management with {YEARS_EXPERIENCE} years of experience. Specializing in
+                    therapeutic treatment for pain relief and postural improvement.
+                  </Text>
+
+                  <List
+                    spacing="xs"
+                    size="sm"
+                    icon={
+                      <ThemeIcon size="sm" color="green">
+                        <IconCheck size="0.8rem" />
+                      </ThemeIcon>
+                    }
+                  >
+                    <List.Item>Chronic pain management</List.Item>
+                    <List.Item>Postural improvement</List.Item>
+                    <List.Item>Scoliosis treatment</List.Item>
+                    <List.Item>Injury rehabilitation</List.Item>
+                  </List>
+
+                  <Group grow mt="auto">
+                    <Button component={Link} to="/service/remedial/" variant="light" color="green">
+                      Learn More
+                    </Button>
+                    <Button component={Link} to="/booking/" color="green">
+                      Book Now
+                    </Button>
+                  </Group>
+                </Stack>
+              </Card>
+            </Grid.Col>
+
             {/* Mind-Body Restorative Massage */}
             <Grid.Col md={6}>
               <Card
@@ -562,65 +621,6 @@ const Service = (props: Props) => {
                 </Stack>
               </Card>
             </Grid.Col>
-            {/* Manual Lymphatic Drainage */}
-            <Grid.Col md={6}>
-              <Card
-                shadow="md"
-                padding="lg"
-                radius="md"
-                withBorder
-                style={{ height: "100%", display: "flex", flexDirection: "column" }}
-              >
-                <Card.Section>
-                  <Box style={{ height: 250, overflow: "hidden" }}>
-                    <StaticImage
-                      src="../../images/v2-photos/body-mind-1.webp"
-                      alt="Manual Lymphatic Drainage"
-                      style={{
-                        height: "100%",
-                        width: "100%",
-                        objectFit: "cover",
-                      }}
-                    />
-                  </Box>
-                </Card.Section>
-
-                <Stack spacing="md" style={{ flex: 1 }} mt="md">
-                  <Title order={3} color="cyan">
-                    Manual Lymphatic Drainage
-                  </Title>
-                  <Text size="sm" color="dimmed">
-                    Gentle, rhythmic Dr. Vodder technique to ease swelling, calm the body and
-                    support your recovery.
-                  </Text>
-
-                  <List
-                    spacing="xs"
-                    size="sm"
-                    icon={
-                      <ThemeIcon size="sm" color="cyan">
-                        <IconCheck size="0.8rem" />
-                      </ThemeIcon>
-                    }
-                  >
-                    <List.Item>Swelling during pregnancy</List.Item>
-                    <List.Item>Post-surgical recovery</List.Item>
-                    <List.Item>Pain management</List.Item>
-                    <List.Item>Deeply calming, very light pressure</List.Item>
-                  </List>
-
-                  <Group grow mt="auto">
-                    <Button component={Link} to="/service/mld/" variant="light" color="cyan">
-                      Learn More
-                    </Button>
-                    <Button component={Link} to="/booking/" color="cyan">
-                      Book Now
-                    </Button>
-                  </Group>
-                </Stack>
-              </Card>
-            </Grid.Col>
-
           </Grid>
         </Box>
 

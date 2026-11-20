@@ -163,18 +163,14 @@ const priceInfo: PriceProps[] = [
   },
   {
     title: "Manual Lymphatic Drainage",
-    description: "*Pre-book price applies when you book your next session in advance",
     hasInitialFollowup: true,
     price: [
       { time: "1 hour", price: 140, category: "initial" },
       { time: "1 hour", price: 130, category: "followup" },
-      { time: "1 hour", price: 120, category: "prebook" },
       { time: "1 hours 15 minutes", price: 150, category: "initial" },
       { time: "1 hours 15 minutes", price: 140, category: "followup" },
-      { time: "1 hours 15 minutes", price: 130, category: "prebook" },
       { time: "1 hours 30 minutes", price: 175, category: "initial" },
       { time: "1 hours 30 minutes", price: 165, category: "followup" },
-      { time: "1 hours 30 minutes", price: 155, category: "prebook" },
     ],
   },
 ];
@@ -237,7 +233,7 @@ export const query = graphql`
         }
       }
     }
-    bg6: file(relativePath: { eq: "v2-photos/body-mind-1.webp" }) {
+    bg6: file(relativePath: { eq: "v2-photos/price-scar-therapy.webp" }) {
       childImageSharp {
         fluid(maxWidth: 960) {
           ...GatsbyImageSharpFluid

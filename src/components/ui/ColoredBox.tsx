@@ -5,9 +5,10 @@ interface ColoredBoxProps {
   title: string;
   children: React.ReactNode;
   color?: string;
+  h?: string | number;
 }
 
-export default function ColoredBox({ title, children, color = "pink.2" }: ColoredBoxProps) {
+export default function ColoredBox({ title, children, color = "pink.2", h }: ColoredBoxProps) {
   const theme = useMantineTheme();
 
   const colorName = color.split(".")[0];
@@ -21,6 +22,7 @@ export default function ColoredBox({ title, children, color = "pink.2" }: Colore
       sx={(theme) => ({
         backgroundColor: bgColor,
         borderRadius: "16px",
+        height: h,
       })}
     >
       <Stack>

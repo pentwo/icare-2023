@@ -1,4 +1,3 @@
-import { YEARS_EXPERIENCE } from "../../Data/business";
 import {
   Title,
   Text,
@@ -11,7 +10,6 @@ import {
   Grid,
   Accordion,
   Badge,
-  Table,
 } from "@mantine/core";
 import React from "react";
 import SEO from "../../components/general/Seo";
@@ -21,12 +19,6 @@ import { IconDroplet, IconHeart, IconShieldCheck, IconMoodHappy } from "@tabler/
 import ColoredBox from "../../components/ui/ColoredBox";
 import { Link } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
-
-const mldPrices = [
-  { duration: "60 minutes", initial: 140, standard: 130, prebook: 120 },
-  { duration: "75 minutes", initial: 150, standard: 140, prebook: 130 },
-  { duration: "90 minutes", initial: 175, standard: 165, prebook: 155 },
-];
 
 const ManualLymphaticDrainage = () => {
   return (
@@ -89,9 +81,9 @@ const ManualLymphaticDrainage = () => {
           <Title order={2}>Who Can Benefit?</Title>
           <Text>MLD is especially helpful in three situations:</Text>
 
-          <Grid>
+          <Grid align="stretch">
             <Grid.Col sm={12} md={4}>
-              <ColoredBox title="Swelling During Pregnancy" color="cyan.1">
+              <ColoredBox title="Swelling During Pregnancy" color="cyan.1" h="100%">
                 <Text>
                   Swollen hands, feet and legs are common as your body carries extra fluid. MLD
                   offers gentle relief in a calm, restful session designed around your comfort.
@@ -99,7 +91,7 @@ const ManualLymphaticDrainage = () => {
               </ColoredBox>
             </Grid.Col>
             <Grid.Col sm={12} md={4}>
-              <ColoredBox title="Swelling After Surgery" color="cyan.1">
+              <ColoredBox title="Swelling After Surgery" color="cyan.1" h="100%">
                 <Text>
                   Wisdom tooth removal, hip or knee replacement, cosmetic surgery and more. MLD
                   supports recovery by encouraging fluid movement and easing tightness and puffiness.
@@ -110,7 +102,7 @@ const ManualLymphaticDrainage = () => {
               </ColoredBox>
             </Grid.Col>
             <Grid.Col sm={12} md={4}>
-              <ColoredBox title="Pain Management" color="cyan.1">
+              <ColoredBox title="Pain Management" color="cyan.1" h="100%">
                 <Text>
                   Swelling and inflammation can add to ongoing pain. MLD calms the nervous system and
                   may help ease pain through gentle stimulation of the skin's touch receptors.
@@ -222,69 +214,6 @@ const ManualLymphaticDrainage = () => {
               conditions (for example, acute infection, blood clots or certain heart conditions).
               Please tell us your full medical history when booking so we can tailor your session
               safely.
-            </Text>
-          </ColoredBox>
-
-          <Grid align="center">
-            <Grid.Col sm={12} md={6}>
-              <Stack spacing={"xs"}>
-                <Title order={2}>Your Practitioner</Title>
-                <Title order={3} color="cyan">
-                  Jenny
-                </Title>
-                <Text>
-                  Jenny is a Remedial Massage Therapist with {YEARS_EXPERIENCE} years of experience, with a special
-                  interest in pregnancy, post-surgical care and pain management. She uses the Dr.
-                  Vodder Manual Lymphatic Drainage technique, and her approach is caring, patient and
-                  personalised to you.
-                </Text>
-                <Text italic mt="md">
-                  Every session begins with listening.
-                </Text>
-              </Stack>
-            </Grid.Col>
-            <Grid.Col sm={12} md={6}>
-              <StaticImage
-                src="../../images/v2-photos/body-mind-3.webp"
-                alt="Jenny - MLD Practitioner"
-                height={400}
-                style={{ borderRadius: "16px" }}
-              />
-            </Grid.Col>
-          </Grid>
-
-          <ColoredBox title="Book Your Session" color="cyan.1">
-            <Table striped highlightOnHover sx={{ backgroundColor: "white", borderRadius: 8 }}>
-              <thead>
-                <tr>
-                  <th>Duration</th>
-                  <th style={{ textAlign: "center" }}>Initial</th>
-                  <th style={{ textAlign: "center" }}>Standard</th>
-                  <th style={{ textAlign: "center" }}>Pre-book</th>
-                </tr>
-              </thead>
-              <tbody>
-                {mldPrices.map((row) => (
-                  <tr key={row.duration}>
-                    <td>{row.duration}</td>
-                    <td align="center">${row.initial}</td>
-                    <td align="center">${row.standard}</td>
-                    <td align="center">${row.prebook}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </Table>
-            <Text size="sm" color="dimmed">
-              Pre-book price applies when you book your next session in advance. HICAPS available
-              on the spot.
-            </Text>
-            <Group position="center">
-              <Button size="lg" component={Link} to="/booking/" color="cyan">
-                Book Your Session
-              </Button>
-            </Group>
-            <Text align="center" size="sm" color="dimmed">
-              Call or text 0489 080 666
             </Text>
           </ColoredBox>
 

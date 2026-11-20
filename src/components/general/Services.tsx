@@ -20,7 +20,7 @@ const Services = (props: Props) => {
         </Text>
 
         <Grid>
-          {/* Remedial Massage */}
+          {/* Manual Lymphatic Drainage - NEW */}
           <Grid.Col md={4}>
             <Card
               shadow="md"
@@ -29,11 +29,27 @@ const Services = (props: Props) => {
               withBorder
               style={{ height: "100%", display: "flex", flexDirection: "column" }}
             >
-              <Card.Section>
+              <Card.Section style={{ position: "relative" }}>
+                <Box
+                  style={{
+                    position: "absolute",
+                    top: 10,
+                    left: 10,
+                    zIndex: 1,
+                    backgroundColor: "#15aabf",
+                    color: "white",
+                    padding: "4px 12px",
+                    borderRadius: "4px",
+                    fontSize: "12px",
+                    fontWeight: 600,
+                  }}
+                >
+                  NEW
+                </Box>
                 <Box style={{ height: 250, overflow: "hidden" }}>
                   <StaticImage
-                    src="../../images/v2-photos/remedial-1.webp"
-                    alt="Remedial Massage"
+                    src="../../images/v2-photos/body-mind-3.webp"
+                    alt="Manual Lymphatic Drainage"
                     style={{
                       height: "100%",
                       width: "100%",
@@ -44,19 +60,19 @@ const Services = (props: Props) => {
               </Card.Section>
 
               <Stack spacing="md" style={{ flex: 1 }} mt="md">
-                <Title order={3}>Remedial Massage</Title>
+                <Title order={3}>Manual Lymphatic Drainage</Title>
                 <Text size="sm" color="dimmed" style={{ flex: 1 }}>
-                  Professional pain management with {YEARS_EXPERIENCE} years of experience. Specializing in
-                  therapeutic treatment for pain relief and postural improvement, with particular
-                  expertise in treating scoliosis.
+                  Gentle support for your body's natural drainage system using the Dr. Vodder
+                  technique. Light, rhythmic touch to ease swelling, calm the body and support
+                  recovery.
                 </Text>
 
                 <Group position="center" mt="auto">
                   <Button
                     component={Link}
-                    to="/service/remedial/"
+                    to="/service/mld/"
                     variant="light"
-                    color="green"
+                    color="cyan"
                     fullWidth
                   >
                     Learn More
@@ -160,7 +176,7 @@ const Services = (props: Props) => {
 
         {/* Additional Services */}
         <Grid>
-          {/* Manual Lymphatic Drainage - NEW */}
+          {/* Remedial Massage */}
           <Grid.Col md={4}>
             <Card
               shadow="md"
@@ -169,27 +185,11 @@ const Services = (props: Props) => {
               withBorder
               style={{ height: "100%", display: "flex", flexDirection: "column" }}
             >
-              <Card.Section style={{ position: "relative" }}>
-                <Box
-                  style={{
-                    position: "absolute",
-                    top: 10,
-                    left: 10,
-                    zIndex: 1,
-                    backgroundColor: "#15aabf",
-                    color: "white",
-                    padding: "4px 12px",
-                    borderRadius: "4px",
-                    fontSize: "12px",
-                    fontWeight: 600,
-                  }}
-                >
-                  NEW
-                </Box>
+              <Card.Section>
                 <Box style={{ height: 250, overflow: "hidden" }}>
                   <StaticImage
-                    src="../../images/v2-photos/body-mind-1.webp"
-                    alt="Manual Lymphatic Drainage"
+                    src="../../images/v2-photos/remedial-1.webp"
+                    alt="Remedial Massage"
                     style={{
                       height: "100%",
                       width: "100%",
@@ -200,19 +200,19 @@ const Services = (props: Props) => {
               </Card.Section>
 
               <Stack spacing="md" style={{ flex: 1 }} mt="md">
-                <Title order={3}>Manual Lymphatic Drainage</Title>
+                <Title order={3}>Remedial Massage</Title>
                 <Text size="sm" color="dimmed" style={{ flex: 1 }}>
-                  Gentle support for your body's natural drainage system using the Dr. Vodder
-                  technique. Light, rhythmic touch to ease swelling, calm the body and support
-                  recovery.
+                  Professional pain management with {YEARS_EXPERIENCE} years of experience. Specializing in
+                  therapeutic treatment for pain relief and postural improvement, with particular
+                  expertise in treating scoliosis.
                 </Text>
 
                 <Group position="center" mt="auto">
                   <Button
                     component={Link}
-                    to="/service/mld/"
+                    to="/service/remedial/"
                     variant="light"
-                    color="cyan"
+                    color="green"
                     fullWidth
                   >
                     Learn More
