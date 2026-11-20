@@ -173,7 +173,7 @@ const PregnancyPackages = () => {
       included: [
         "Three extended 90-minute pregnancy massage sessions",
         "Full body relaxation and targeted work on problem areas",
-        "Gentle stretching and mobilization techniques",
+        "Gentle stretching and mobilisation techniques",
         "Comfortable side-lying positioning with supportive cushions",
         "Self-care advice for managing discomfort between sessions",
       ],
@@ -193,7 +193,7 @@ const PregnancyPackages = () => {
       badgeColor: "pink",
       included: [
         "Three pregnancy massage sessions during your pregnancy",
-        "One specialized postnatal fertility massage after birth",
+        "One specialised postnatal fertility massage after birth",
         "Continuity of care from pregnancy through early recovery",
         "Support for your body's transition into the postnatal period",
       ],
@@ -209,7 +209,7 @@ const PregnancyPackages = () => {
       idealFor: [
         "Mums wanting comprehensive care through pregnancy and beyond",
         "Those planning to conceive again in the future",
-        "Anyone recognizing the importance of postnatal recovery",
+        "Anyone recognising the importance of postnatal recovery",
         "First-time mothers navigating the postpartum period",
       ],
     },
@@ -266,7 +266,7 @@ const PregnancyPackages = () => {
               difficulties are common as your body adapts to support your growing baby.
             </Text>
             <Text>
-              Our specialized Pregnancy Care Packages provide consistent, gentle support throughout
+              Our specialised Pregnancy Care Packages provide consistent, gentle support throughout
               your pregnancy and into the postnatal period – helping you feel more comfortable as
               you prepare to welcome your little one.
             </Text>
@@ -288,7 +288,7 @@ const PregnancyPackages = () => {
             <Text>
               Not sure which package is right for you? I'm happy to discuss your specific needs and
               help you choose the best option for your pregnancy journey. Each package can be
-              customized to address your unique concerns and comfort needs.
+              customised to address your unique concerns and comfort needs.
             </Text>
             <Text italic>
               Please note: While pregnancy massage is generally safe, it's always recommended to

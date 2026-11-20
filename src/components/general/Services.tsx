@@ -15,7 +15,7 @@ const Services = (props: Props) => {
         </Title>
 
         <Text align="center" size="lg" color="dimmed" mb="xl">
-          Discover our range of specialized massage therapies designed to support your health and
+          Discover our range of specialised massage therapies designed to support your health and
           wellbeing
         </Text>
 
@@ -108,7 +108,7 @@ const Services = (props: Props) => {
               <Stack spacing="md" style={{ flex: 1 }} mt="md">
                 <Title order={3}>Fertility Massage</Title>
                 <Text size="sm" color="dimmed" style={{ flex: 1 }}>
-                  Specialized therapeutic treatment combining gentle massage with emotional support
+                  Specialised therapeutic treatment combining gentle massage with emotional support
                   to promote reproductive and mental wellness. Formerly known as Mind-Body
                   Restorative Massage.
                 </Text>
@@ -202,7 +202,7 @@ const Services = (props: Props) => {
               <Stack spacing="md" style={{ flex: 1 }} mt="md">
                 <Title order={3}>Remedial Massage</Title>
                 <Text size="sm" color="dimmed" style={{ flex: 1 }}>
-                  Professional pain management with {YEARS_EXPERIENCE} years of experience. Specializing in
+                  Professional pain management with {YEARS_EXPERIENCE} years of experience. Specialising in
                   therapeutic treatment for pain relief and postural improvement, with particular
                   expertise in treating scoliosis.
                 </Text>

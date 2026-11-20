@@ -51,13 +51,13 @@ const ClinicalHypnosis: React.FC = () => {
                   therapeutic interventions - which is why it pairs so beautifully with remedial
                   massage therapy.
                 </Text>
-                <Title order={2}>My Areas of Specialization</Title>
+                <Title order={2}>My Areas of Specialisation</Title>
 
                 <Text>
                   Through my years of massage therapy practice, I've developed particular expertise
                   and passion for helping people with conditions that often have both physical and
                   psychological components. My integrated approach addresses the whole person,
-                  recognizing that lasting healing occurs when we work with both body and mind
+                  recognising that lasting healing occurs when we work with both body and mind
                   together.
                 </Text>
               </Stack>
@@ -72,7 +72,7 @@ const ClinicalHypnosis: React.FC = () => {
             </Grid.Col>
           </Grid>
 
-          <ColoredBox title="What I Specialize In" color="blue.1">
+          <ColoredBox title="What I Specialise In" color="blue.1">
             <List
               spacing="md"
               icon={
@@ -142,7 +142,7 @@ const ClinicalHypnosis: React.FC = () => {
                   <Title order={4}>Collaborative Partnership</Title>
                   <Text size="sm" color="dimmed">
                     Clinical hypnosis is a collaborative process. We work together to identify your
-                    goals and develop personalized approaches that feel right for you.
+                    goals and develop personalised approaches that feel right for you.
                   </Text>
                 </Box>
               </Group>

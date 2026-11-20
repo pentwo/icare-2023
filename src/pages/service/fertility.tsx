@@ -45,7 +45,7 @@ const Fertility = () => {
             <Grid.Col sm={12} md={6}>
               <Stack spacing={"xl"}>
                 <Text>
-                  Fertility Massage is a specialized therapeutic treatment that combines gentle
+                  Fertility Massage is a specialised therapeutic treatment that combines gentle
                   massage techniques with emotional support to promote overall reproductive and
                   mental wellness. Trained by Edwina Taylor in Perth, I offer this nurturing
                   treatment to support various aspects of women's health and wellbeing.
@@ -75,7 +75,7 @@ const Fertility = () => {
             <Grid.Col md={12} lg={6} style={{ display: "flex", justifyContent: "center" }}>
               <StaticImage
                 src="../../images/fertility-images/v2/fertility-4.jpeg"
-                alt="Fertility Massage"
+                alt="Woman holding a pregnancy test"
                 height={560}
                 style={{ borderRadius: "16px" }}
               />
@@ -124,7 +124,7 @@ const Fertility = () => {
             <Grid.Col sm={12} md={6}>
               <StaticImage
                 src="../../images/v2-photos/fertility-1.webp"
-                alt="Fertility Massage"
+                alt="Jenny Yeh giving a fertility massage in her Perth studio"
                 height={480}
                 style={{ borderRadius: "16px" }}
               />
@@ -206,7 +206,7 @@ const Fertility = () => {
             <Grid.Col sm={12} md={6}>
               <StaticImage
                 src="../../images/v2-photos/fertility-2.webp"
-                alt="Fertility Massage"
+                alt="Gentle abdominal fertility massage"
                 style={{ borderRadius: "16px" }}
               />
             </Grid.Col>
@@ -223,7 +223,7 @@ const Fertility = () => {
             >
               <StaticImage
                 src="../../images/v2-photos/fertility-3.webp"
-                alt="Fertility Massage"
+                alt="Singing bowl used for relaxation during a fertility session"
                 height={500}
                 style={{ borderRadius: "16px" }}
               />
@@ -309,7 +309,7 @@ const Fertility = () => {
             <Grid.Col sm={12} md={6} style={{ display: "flex", justifyContent: "center" }}>
               <StaticImage
                 src="../../images/v2-photos/fertility-5.webp"
-                alt="Fertility Massage"
+                alt="Jenny Yeh discussing health history with a client before treatment"
                 height={500}
                 style={{ borderRadius: "16px" }}
               />

@@ -61,7 +61,7 @@ const Price = ({ prices }: Props) => {
           <Center>
             <Stack align="center" spacing="md">
               <Title order={1} align="center" size="h1">
-                Transparent Pricing for Quality Care
+                Massage Prices &amp; Health Fund Rebates in Perth
               </Title>
               <Text align="center" size="lg" color="dimmed" maw={600}>
                 Professional massage therapy with competitive rates and health fund rebates

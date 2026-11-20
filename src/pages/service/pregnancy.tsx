@@ -30,7 +30,7 @@ const Pregnancy = () => {
           <Text>
             As a certified Pregnancy Massage Practitioner with special training in prenatal care, I
             understand the unique physical and emotional changes that come with pregnancy. My
-            specialized pregnancy massage service offers gentle, secure support throughout your
+            specialised pregnancy massage service offers gentle, secure support throughout your
             pregnancy journey, helping you find comfort and relief during this transformative time.
           </Text>
 
@@ -63,14 +63,14 @@ const Pregnancy = () => {
             <Grid.Col md={12} lg={6} style={{ display: "flex", justifyContent: "center" }}>
               <StaticImage
                 src="../../images/pregnancy-images/v2/pregnancy-1.jpeg"
-                alt="Pregnancy Massage"
+                alt="Pregnant woman standing in a field of flowers"
                 height={480}
                 style={{ borderRadius: "16px" }}
               />
             </Grid.Col>
           </Grid>
 
-          <ColoredBox title="Safe, Specialized Care" color="yellow.1">
+          <ColoredBox title="Safe, Specialised Care" color="yellow.1">
             <Text>
               Your safety and comfort are my top priorities. Each session is carefully tailored to
               your stage of pregnancy and specific needs:
@@ -140,7 +140,7 @@ const Pregnancy = () => {
             <Grid.Col sm={12} md={6}>
               <StaticImage
                 src="../../images/pregnancy-images/v2/pregnancy-3.jpeg"
-                alt="Pregnancy Massage"
+                alt="Pregnant woman holding her belly"
                 // height={480}
                 style={{ borderRadius: "16px" }}
               />
@@ -169,7 +169,7 @@ const Pregnancy = () => {
             <Grid.Col sm={12} md={6}>
               <StaticImage
                 src="../../images/pregnancy-images/v2/pregnancy-6.jpg"
-                alt="Pregnancy Massage"
+                alt="Side-lying pregnancy massage on the lower back"
                 // height={480}
                 style={{ borderRadius: "16px" }}
               />
@@ -178,7 +178,7 @@ const Pregnancy = () => {
               <Stack spacing={"xs"}>
                 <Title order={2}>Expertise You Can Trust</Title>
                 <Text>
-                  With specialized training in pregnancy massage and years of experience working
+                  With specialised training in pregnancy massage and years of experience working
                   with expecting mothers, I understand the unique needs of pregnant bodies. My
                   qualifications include:
                 </Text>
@@ -224,7 +224,7 @@ const Pregnancy = () => {
 
           <ColoredBox title="Pregnancy Care Packages" color="yellow.1">
             <Text>
-              Looking for ongoing support throughout your pregnancy? Our specialized care packages
+              Looking for ongoing support throughout your pregnancy? Our specialised care packages
               offer consistent, gentle support from pregnancy through the postnatal period – with
               significant savings compared to individual sessions.
             </Text>

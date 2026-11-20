@@ -85,7 +85,7 @@ const Service = (props: Props) => {
           <Center>
             <Stack align="center" spacing="md">
               <Title order={1} align="center" size="h1">
-                Our Specialized Massage Services
+                Massage Services in Perth
               </Title>
               <Text align="center" size="lg" color="dimmed" maw={600}>
                 Holistic care combining massage therapy, clinical hypnosis, and strategic
@@ -189,7 +189,7 @@ const Service = (props: Props) => {
                     Fertility Massage
                   </Title>
                   <Text size="sm" color="dimmed">
-                    Specialized treatment combining gentle massage with emotional support to promote
+                    Specialised treatment combining gentle massage with emotional support to promote
                     reproductive wellness. Formerly Mind-Body Restorative Massage.
                   </Text>
 
@@ -416,7 +416,7 @@ const Service = (props: Props) => {
                     Remedial Massage
                   </Title>
                   <Text size="sm" color="dimmed">
-                    Professional pain management with {YEARS_EXPERIENCE} years of experience. Specializing in
+                    Professional pain management with {YEARS_EXPERIENCE} years of experience. Specialising in
                     therapeutic treatment for pain relief and postural improvement.
                   </Text>
 
@@ -675,7 +675,7 @@ const Service = (props: Props) => {
                     <Box>
                       <Title order={4}>{YEARS_EXPERIENCE} Years Experience</Title>
                       <Text size="sm" color="dimmed">
-                        Extensive experience in remedial massage with specialized training in
+                        Extensive experience in remedial massage with specialised training in
                         fertility and pregnancy massage therapy.
                       </Text>
                     </Box>
@@ -761,7 +761,7 @@ const Service = (props: Props) => {
         {/* Booking CTA */}
         {/* <ColoredBox title="Ready to Begin Your Wellness Journey?">
           <Text align="center" mb="md">
-            Book your personalized consultation today and discover which treatment
+            Book your personalised consultation today and discover which treatment
             is right for you. Jenny will work with you to create a tailored plan
             that addresses your specific needs and wellness goals.
           </Text>

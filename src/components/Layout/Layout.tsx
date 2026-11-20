@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useHotkeys } from "@mantine/hooks";
-import { MantineProvider, ColorSchemeProvider, ColorScheme, AppShell, Space } from "@mantine/core";
+import { MantineProvider, ColorSchemeProvider, ColorScheme, AppShell } from "@mantine/core";
 import { iCareTheme } from "../styles/iCareTheme";
 import Header from "./Header";
 
@@ -28,7 +28,6 @@ export function Layout({ children }: LayoutProps) {
         padding={0}
         // navbar={<Navbar width={{ base: 300 }} height={500} p="xs">{/* Navbar content */}</Navbar>}
         header={<Header />}
-        footer={<Footer />}
         styles={(theme) => ({
           paddingBottom: 20,
           main: {
@@ -38,7 +37,7 @@ export function Layout({ children }: LayoutProps) {
         })}
       >
         {children}
-        <Space h={60} />
+        <Footer />
       </AppShell>
     </MantineProvider>
   );

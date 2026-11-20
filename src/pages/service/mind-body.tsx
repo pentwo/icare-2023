@@ -44,7 +44,7 @@ const MindBody: React.FC = () => {
                 the whole person, not just individual symptoms.
               </Text>
               <Text>
-                During your session, our qualified practitioners work simultaneously on multiple
+                During your session, Jenny works simultaneously on multiple
                 levels - releasing physical tension and muscle restrictions while guiding your mind
                 toward relaxation, stress reduction, and positive mental patterns. This dual
                 approach helps break the cycle where physical discomfort creates mental stress,
@@ -54,7 +54,7 @@ const MindBody: React.FC = () => {
             <Grid.Col md={6}>
               <StaticImage
                 src="../../images/v2-photos/body-mind-2.webp"
-                alt="Mind-Body Restorative Massage"
+                alt="Essential oils and a singing bowl on the treatment table"
                 height={480}
                 style={{ borderRadius: "16px" }}
               />
@@ -140,7 +140,7 @@ const MindBody: React.FC = () => {
 
           <StaticImage
             src="../../images/v2-photos/body-mind-1.webp"
-            alt="Mind-Body Restorative Massage"
+            alt="Jenny Yeh taking notes during a mind-body consultation"
             height={480}
             style={{ borderRadius: "16px" }}
           />

@@ -18,7 +18,7 @@ const About = (props: Props) => {
               </Title>
               <Text align="center" size="lg" color="dimmed" maw={600}>
                 Holistic healing through compassionate care, evidence-based practice, and 
-                personalized treatment plans that honor your unique wellness journey.
+                personalised treatment plans that honour your unique wellness journey.
               </Text>
               <Button size="lg" component={Link} to="/booking/" mt="md">
                 Start Your Journey
@@ -49,7 +49,7 @@ const About = (props: Props) => {
               strive to create a safe, supportive space where people feel seen, heard, and valued.
             </Text>
             <Text mt="sm">
-              Our goal is to normalize integrated care, where mental health and physical health are
+              Our goal is to normalise integrated care, where mental health and physical health are
               treated with equal respect and attention.
             </Text>
           </ColoredBox>
@@ -79,9 +79,9 @@ const About = (props: Props) => {
               </Box>
 
               <Box>
-                <Text weight={600}>Personalized Care</Text>
+                <Text weight={600}>Personalised Care</Text>
                 <Text size="sm">
-                  Every session is customized to meet your unique needs, goals, and comfort.
+                  Every session is customised to meet your unique needs, goals, and comfort.
                 </Text>
               </Box>
 
@@ -98,7 +98,7 @@ const About = (props: Props) => {
         {/* CTA Section */}
         <ColoredBox title="Ready to Begin Your Wellness Journey?">
           <Text align="center" mb="md">
-            Experience our holistic approach to healing. Jenny will work with you to create a personalized 
+            Experience our holistic approach to healing. Jenny will work with you to create a personalised 
             treatment plan that addresses your unique needs and wellness goals.
           </Text>
           <Group position="center" spacing="md">

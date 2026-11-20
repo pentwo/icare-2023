@@ -37,7 +37,7 @@ const Remedial = () => {
         <Stack spacing={"xl"}>
           <Title order={1}>Remedial Massage - Professional Pain Management</Title>
           <Text>
-            With {YEARS_EXPERIENCE} years of experience as a qualified Remedial Massage Therapist, I specialize in
+            With {YEARS_EXPERIENCE} years of experience as a qualified Remedial Massage Therapist, I specialise in
             providing targeted treatment for those seeking effective pain management and postural
             improvement, with particular expertise in treating scoliosis.
           </Text>
@@ -49,13 +49,13 @@ const Remedial = () => {
                 Remedial massage is a therapeutic treatment that goes beyond relaxation to address
                 specific muscular pain and postural issues. Using advanced techniques and detailed
                 anatomical knowledge, I work to identify the root cause of your discomfort and
-                develop a personalized treatment plan to achieve lasting results.
+                develop a personalised treatment plan to achieve lasting results.
               </Text>
             </Grid.Col>
             <Grid.Col sm={12} md={3}>
               <StaticImage
                 src="../../images/v2-photos/remedial-3.webp"
-                alt="Remedial Massage"
+                alt="Studio entrance with client intake form"
                 height={240}
                 style={{ borderRadius: "16px" }}
               />
@@ -63,7 +63,7 @@ const Remedial = () => {
           </Grid>
 
           <ColoredBox title="How Can Remedial Massage Help You?" color="green.1">
-            <Text>This specialized treatment is particularly effective for:</Text>
+            <Text>This specialised treatment is particularly effective for:</Text>
             <List
               spacing="xs"
               icon={
@@ -85,7 +85,7 @@ const Remedial = () => {
             <Grid.Col sm={12} md={6}>
               <StaticImage
                 src="../../images/v2-photos/remedial-1.webp"
-                alt="Remedial Massage"
+                alt="Jenny Yeh talking with a client in the treatment room"
                 height={480}
                 style={{ borderRadius: "16px" }}
               />
@@ -115,7 +115,7 @@ const Remedial = () => {
                 </List>
                 <Text>
                   Whether you're dealing with chronic pain, recovering from an injury, or seeking to
-                  improve your posture, my goal is to provide effective, personalized treatment that
+                  improve your posture, my goal is to provide effective, personalised treatment that
                   addresses your specific needs and supports your journey to better health.
                 </Text>
               </Stack>
@@ -149,7 +149,7 @@ const Remedial = () => {
             <Grid.Col sm={12} md={12}>
               <StaticImage
                 src="../../images/v2-photos/remedial-2.webp"
-                alt="Remedial Massage"
+                alt="Jenny Yeh with a client on the massage table in her Perth studio"
                 // height={480}
                 style={{ borderRadius: "16px" }}
               />

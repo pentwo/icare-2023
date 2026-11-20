@@ -17,11 +17,11 @@ const OurTeam = (props: Props) => {
           <Center>
             <Stack align="center" spacing="md">
               <Title order={1} align="center" size="h1">
-                Meet Our Expert Team
+                Jenny Yeh, Remedial Massage Therapist in Perth
               </Title>
               <Text align="center" size="lg" color="dimmed" maw={600}>
-                Led by Jenny YEH, our experienced team brings {YEARS_EXPERIENCE} years of expertise in 
-                remedial massage, fertility therapy, and holistic healing to support your wellness journey.
+                Jenny brings {YEARS_EXPERIENCE} years of expertise in remedial massage, fertility
+                therapy, and holistic healing to support your wellness journey.
               </Text>
               <Button size="lg" component={Link} to="/booking/" mt="md">
                 Book with Jenny
@@ -69,7 +69,7 @@ const OurTeam = (props: Props) => {
                   Jenny has been a massage therapist since 2010 ({YEARS_EXPERIENCE} years). Qualified Diploma of remedial
                   massage and practitioner of pregnancy massage. Jenny had completed the Bachelor of
                   Education and worked as a teacher in child cares and kindergarten in Taiwan. She
-                  LOVE to work with children and families. Therefore, she chooses to do specialized
+                  LOVE to work with children and families. Therefore, she chooses to do specialised
                   training in fertility massage, pregnancy massage, and infant massage. She also
                   incorporates Reiki and Neurofascial release techniques into her treatments.
                 </Text>
@@ -128,7 +128,7 @@ const OurTeam = (props: Props) => {
           <ColoredBox title="Ready to Work with Jenny?">
             <Text align="center" mb="md">
               With {YEARS_EXPERIENCE} years of experience and extensive qualifications, Jenny is ready to help you achieve 
-              your wellness goals. Book your personalized consultation today.
+              your wellness goals. Book your personalised consultation today.
             </Text>
             <Group position="center" spacing="md">
               <Button size="lg" component={Link} to="/booking/">
