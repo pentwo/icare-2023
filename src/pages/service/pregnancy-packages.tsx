@@ -252,6 +252,7 @@ const PregnancyPackages = () => {
         <SEO
           title="Pregnancy Care Packages"
           description="Pregnancy massage packages in Perth for every trimester and postnatal recovery. Ongoing support for back pain, swelling, muscle tension and sleep."
+          service={{ name: "Pregnancy Care Packages", serviceType: "Pregnancy massage" }}
         />
         <Stack spacing="xl">
           <Title order={1} sx={{ fontSize: 42 }}>

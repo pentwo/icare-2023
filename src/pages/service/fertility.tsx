@@ -34,6 +34,7 @@ const Fertility = () => {
         <SEO
           title="Fertility Massage Perth"
           description="Fertility massage in Perth combining gentle therapeutic techniques with emotional support for reproductive and mental wellness. Trained by Edwina Taylor."
+          service={{ name: "Fertility Massage", serviceType: "Massage therapy" }}
         />
         <Stack spacing={"xl"}>
           <Title order={1}>Fertility Massage</Title>

@@ -19,6 +19,30 @@ import { StaticImage } from "gatsby-plugin-image";
 import { IconCheck, IconCaretRight, IconCertificate, IconHeart } from "@tabler/icons";
 import ColoredBox from "../../components/ui/ColoredBox";
 import { Link } from "gatsby";
+import { FaqItem } from "../../Data/schema";
+
+const SCAR_FAQS: FaqItem[] = [
+  {
+    q: "When is it safe to start scar therapy after surgery?",
+    a: "For caesarean scars, we generally recommend waiting until the wound is fully closed — typically around 6–8 weeks postpartum. For oncology scars, timing depends on your treatment pathway. We always recommend consulting your medical team first. That said, it is never too late — even scars from many years ago can respond to treatment.",
+  },
+  {
+    q: "Does scar massage hurt?",
+    a: "The techniques used in Restore Scar Therapy are gentle and non-invasive. Some areas may be sensitive — particularly if there is nerve involvement or long-standing tension — but treatment is always adapted to your comfort level. Many clients find the sessions deeply relaxing.",
+  },
+  {
+    q: "How many sessions will I need?",
+    a: "This varies from person to person and depends on the age, size, and complexity of your scar, as well as your goals. Some clients notice improvements after just one or two sessions; others benefit from an ongoing series. We'll discuss a personalised plan during your initial consultation.",
+  },
+  {
+    q: "Is this service suitable for active cancer treatment?",
+    a: "As an Oncology Scar Specialist, I am trained to work safely with clients at different stages of their cancer journey. If you are currently receiving treatment, we will liaise carefully with your medical team to ensure your safety and comfort throughout.",
+  },
+  {
+    q: "Can I combine this with other iCare services?",
+    a: "Absolutely. Restore Scar Therapy pairs beautifully with our Fertility Massage, Remedial Massage, and Mind-Body Restorative Massage services. Please note that pregnancy is a contraindication for Restore Scar Therapy, so it is not suitable to be combined with Pregnancy Massage or received during pregnancy. We recommend waiting until after you have given birth and your wound has fully healed before beginning scar therapy.",
+  },
+];
 
 const ScarTherapy = () => {
   return (
@@ -27,6 +51,8 @@ const ScarTherapy = () => {
         <SEO
           title="Restore Scar Therapy Perth"
           description="Gentle, evidence-informed Restore Scar Therapy in Perth for caesarean and oncology scars. Certified specialist trained by Emma Holly of Restore Therapy."
+          service={{ name: "Restore Scar Therapy", serviceType: "Scar tissue therapy" }}
+          faq={SCAR_FAQS}
         />
         <Stack spacing={"xl"}>
           <Title order={1}>Restore Scar Therapy</Title>
@@ -346,74 +372,16 @@ const ScarTherapy = () => {
               Here are some of the things people often ask before their first scar therapy session.
             </Text>
             <Accordion variant="separated" radius="md">
-              <Accordion.Item value="when-to-start">
-                <Accordion.Control>
-                  When is it safe to start scar therapy after surgery?
-                </Accordion.Control>
-                <Accordion.Panel>
-                  <Text size="sm" color="dimmed">
-                    For caesarean scars, we generally recommend waiting until the wound is fully
-                    closed — typically around 6–8 weeks postpartum. For oncology scars, timing
-                    depends on your treatment pathway. We always recommend consulting your medical
-                    team first. That said, it is never too late — even scars from many years ago can
-                    respond to treatment.
-                  </Text>
-                </Accordion.Panel>
-              </Accordion.Item>
-
-              <Accordion.Item value="does-it-hurt">
-                <Accordion.Control>Does scar massage hurt?</Accordion.Control>
-                <Accordion.Panel>
-                  <Text size="sm" color="dimmed">
-                    The techniques used in Restore Scar Therapy are gentle and non-invasive. Some
-                    areas may be sensitive — particularly if there is nerve involvement or
-                    long-standing tension — but treatment is always adapted to your comfort level.
-                    Many clients find the sessions deeply relaxing.
-                  </Text>
-                </Accordion.Panel>
-              </Accordion.Item>
-
-              <Accordion.Item value="how-many-sessions">
-                <Accordion.Control>How many sessions will I need?</Accordion.Control>
-                <Accordion.Panel>
-                  <Text size="sm" color="dimmed">
-                    This varies from person to person and depends on the age, size, and complexity of
-                    your scar, as well as your goals. Some clients notice improvements after just one
-                    or two sessions; others benefit from an ongoing series. We'll discuss a
-                    personalised plan during your initial consultation.
-                  </Text>
-                </Accordion.Panel>
-              </Accordion.Item>
-
-              <Accordion.Item value="active-treatment">
-                <Accordion.Control>
-                  Is this service suitable for active cancer treatment?
-                </Accordion.Control>
-                <Accordion.Panel>
-                  <Text size="sm" color="dimmed">
-                    As an Oncology Scar Specialist, I am trained to work safely with clients at
-                    different stages of their cancer journey. If you are currently receiving
-                    treatment, we will liaise carefully with your medical team to ensure your safety
-                    and comfort throughout.
-                  </Text>
-                </Accordion.Panel>
-              </Accordion.Item>
-
-              <Accordion.Item value="combine-services">
-                <Accordion.Control>
-                  Can I combine this with other iCare services?
-                </Accordion.Control>
-                <Accordion.Panel>
-                  <Text size="sm" color="dimmed">
-                    Absolutely. Restore Scar Therapy pairs beautifully with our Fertility Massage,
-                    Remedial Massage, and Mind-Body Restorative Massage services. Please note that
-                    pregnancy is a contraindication for Restore Scar Therapy, so it is not suitable
-                    to be combined with Pregnancy Massage or received during pregnancy. We recommend
-                    waiting until after you have given birth and your wound has fully healed before
-                    beginning scar therapy.
-                  </Text>
-                </Accordion.Panel>
-              </Accordion.Item>
+              {SCAR_FAQS.map((item, i) => (
+                <Accordion.Item key={i} value={`faq-${i}`}>
+                  <Accordion.Control>{item.q}</Accordion.Control>
+                  <Accordion.Panel>
+                    <Text size="sm" color="dimmed">
+                      {item.a}
+                    </Text>
+                  </Accordion.Panel>
+                </Accordion.Item>
+              ))}
             </Accordion>
           </Box>
 

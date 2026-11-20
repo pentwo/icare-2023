@@ -302,7 +302,7 @@ const Services = (props: Props) => {
                     component={Link}
                     to="/service/clinical-hypnosis/"
                     variant="light"
-                    color="blue"
+                    color="blue.6"
                     fullWidth
                   >
                     Learn More

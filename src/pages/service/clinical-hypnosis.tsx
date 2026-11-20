@@ -26,6 +26,7 @@ const ClinicalHypnosis: React.FC = () => {
         <SEO
           title="Clinical Hypnosis Perth"
           description="Clinical hypnosis in Perth: a collaborative, deeply relaxed state where you stay in control while easing anxiety, pain, insomnia and fertility stress."
+          service={{ name: "Clinical Hypnosis", serviceType: "Clinical hypnosis" }}
         />
         <Stack spacing={"xl"}>
           <Title order={1}>Clinical Hypnosis</Title>
@@ -75,7 +76,7 @@ const ClinicalHypnosis: React.FC = () => {
             <List
               spacing="md"
               icon={
-                <ThemeIcon variant="light" size="md" color="blue">
+                <ThemeIcon variant="light" size="md" color="blue.6">
                   <IconBrain />
                 </ThemeIcon>
               }
@@ -134,7 +135,7 @@ const ClinicalHypnosis: React.FC = () => {
           <ColoredBox title="What to Expect" color="blue.1">
             <Stack spacing="md">
               <Group spacing="sm" align="flex-start">
-                <ThemeIcon size="lg" color="blue" variant="light">
+                <ThemeIcon size="lg" color="blue.6" variant="light">
                   <IconHeart />
                 </ThemeIcon>
                 <Box style={{ flex: 1 }}>
@@ -147,7 +148,7 @@ const ClinicalHypnosis: React.FC = () => {
               </Group>
 
               <Group spacing="sm" align="flex-start">
-                <ThemeIcon size="lg" color="blue" variant="light">
+                <ThemeIcon size="lg" color="blue.6" variant="light">
                   <IconSun />
                 </ThemeIcon>
                 <Box style={{ flex: 1 }}>
@@ -160,7 +161,7 @@ const ClinicalHypnosis: React.FC = () => {
               </Group>
 
               <Group spacing="sm" align="flex-start">
-                <ThemeIcon size="lg" color="blue" variant="light">
+                <ThemeIcon size="lg" color="blue.6" variant="light">
                   <IconMoon />
                 </ThemeIcon>
                 <Box style={{ flex: 1 }}>
@@ -205,7 +206,7 @@ const ClinicalHypnosis: React.FC = () => {
               your path to wellness.
             </Text>
             <Group position="center" spacing="md">
-              <Button size="lg" component={Link} to="/booking/" color="blue">
+              <Button size="lg" component={Link} to="/booking/" color="blue.6">
                 Book Free Consultation
               </Button>
               <Button
@@ -213,7 +214,7 @@ const ClinicalHypnosis: React.FC = () => {
                 variant="outline"
                 component="a"
                 href="tel:+61489080666"
-                color="blue"
+                color="blue.6"
               >
                 Call to Discuss
               </Button>

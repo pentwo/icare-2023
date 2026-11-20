@@ -2,6 +2,14 @@ import React from "react";
 import Helmet from "react-helmet";
 import { useLocation } from "@reach/router";
 import { useStaticQuery, graphql } from "gatsby";
+import {
+  FaqItem,
+  breadcrumbSchema,
+  businessId,
+  faqSchema,
+  personId,
+  serviceSchema,
+} from "../../Data/schema";
 
 interface SeoProps {
   title: string;
@@ -9,19 +17,26 @@ interface SeoProps {
   lang?: string;
   meta?: any[];
   image?: string;
+  /** Service pages: emits Service + BreadcrumbList JSON-LD. */
+  service?: { name: string; serviceType?: string };
+  /** Visible FAQ items on the page: emits FAQPage JSON-LD. */
+  faq?: FaqItem[];
+  /** Any other JSON-LD objects for this page. */
+  schema?: object[];
 }
 
 const localBusinessSchema = (siteUrl: string, description: string, image: string) => ({
   "@context": "https://schema.org",
   "@type": "HealthAndBeautyBusiness",
+  "@id": businessId(siteUrl),
   name: "iCare Health Massage",
   description,
-  url: siteUrl,
+  url: `${siteUrl}/`,
   image,
   logo: `${siteUrl}/icons/icon-512x512.png`,
   telephone: "+61489080666",
   priceRange: "$$",
-  founder: { "@type": "Person", name: "Jenny Yeh" },
+  founder: { "@type": "Person", "@id": personId(siteUrl), name: "Jenny Yeh" },
   sameAs: [
     "https://www.google.com/search?kgmid=/g/11gtykjqsw",
     "https://www.instagram.com/icare_health_massage_hypnosis/",
@@ -52,7 +67,7 @@ const localBusinessSchema = (siteUrl: string, description: string, image: string
   ],
 });
 
-function SEO({ title, description, lang = "en", meta = [], image }: SeoProps) {
+function SEO({ title, description, lang = "en", meta = [], image, service, faq, schema = [] }: SeoProps) {
   const { pathname } = useLocation();
   const { site } = useStaticQuery(detailsQuery);
   const { siteUrl, defaultDescription, author } = site.siteMetadata;
@@ -61,6 +76,18 @@ function SEO({ title, description, lang = "en", meta = [], image }: SeoProps) {
   const canonical = `${siteUrl}${pathname}`;
   const metaImage = `${siteUrl}${image || "/og-image.jpg"}`;
   const isHome = pathname === "/";
+
+  const jsonLd: object[] = [
+    ...(isHome ? [localBusinessSchema(siteUrl, metaDescription, metaImage)] : []),
+    ...(service
+      ? [
+          serviceSchema(siteUrl, canonical, service.name, metaDescription, service.serviceType),
+          breadcrumbSchema(siteUrl, canonical, service.name),
+        ]
+      : []),
+    ...(faq?.length ? [faqSchema(faq)] : []),
+    ...schema,
+  ];
 
   return (
     <Helmet
@@ -84,11 +111,11 @@ function SEO({ title, description, lang = "en", meta = [], image }: SeoProps) {
         { name: `twitter:image`, content: metaImage },
       ].concat(meta)}
     >
-      {isHome && (
-        <script type="application/ld+json">
-          {JSON.stringify(localBusinessSchema(siteUrl, metaDescription, metaImage))}
+      {jsonLd.map((data, i) => (
+        <script key={i} type="application/ld+json">
+          {JSON.stringify(data)}
         </script>
-      )}
+      ))}
     </Helmet>
   );
 }

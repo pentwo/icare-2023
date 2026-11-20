@@ -15,6 +15,7 @@ const MindBody: React.FC = () => {
         <SEO
           title="Mind-Body Restorative Massage"
           description="Mind-body restorative massage in Perth combining remedial massage, clinical hypnosis and strategic psychotherapy for chronic pain, stress and tension."
+          service={{ name: "Mind-Body Restorative Massage", serviceType: "Massage therapy" }}
         />
         <Stack spacing={"xl"}>
           <Title order={1}>Mind-Body Restorative Massage</Title>

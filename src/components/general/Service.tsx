@@ -530,7 +530,7 @@ const Service = (props: Props) => {
                 </Card.Section>
 
                 <Stack spacing="md" style={{ flex: 1 }} mt="md">
-                  <Title order={3} color="blue">
+                  <Title order={3} color="blue.6">
                     Clinical Hypnosis
                   </Title>
                   <Text size="sm" color="dimmed">
@@ -541,7 +541,7 @@ const Service = (props: Props) => {
                     spacing="xs"
                     size="sm"
                     icon={
-                      <ThemeIcon size="sm" color="blue">
+                      <ThemeIcon size="sm" color="blue.6">
                         <IconCheck size="0.8rem" />
                       </ThemeIcon>
                     }
@@ -553,10 +553,10 @@ const Service = (props: Props) => {
                   </List>
 
                   <Group grow mt="auto">
-                    <Button component={Link} to="/service/clinical-hypnosis/" variant="light" color="blue">
+                    <Button component={Link} to="/service/clinical-hypnosis/" variant="light" color="blue.6">
                       Learn More
                     </Button>
-                    <Button component={Link} to="/booking/" color="blue">
+                    <Button component={Link} to="/booking/" color="blue.6">
                       Book Now
                     </Button>
                   </Group>

@@ -19,6 +19,26 @@ import { IconDroplet, IconHeart, IconShieldCheck, IconMoodHappy } from "@tabler/
 import ColoredBox from "../../components/ui/ColoredBox";
 import { Link } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
+import { FaqItem } from "../../Data/schema";
+
+const MLD_FAQS: FaqItem[] = [
+  {
+    q: "How many sessions will I need?",
+    a: "It depends on your needs. We will discuss a plan with you at your first visit.",
+  },
+  {
+    q: "Does it hurt?",
+    a: "No. MLD uses very light pressure and is gentle.",
+  },
+  {
+    q: "Is it safe during pregnancy?",
+    a: "It is generally considered gentle, and we tailor each session to you. Please let us know how far along you are, and check with your midwife or doctor if you have any concerns.",
+  },
+  {
+    q: "Can I have MLD soon after surgery?",
+    a: "Timing varies by procedure. Please check with your surgeon first.",
+  },
+];
 
 const ManualLymphaticDrainage = () => {
   return (
@@ -27,6 +47,8 @@ const ManualLymphaticDrainage = () => {
         <SEO
           title="Manual Lymphatic Drainage Perth"
           description="Manual Lymphatic Drainage (MLD) in Perth using the Dr. Vodder technique. Gentle relief for pregnancy swelling, post-surgical recovery and pain."
+          service={{ name: "Manual Lymphatic Drainage", serviceType: "Manual lymphatic drainage" }}
+          faq={MLD_FAQS}
         />
         <Stack spacing={"xl"}>
           <Badge color="cyan" size="lg" variant="light">
@@ -219,30 +241,12 @@ const ManualLymphaticDrainage = () => {
 
           <Title order={2}>Frequently Asked Questions</Title>
           <Accordion variant="separated" radius="md">
-            <Accordion.Item value="sessions">
-              <Accordion.Control>How many sessions will I need?</Accordion.Control>
-              <Accordion.Panel>
-                It depends on your needs. We will discuss a plan with you at your first visit.
-              </Accordion.Panel>
-            </Accordion.Item>
-            <Accordion.Item value="pain">
-              <Accordion.Control>Does it hurt?</Accordion.Control>
-              <Accordion.Panel>No. MLD uses very light pressure and is gentle.</Accordion.Panel>
-            </Accordion.Item>
-            <Accordion.Item value="pregnancy">
-              <Accordion.Control>Is it safe during pregnancy?</Accordion.Control>
-              <Accordion.Panel>
-                It is generally considered gentle, and we tailor each session to you. Please let us
-                know how far along you are, and check with your midwife or doctor if you have any
-                concerns.
-              </Accordion.Panel>
-            </Accordion.Item>
-            <Accordion.Item value="surgery">
-              <Accordion.Control>Can I have MLD soon after surgery?</Accordion.Control>
-              <Accordion.Panel>
-                Timing varies by procedure. Please check with your surgeon first.
-              </Accordion.Panel>
-            </Accordion.Item>
+            {MLD_FAQS.map((item, i) => (
+              <Accordion.Item key={i} value={`faq-${i}`}>
+                <Accordion.Control>{item.q}</Accordion.Control>
+                <Accordion.Panel>{item.a}</Accordion.Panel>
+              </Accordion.Item>
+            ))}
           </Accordion>
 
           <ColoredBox title="Your body already knows how to heal" color="cyan.1">

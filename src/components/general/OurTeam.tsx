@@ -117,7 +117,10 @@ const OurTeam = (props: Props) => {
           <List icon={<IconChevronRight />}>
             <List.Item>Diploma of Remedial Massage (HLT50307)</List.Item>
             <List.Item>Practitioner of Pregnancy Massage @ NurtureLife&reg;</List.Item>
-            <List.Item>Member of Massage & Myotherapy Association</List.Item>
+            <List.Item>Certified Caesarean Scar Specialist @ Restore Therapy (trained by Emma Holly)</List.Item>
+            <List.Item>Certified Oncology Scar Specialist @ Restore Therapy</List.Item>
+            <List.Item>Fertility Massage Therapy, trained by Edwina Taylor</List.Item>
+            <List.Item>Member of Massage & Myotherapy Australia</List.Item>
             <List.Item>Paediatric Massage Consultant</List.Item>
           </List>
 
