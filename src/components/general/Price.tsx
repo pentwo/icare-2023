@@ -115,7 +115,7 @@ interface PriceDetail {
   time: string;
   price: number;
   highlight?: boolean;
-  category?: "initial" | "followup";
+  category?: "initial" | "followup" | "prebook";
 }
 
 const PriceBlock = ({ title, price, description, bg, hasInitialFollowup }: PriceProps) => {
@@ -124,7 +124,10 @@ const PriceBlock = ({ title, price, description, bg, hasInitialFollowup }: Price
   if (hasInitialFollowup) {
     // Create combined table with initial and follow-up columns
     // Group prices by their time value, maintaining exact matches
-    const priceMap = new Map<string, { initial?: PriceDetail; followup?: PriceDetail }>();
+    const priceMap = new Map<
+      string,
+      { initial?: PriceDetail; followup?: PriceDetail; prebook?: PriceDetail }
+    >();
 
     price.forEach((p) => {
       const key = p.time;
@@ -134,6 +137,8 @@ const PriceBlock = ({ title, price, description, bg, hasInitialFollowup }: Price
         existing.initial = p;
       } else if (p.category === "followup") {
         existing.followup = p;
+      } else if (p.category === "prebook") {
+        existing.prebook = p;
       } else {
         // If no category specified, try to determine from text
         if (p.time.toLowerCase().includes("initial")) {
@@ -180,9 +185,13 @@ const PriceBlock = ({ title, price, description, bg, hasInitialFollowup }: Price
         time,
         initialPrice: prices.initial?.price,
         followupPrice: prices.followup?.price,
+        prebookPrice: prices.prebook?.price,
         highlight: prices.initial?.highlight || prices.followup?.highlight,
       }))
       .filter((item) => item.initialPrice || item.followupPrice);
+
+    const hasPrebook = combinedData.some((item) => item.prebookPrice);
+    const colWidth = hasPrebook ? "20%" : "25%";
 
     return (
       <>
@@ -207,12 +216,17 @@ const PriceBlock = ({ title, price, description, bg, hasInitialFollowup }: Price
               <thead className={classes.thead}>
                 <tr>
                   <td>Duration</td>
-                  <td align="center" width={"25%"}>
+                  <td align="center" width={colWidth}>
                     Initial Price
                   </td>
-                  <td align="center" width={"25%"}>
+                  <td align="center" width={colWidth}>
                     Follow-up Price
                   </td>
+                  {hasPrebook && (
+                    <td align="center" width={colWidth}>
+                      Pre-book Price
+                    </td>
+                  )}
                 </tr>
               </thead>
               <tbody>
@@ -242,6 +256,11 @@ const PriceBlock = ({ title, price, description, bg, hasInitialFollowup }: Price
                     <td align="center" style={{ whiteSpace: "nowrap" }}>
                       {row.followupPrice ? `$ ${row.followupPrice}` : "-"}
                     </td>
+                    {hasPrebook && (
+                      <td align="center" style={{ whiteSpace: "nowrap" }}>
+                        {row.prebookPrice ? `$ ${row.prebookPrice}` : "-"}
+                      </td>
+                    )}
                   </tr>
                 ))}
               </tbody>

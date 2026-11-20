@@ -159,6 +159,68 @@ const Services = (props: Props) => {
 
         {/* Additional Services */}
         <Grid>
+          {/* Manual Lymphatic Drainage - NEW */}
+          <Grid.Col md={4}>
+            <Card
+              shadow="md"
+              padding="lg"
+              radius="md"
+              withBorder
+              style={{ height: "100%", display: "flex", flexDirection: "column" }}
+            >
+              <Card.Section style={{ position: "relative" }}>
+                <Box
+                  style={{
+                    position: "absolute",
+                    top: 10,
+                    left: 10,
+                    zIndex: 1,
+                    backgroundColor: "#15aabf",
+                    color: "white",
+                    padding: "4px 12px",
+                    borderRadius: "4px",
+                    fontSize: "12px",
+                    fontWeight: 600,
+                  }}
+                >
+                  NEW
+                </Box>
+                <Box style={{ height: 250, overflow: "hidden" }}>
+                  <StaticImage
+                    src="../../images/v2-photos/body-mind-1.webp"
+                    alt="Manual Lymphatic Drainage"
+                    style={{
+                      height: "100%",
+                      width: "100%",
+                      objectFit: "cover",
+                    }}
+                  />
+                </Box>
+              </Card.Section>
+
+              <Stack spacing="md" style={{ flex: 1 }} mt="md">
+                <Title order={3}>Manual Lymphatic Drainage</Title>
+                <Text size="sm" color="dimmed" style={{ flex: 1 }}>
+                  Gentle support for your body's natural drainage system using the Dr. Vodder
+                  technique. Light, rhythmic touch to ease swelling, calm the body and support
+                  recovery.
+                </Text>
+
+                <Group position="center" mt="auto">
+                  <Button
+                    component={Link}
+                    to="/service/mld"
+                    variant="light"
+                    color="cyan"
+                    fullWidth
+                  >
+                    Learn More
+                  </Button>
+                </Group>
+              </Stack>
+            </Card>
+          </Grid.Col>
+
           {/* Mind-Body Restorative Massage */}
           <Grid.Col md={4}>
             <Card

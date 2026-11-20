@@ -17,7 +17,7 @@ interface PriceDetail {
   time: string;
   price: number;
   highlight?: boolean;
-  category?: "initial" | "followup";
+  category?: "initial" | "followup" | "prebook";
 }
 
 const priceInfo: PriceProps[] = [
@@ -161,6 +161,22 @@ const priceInfo: PriceProps[] = [
       },
     ],
   },
+  {
+    title: "Manual Lymphatic Drainage",
+    description: "*Pre-book price applies when you book your next session in advance",
+    hasInitialFollowup: true,
+    price: [
+      { time: "1 hour", price: 140, category: "initial" },
+      { time: "1 hour", price: 130, category: "followup" },
+      { time: "1 hour", price: 120, category: "prebook" },
+      { time: "1 hours 15 minutes", price: 150, category: "initial" },
+      { time: "1 hours 15 minutes", price: 140, category: "followup" },
+      { time: "1 hours 15 minutes", price: 130, category: "prebook" },
+      { time: "1 hours 30 minutes", price: 175, category: "initial" },
+      { time: "1 hours 30 minutes", price: 165, category: "followup" },
+      { time: "1 hours 30 minutes", price: 155, category: "prebook" },
+    ],
+  },
 ];
 
 export default function PricePage({ data }) {
@@ -175,7 +191,7 @@ export default function PricePage({ data }) {
     <Layout>
       <Seo
         title="Prices & Health Fund Rebates"
-        description="Massage prices for remedial, fertility, pregnancy and scar therapy sessions in Perth. Health fund rebates available with HICAPS."
+        description="Massage prices for remedial, fertility, pregnancy, scar therapy and lymphatic drainage sessions in Perth. Health fund rebates available with HICAPS."
       />
       {/* <Hero /> */}
       <Price prices={prices} />
@@ -215,6 +231,13 @@ export const query = graphql`
       }
     }
     bg5: file(relativePath: { eq: "v2-photos/price-scar-therapy.webp" }) {
+      childImageSharp {
+        fluid(maxWidth: 960) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    bg6: file(relativePath: { eq: "v2-photos/body-mind-1.webp" }) {
       childImageSharp {
         fluid(maxWidth: 960) {
           ...GatsbyImageSharpFluid
