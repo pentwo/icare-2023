@@ -2,6 +2,7 @@ import { Title, Text, Container, Stack, List, ThemeIcon, Group, Button, Grid } f
 import React from "react";
 import SEO from "../../components/general/Seo";
 import { Layout } from "../../components/Layout/Layout";
+import RelatedServices from "../../components/general/RelatedServices";
 import { IconFlower } from "@tabler/icons";
 import ColoredBox from "../../components/ui/ColoredBox";
 import { Link } from "gatsby";
@@ -253,6 +254,7 @@ const Pregnancy = () => {
           </ColoredBox>
         </Stack>
       </Container>
+      <RelatedServices current="pregnancy" />
     </Layout>
   );
 };

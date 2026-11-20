@@ -1,4 +1,4 @@
-import { Stack } from "@mantine/core";
+import { Stack, Title, Text } from "@mantine/core";
 import { Container } from "@mantine/core";
 import { useViewportSize } from "@mantine/hooks";
 import React, { useEffect, useState } from "react";
@@ -28,10 +28,19 @@ export default function Voucher() {
   return (
     <Container mt={60}>
       <Stack style={{ height: "100%" }}>
+        <Title order={1} align="center">
+          Massage Gift Vouchers
+        </Title>
+        <Text align="center">
+          Give the gift of care. An iCare Health Massage gift voucher can be used for remedial,
+          pregnancy, fertility and other massage treatments at our women-only studio in Perth.
+          Buy online below and the voucher is emailed instantly, ready to print or forward.
+        </Text>
         <iframe
           src="https://giftup.app/place-order/78de4eb9-a9b2-4edb-38fd-08dd210f130d?platform=hosted&language=en-AU"
           height={iframeHeight}
           scrolling="auto"
+          title="Buy a gift voucher"
           style={{
             border: "none",
             width: "100%",

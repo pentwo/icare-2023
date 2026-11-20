@@ -1,4 +1,5 @@
 import React from "react";
+import { YEARS_EXPERIENCE } from "../../Data/business";
 import { Container, Text, Title, List, Stack, Center, Box, Grid, Button, Group } from "@mantine/core";
 import { StaticImage } from "gatsby-plugin-image";
 import { Link } from "gatsby";
@@ -19,7 +20,7 @@ const OurTeam = (props: Props) => {
                 Meet Our Expert Team
               </Title>
               <Text align="center" size="lg" color="dimmed" maw={600}>
-                Led by Jenny YEH, our experienced team brings 13+ years of expertise in 
+                Led by Jenny YEH, our experienced team brings {YEARS_EXPERIENCE} years of expertise in 
                 remedial massage, fertility therapy, and holistic healing to support your wellness journey.
               </Text>
               <Button size="lg" component={Link} to="/booking/" mt="md">
@@ -46,16 +47,16 @@ const OurTeam = (props: Props) => {
                 >
                   <StaticImage
                     src="../../images/portrait.jpg"
-                    alt="jenny Portrait"
+                    alt="Jenny Yeh, remedial massage therapist in Perth"
                     style={{
                       maxWidth: "350px",
                     }}
                   />
                 </Box>
               </Center>
-              <Title order={2} align={"center"}>
+              <Text weight={700} size="xl" align={"center"}>
                 Jenny YEH
-              </Title>
+              </Text>
             </Grid.Col>
             <Grid.Col sm={12} md={6}>
               <Stack>
@@ -65,7 +66,7 @@ const OurTeam = (props: Props) => {
                 </Text>
 
                 <Text>
-                  Jenny is a 13-years-experienced massage therapist. Qualified Diploma of remedial
+                  Jenny has been a massage therapist since 2010 ({YEARS_EXPERIENCE} years). Qualified Diploma of remedial
                   massage and practitioner of pregnancy massage. Jenny had completed the Bachelor of
                   Education and worked as a teacher in child cares and kindergarten in Taiwan. She
                   LOVE to work with children and families. Therefore, she chooses to do specialized
@@ -84,7 +85,7 @@ const OurTeam = (props: Props) => {
             happier, healthier lives.
           </Text>
 
-          <ColoredBox title="As part of Diploma of Remedial massage, I studied">
+          <ColoredBox title="Remedial Massage Diploma Training">
             <List icon={<IconChevronRight />}>
               <List.Item>Deep Tissue</List.Item>
               <List.Item>Swedish</List.Item>
@@ -96,7 +97,7 @@ const OurTeam = (props: Props) => {
               <List.Item>Positional Release</List.Item>
               <List.Item>Postnatal Massage</List.Item>
               <List.Item>Reflexology</List.Item>
-              <List.Item>Manual Lymphtic Drainage</List.Item>
+              <List.Item>Manual Lymphatic Drainage</List.Item>
             </List>
           </ColoredBox>
 
@@ -123,7 +124,7 @@ const OurTeam = (props: Props) => {
           {/* CTA Section */}
           <ColoredBox title="Ready to Work with Jenny?">
             <Text align="center" mb="md">
-              With 13+ years of experience and extensive qualifications, Jenny is ready to help you achieve 
+              With {YEARS_EXPERIENCE} years of experience and extensive qualifications, Jenny is ready to help you achieve 
               your wellness goals. Book your personalized consultation today.
             </Text>
             <Group position="center" spacing="md">

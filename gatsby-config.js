@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `iCare Health Massage`,
-    description: `Remedial, fertility, pregnancy and Restore Scar Therapy massage in Perth with Jenny Yeh. Women-only home studio with 13+ years of experience. Health fund rebates available.`,
+    description: `Remedial, fertility, pregnancy and Restore Scar Therapy massage in Perth with Jenny Yeh. Women-only home studio with ${new Date().getFullYear() - 2010} years of experience. Health fund rebates available.`,
     author: `Jenny Yeh`,
     siteUrl: `https://icarehealthmassage.com.au`,
   },

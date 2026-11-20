@@ -93,7 +93,10 @@ const Hero = (props: Props) => {
           })}
         >
           <Stack>
-            <Title order={1}>iCare Health Massage</Title>
+            <Text weight={700} size="lg">
+              iCare Health Massage
+            </Text>
+            <Title order={1}>Remedial, Fertility &amp; Pregnancy Massage in Perth</Title>
             <Text>The best time to take care of yourself</Text>
             <Group>
               <Stack>

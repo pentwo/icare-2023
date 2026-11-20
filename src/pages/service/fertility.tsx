@@ -16,6 +16,7 @@ import {
 import React from "react";
 import SEO from "../../components/general/Seo";
 import { Layout } from "../../components/Layout/Layout";
+import RelatedServices from "../../components/general/RelatedServices";
 import { StaticImage } from "gatsby-plugin-image";
 import { IconCaretRight, IconFlower } from "@tabler/icons";
 import ColoredBox from "../../components/ui/ColoredBox";
@@ -343,6 +344,7 @@ const Fertility = () => {
           </ColoredBox>
         </Stack>
       </Container>
+      <RelatedServices current="fertility" />
     </Layout>
   );
 };

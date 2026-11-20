@@ -1,3 +1,4 @@
+import { YEARS_EXPERIENCE } from "../../Data/business";
 import {
   Title,
   Text,
@@ -13,6 +14,7 @@ import {
 import React from "react";
 import SEO from "../../components/general/Seo";
 import { Layout } from "../../components/Layout/Layout";
+import RelatedServices from "../../components/general/RelatedServices";
 import { IconCheck, IconFlower } from "@tabler/icons";
 import ColoredBox from "../../components/ui/ColoredBox";
 import { Link } from "gatsby";
@@ -29,12 +31,12 @@ const Remedial = () => {
       <Container mt={60}>
         <SEO
           title="Remedial Massage Perth"
-          description="Remedial massage in Perth for pain management, posture and scoliosis. 14 years experience as a qualified remedial therapist. Health fund rebates available."
+          description={`Remedial massage in Perth for pain management, posture and scoliosis. ${YEARS_EXPERIENCE} years as a qualified remedial therapist. Health fund rebates available.`}
         />
         <Stack spacing={"xl"}>
           <Title order={1}>Remedial Massage - Professional Pain Management</Title>
           <Text>
-            With 14 years of experience as a qualified Remedial Massage Therapist, I specialize in
+            With {YEARS_EXPERIENCE} years of experience as a qualified Remedial Massage Therapist, I specialize in
             providing targeted treatment for those seeking effective pain management and postural
             improvement, with particular expertise in treating scoliosis.
           </Text>
@@ -166,6 +168,7 @@ const Remedial = () => {
           </ColoredBox>
         </Stack>
       </Container>
+      <RelatedServices current="remedial" />
     </Layout>
   );
 };

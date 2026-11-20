@@ -44,7 +44,7 @@ const ICareFooter = (props: Props) => {
             </Text>
 
             <Text size={10}>
-              Made with ❤️ by <Anchor href="https://www.stevenpeng.com.au">Steven Peng</Anchor>
+              Made with ❤️ by <Anchor href="https://www.stevenpeng.com.au" rel="nofollow">Steven Peng</Anchor>
             </Text>
           </Stack>
 
@@ -79,7 +79,7 @@ const ICareFooter = (props: Props) => {
               <Anchor href="https://www.gatsbyjs.org">Gatsby</Anchor>
             </Text>
             <Text size={9}>
-              Made with ❤️ by <Anchor href="https://www.stevenpeng.com.au">Steven Peng</Anchor>
+              Made with ❤️ by <Anchor href="https://www.stevenpeng.com.au" rel="nofollow">Steven Peng</Anchor>
             </Text>
           </Stack>
         </Stack>
@@ -107,7 +107,7 @@ const ICareFooter = (props: Props) => {
               © {new Date().getFullYear()} iCare Health
             </Text>
             <Text size={8}>
-              By <Anchor href="https://www.stevenpeng.com.au">Steven Peng</Anchor>
+              By <Anchor href="https://www.stevenpeng.com.au" rel="nofollow">Steven Peng</Anchor>
             </Text>
           </Stack>
         </Stack>

@@ -1,5 +1,6 @@
 import React from "react";
 import { Layout } from "../../components/Layout/Layout";
+import RelatedServices from "../../components/general/RelatedServices";
 import SEO from "../../components/general/Seo";
 import { Container, Stack, Title, Text, List, ThemeIcon, Group, Button, Grid } from "@mantine/core";
 import { IconFlower } from "@tabler/icons";
@@ -181,6 +182,7 @@ const MindBody: React.FC = () => {
           </ColoredBox>
         </Stack>
       </Container>
+      <RelatedServices current="mind-body" />
     </Layout>
   );
 };

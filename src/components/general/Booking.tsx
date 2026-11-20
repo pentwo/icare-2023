@@ -1,6 +1,6 @@
 // REACT IMPORTS
 
-import { Stack, Container, Loader, Group, Alert, Anchor, Mark, createStyles } from "@mantine/core";
+import { Stack, Container, Title, Text, Loader, Group, Alert, Anchor, Mark, createStyles } from "@mantine/core";
 import { useViewportSize } from "@mantine/hooks";
 import { IconAlertCircle } from "@tabler/icons";
 import React, { useEffect, useState } from "react";
@@ -93,6 +93,15 @@ const Booking = (props: Props) => {
   return (
     <Container mt={60} className={classes.container}>
       <Stack className={classes.stack} align="center">
+        <Title order={1} align="center">
+          Book a Massage Online
+        </Title>
+        <Text align="center" maw={720}>
+          Choose your treatment and a time that suits you below. Sessions are held at our
+          women-only home studio in Balga, Perth, with Jenny Yeh. Health fund rebates are
+          available on the spot via HICAPS for eligible services. If you need to reschedule,
+          please let us know at least 24 hours in advance.
+        </Text>
         <BookingAlert variant="fullwidth" />
         <iframe
           //   src="https://icare-health-massage.square.site/"

@@ -16,6 +16,7 @@ import {
 import React from "react";
 import SEO from "../../components/general/Seo";
 import { Layout } from "../../components/Layout/Layout";
+import RelatedServices from "../../components/general/RelatedServices";
 import { IconFlower, IconCheck, IconHeart, IconBabyCarriage } from "@tabler/icons";
 import ColoredBox from "../../components/ui/ColoredBox";
 import { Link } from "gatsby";
@@ -310,6 +311,7 @@ const PregnancyPackages = () => {
           </ColoredBox>
         </Stack>
       </Container>
+      <RelatedServices current="pregnancy-packages" />
     </Layout>
   );
 };

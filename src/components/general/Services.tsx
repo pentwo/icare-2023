@@ -1,4 +1,5 @@
 import React from "react";
+import { YEARS_EXPERIENCE } from "../../Data/business";
 import { Container, Text, Title, Stack, Grid, Card, Button, Group, Box } from "@mantine/core";
 import { StaticImage } from "gatsby-plugin-image";
 import { Link } from "gatsby";
@@ -45,7 +46,7 @@ const Services = (props: Props) => {
               <Stack spacing="md" style={{ flex: 1 }} mt="md">
                 <Title order={3}>Remedial Massage</Title>
                 <Text size="sm" color="dimmed" style={{ flex: 1 }}>
-                  Professional pain management with 14 years of experience. Specializing in
+                  Professional pain management with {YEARS_EXPERIENCE} years of experience. Specializing in
                   therapeutic treatment for pain relief and postural improvement, with particular
                   expertise in treating scoliosis.
                 </Text>

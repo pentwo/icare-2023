@@ -1,4 +1,5 @@
 import React from "react";
+import { YEARS_EXPERIENCE } from "../../Data/business";
 import {
   Stack,
   Title,
@@ -129,7 +130,7 @@ const Service = (props: Props) => {
                     Remedial Massage
                   </Title>
                   <Text size="sm" color="dimmed">
-                    Professional pain management with 14 years of experience. Specializing in
+                    Professional pain management with {YEARS_EXPERIENCE} years of experience. Specializing in
                     therapeutic treatment for pain relief and postural improvement.
                   </Text>
 
@@ -672,7 +673,7 @@ const Service = (props: Props) => {
                       <IconClock />
                     </ThemeIcon>
                     <Box>
-                      <Title order={4}>13+ Years Experience</Title>
+                      <Title order={4}>{YEARS_EXPERIENCE} Years Experience</Title>
                       <Text size="sm" color="dimmed">
                         Extensive experience in remedial massage with specialized training in
                         fertility and pregnancy massage therapy.

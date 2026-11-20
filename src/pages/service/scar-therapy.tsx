@@ -14,6 +14,7 @@ import {
 import React from "react";
 import SEO from "../../components/general/Seo";
 import { Layout } from "../../components/Layout/Layout";
+import RelatedServices from "../../components/general/RelatedServices";
 import { StaticImage } from "gatsby-plugin-image";
 import { IconCheck, IconCaretRight, IconCertificate, IconHeart } from "@tabler/icons";
 import ColoredBox from "../../components/ui/ColoredBox";
@@ -440,6 +441,7 @@ const ScarTherapy = () => {
           </ColoredBox>
         </Stack>
       </Container>
+      <RelatedServices current="scar-therapy" />
     </Layout>
   );
 };

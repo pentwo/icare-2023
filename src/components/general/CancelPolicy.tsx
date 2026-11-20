@@ -23,7 +23,7 @@ const CancelPolicy = (props: Props) => {
     <Container mt={30}>
       <Stack>
         <Title order={2} align={"center"}>
-          Cancelation Policy
+          Cancellation Policy
         </Title>
         <Text>
           Thank you for choosing our business. We understand that things can come up and you may

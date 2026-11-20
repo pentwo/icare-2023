@@ -1,5 +1,6 @@
 import React from "react";
 import { Layout } from "../../components/Layout/Layout";
+import RelatedServices from "../../components/general/RelatedServices";
 import SEO from "../../components/general/Seo";
 import {
   Container,
@@ -220,6 +221,7 @@ const ClinicalHypnosis: React.FC = () => {
           </ColoredBox>
         </Stack>
       </Container>
+      <RelatedServices current="clinical-hypnosis" />
     </Layout>
   );
 };

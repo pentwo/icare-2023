@@ -1,3 +1,4 @@
+import { YEARS_EXPERIENCE } from "../../Data/business";
 import {
   Title,
   Text,
@@ -15,6 +16,7 @@ import {
 import React from "react";
 import SEO from "../../components/general/Seo";
 import { Layout } from "../../components/Layout/Layout";
+import RelatedServices from "../../components/general/RelatedServices";
 import { IconDroplet, IconHeart, IconShieldCheck, IconMoodHappy } from "@tabler/icons";
 import ColoredBox from "../../components/ui/ColoredBox";
 import { Link } from "gatsby";
@@ -32,7 +34,7 @@ const ManualLymphaticDrainage = () => {
       <Container mt={60}>
         <SEO
           title="Manual Lymphatic Drainage Perth"
-          description="Gentle Manual Lymphatic Drainage (MLD) in Perth using the Dr. Vodder technique. Specialised treatment for pregnancy swelling, post-surgical recovery, and pain management."
+          description="Manual Lymphatic Drainage (MLD) in Perth using the Dr. Vodder technique. Gentle relief for pregnancy swelling, post-surgical recovery and pain."
         />
         <Stack spacing={"xl"}>
           <Badge color="cyan" size="lg" variant="light">
@@ -231,7 +233,7 @@ const ManualLymphaticDrainage = () => {
                   Jenny
                 </Title>
                 <Text>
-                  Jenny is a Remedial Massage Therapist with 16 years of experience, with a special
+                  Jenny is a Remedial Massage Therapist with {YEARS_EXPERIENCE} years of experience, with a special
                   interest in pregnancy, post-surgical care and pain management. She uses the Dr.
                   Vodder Manual Lymphatic Drainage technique, and her approach is caring, patient and
                   personalised to you.
@@ -329,6 +331,7 @@ const ManualLymphaticDrainage = () => {
           </ColoredBox>
         </Stack>
       </Container>
+      <RelatedServices current="mld" />
     </Layout>
   );
 };
