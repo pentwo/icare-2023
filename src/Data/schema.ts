@@ -8,9 +8,9 @@ export interface FaqItem {
 export const businessId = (siteUrl: string) => `${siteUrl}/#business`;
 export const personId = (siteUrl: string) => `${siteUrl}/our-team/#jenny`;
 
-// Lightweight reference used on non-home pages; the full business entity lives on "/".
+// Reference to the business entity defined in full on "/". No @type on purpose:
+// a typed stub here is validated by Google as a second, incomplete LocalBusiness.
 const businessRef = (siteUrl: string) => ({
-  "@type": "HealthAndBeautyBusiness",
   "@id": businessId(siteUrl),
   name: "iCare Health Massage",
   url: `${siteUrl}/`,
