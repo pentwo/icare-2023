@@ -286,7 +286,7 @@ const Service = (props: Props) => {
                             <IconGift size={16} />
                           </ThemeIcon>
                           <Title order={4} align="center">
-                            Care Packages - Save up to $186
+                            Care Packages - Save up to $190
                           </Title>
                         </Group>
 
@@ -303,10 +303,10 @@ const Service = (props: Props) => {
                               </Box>
                               <Box style={{ textAlign: "right" }}>
                                 <Text weight={700} size="lg" color="yellow.7">
-                                  $430
+                                  $480
                                 </Text>
                                 <Text size="xs" color="green" weight={600}>
-                                  Save $78
+                                  Save $40
                                 </Text>
                               </Box>
                             </Group>
@@ -332,10 +332,10 @@ const Service = (props: Props) => {
                               </Box>
                               <Box style={{ textAlign: "right" }}>
                                 <Text weight={700} size="lg" color="yellow.7">
-                                  $536
+                                  $600
                                 </Text>
                                 <Text size="xs" color="green" weight={600}>
-                                  Save $100
+                                  Save $108
                                 </Text>
                               </Box>
                             </Group>
@@ -361,10 +361,10 @@ const Service = (props: Props) => {
                               </Box>
                               <Box style={{ textAlign: "right" }}>
                                 <Text weight={700} size="lg" color="yellow.7">
-                                  $600
+                                  $650
                                 </Text>
                                 <Text size="xs" color="green" weight={600}>
-                                  Save $186
+                                  Save $190
                                 </Text>
                               </Box>
                             </Group>

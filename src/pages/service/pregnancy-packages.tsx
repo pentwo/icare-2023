@@ -168,8 +168,8 @@ const PregnancyPackages = () => {
     {
       title: "PLAN A: Foundation Care",
       subtitle: "3 x 90-Minute Pregnancy Massage Sessions",
-      price: "$430",
-      savings: "Save $78",
+      price: "$480",
+      savings: "Save $40",
       included: [
         "Three extended 90-minute pregnancy massage sessions",
         "Full body relaxation and targeted work on problem areas",
@@ -187,8 +187,8 @@ const PregnancyPackages = () => {
     {
       title: "PLAN B: Pregnancy Through Postnatal",
       subtitle: "3 Pregnancy Massage + 1 Postnatal Fertility Massage",
-      price: "$536",
-      savings: "Save $100",
+      price: "$600",
+      savings: "Save $108",
       badge: "Most Popular",
       badgeColor: "pink",
       included: [
@@ -216,8 +216,8 @@ const PregnancyPackages = () => {
     {
       title: "PLAN C: Complete Family Wellness",
       subtitle: "3 Pregnancy Massage + 1 Postnatal Fertility Massage + Infant Massage Introduction",
-      price: "$600",
-      savings: "Save $186",
+      price: "$650",
+      savings: "Save $190",
       badge: "Best Value",
       badgeColor: "green",
       included: [
